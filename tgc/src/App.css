@@ -1,0 +1,39 @@
+html{
+  overflow:hidden;
+}
+
+
+
+
+
+#root{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+}
+
+.App {
+  flex:1;
+  text-align: center;
+  background-color:#0C0032;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+
+
+
+
+.dark-mode{
+  background-color:#000;
+  -webkit-text-fill-color:#fff;
+  color:#fff;
+}
+
+
+.light-mode{
+  background-color:#fff;
+  -webkit-text-fill-color:#000;
+  color:#000;
+}
