@@ -16,19 +16,25 @@ import {
  				constructor(){
  					super()
  					this.state={
- 						commentsGlitc:[]
+ 						likesGlitch:[]
  					}
  				}
 
  		componentDidMount(prevProps){
- 			console.log(this.props)
-
+ 			if(localStorage.getItem('likesGlitch')){
+ 				this.setState({
+ 					likesGlitch:JSON.parse(localStorage.getItem('likesGlitch'))
+ 				})
+ 			}
  			this.props.getMyWork()
  		}
 
  		componentDidUpdate(){
 
- 			console.log(this.props)
+ 		}
+
+ 		addLike(){
+
  		}
 
 		render(){
@@ -57,7 +63,7 @@ import {
           <CardTitle>{post.title}</CardTitle>
           <CardSubtitle>Likes:{JSON.parse(post.likes)}</CardSubtitle>
         </CardBody>
-        <img width="100%" src={post.image} alt={post.alt} />
+        <CardImg width="100%" src={post.image} alt={post.alt} />
         <CardBody>
           <CardText>{post.description}</CardText>
           <CardLink href={post.link}>Link</CardLink>

@@ -8,7 +8,7 @@ import {Provider} from 'react-redux'
 import {Route} from 'react-router-dom'
 import logo from './img/tgc1.png'
 import me from './img/me.png'
-import bg from './img/bg.jpg'
+import bg from './img/bg6.jpg'
 
 import Header from './Header'
 import Home from './comps/'

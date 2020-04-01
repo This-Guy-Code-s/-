@@ -38,8 +38,8 @@ class Home extends React.Component{
 			 	and always have your self open for opportunities.
 			 	 You never know who's admiring your content ,
 			 	  bring your audience into the world they want to be in.
-			 	   Creating content, bringing "wows" and good vibes can never get old to me.
-			 	     From custom websites to pre made websites,
+			 	   Creating content and good vibes can never get old to me.
+			 	     From custom websites to updates to your websites,
 			 	 I can help. Contact Me.
 			 	 </p>
 			 <Contact buttonLabel='Contact Me'/>

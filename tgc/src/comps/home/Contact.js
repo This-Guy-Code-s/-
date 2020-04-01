@@ -16,6 +16,13 @@ const Pass = styled.span`
 `
 
 
+const Div = styled.div`
+
+
+
+
+`
+
 
 const pulse = {
     float:'right'
@@ -29,7 +36,7 @@ const pulse = {
   }
 
     const conLink = {
-    background:"-webkit-linear-gradient(azure,azure,blue)",
+    background:"-webkit-linear-gradient(azure,azure,#4df7ff)",
     WebkitBackgroundClip:'text',
     WebkitTextFillColor:'transparent',
 
@@ -41,17 +48,52 @@ const pulse = {
     backgroundColor:'rgba(0,0,0,1)',
     padding:'1%',
     borderRaduis:'10px',
-    WebkitTextFillColor:'azure',
+    WebkitTextFillColor:'#fff',
+    
+  }
+
+
+   const formBoxh = {
+    backgroundColor:'#000',
+    flex:'1',
+    WebkitTextFillColor:'#fff',
+    border:'none'
+
     
   }
 
       const formio = {
-    backgroundColor:'rgba(0,0,0,.3)',
-    padding:'1%',
+    background:'linear-gradient(to bottom right,#000 ,#111, #222, #212529)',
     borderRaduis:'10px',
-     WebkitTextFillColor:'azure'
+     WebkitTextFillColor:'azure',
+     border:'double ',
+     padding:'10px'
   }
 
+
+
+const brand = {
+display:'flex',
+background:'-webkit-linear-gradient(azure,#3500D3)',
+WebkitBackgroundClip:'text',
+WebkitTextFillColor:'transparent'
+}
+
+const brand_signs = {
+}
+
+const brand_this = {
+WebkitTextFillColor:'#700022',
+  
+}
+
+const brand_guy = {
+  
+}
+
+const brand_codez = {
+  
+}
 
 
 
@@ -113,6 +155,10 @@ class Contact extends React.Component {
 
      setTimeout(()=>{
     this.toggle()
+     this.setState({
+        passMsg:"",
+        errMsg:""
+      })
      },2000)   
 
     })
@@ -130,14 +176,15 @@ class Contact extends React.Component {
 render(){
 
 return (
-    <div >
+    <Div>
       <Button style={conBtn} onClick={this.toggle}><span style={conLink}><i className="fas fa-envelope"></i> {this.props.buttonLabel} <i className="fas fa-envelope"></i></span></Button>
       <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
         <Err>{this.state.errMsg}</Err>
         <Pass>{this.state.passMsg}</Pass>
-        <ModalHeader toggle={this.toggle} style={formBox}>
+        <ModalHeader toggle={this.toggle} style={formBoxh}>
         <span style={pulse}>
-        <Spinner type="grow" color="danger" />
+        <Spinner type="grow" color="primary" />
+        <small><a href='tel:2402737952'><i className="fas fa-phone"></i> Call Instead? </a></small>
         </span>
        </ModalHeader>
         <ModalBody  style={formBox}>
@@ -157,19 +204,19 @@ return (
       </FormGroup>
       <Button style={
         {
-          WebkitTextFillColor:'#000',
-          backgroundColor:"rgba(53,242,646.2)",
+          WebkitTextFillColor:'#fff',
+          WebkitTextStroke:'.3px #000',
+          textShadow:'0 0 5px #000',
+          background:"linear-gradient(to bottom right,#000,#212529)",
           fontWeight:"bolder"
         }}
         >Send</Button>
         </Form>
         {/*FORM*/}
         </ModalBody>
-        <ModalFooter style={formBox}>
-          <Button color="danger" onClick={this.toggle}>Cancel</Button>
-        </ModalFooter>
+       
       </Modal>
-    </div>
+    </Div>
   );
 
 

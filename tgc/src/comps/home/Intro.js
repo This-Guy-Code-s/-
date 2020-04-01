@@ -26,7 +26,7 @@ grid-gap:10px;
 const me = {
 	borderRadius:'100%',
 	border:'double 3px #240090',
-	boxShadow:'0 0 10px #3500D3'
+	boxShadow:'0 0 10px #4df7ff'
 }
 
 let introCard = {
@@ -52,8 +52,8 @@ class Intro extends React.Component{
 		</figure>
 		<Card style={introCard}>
 		<h2 className="alt">A Full-Stack Web Developer</h2>
-		<p style={{fontSize:'1.5rem'}}>I was self taught for a few years, with a lot of work done for clients(private and public).
-		Now I'll be graduating soon at <a href="http://LambdaSchool.com">LambdaSchool</a> and I am also open for projects and hire.</p>
+		<p style={{fontSize:'1.5rem'}}>I started out self taught for a few years, with a lot of work done for clients(private and public).
+		Now I'll be graduating soon at <a href="http://LambdaSchool.com">LambdaSchool</a> and I help start-ups, small businesses, and agencies achieve high quality websites and satisfying user experience.</p>
 		</Card>
 	 	</Row>
 

@@ -15,7 +15,7 @@ import {Link} from 'react-router-dom'
 
 const brand = {
 display:'flex',
-background:'-webkit-linear-gradient(azure,#3500D3)',
+background:'-webkit-linear-gradient(azure,azure,#4df7ff)',
 WebkitBackgroundClip:'text',
 WebkitTextFillColor:'transparent',
 fontSize:'2.4rem'
