@@ -17,7 +17,8 @@ const brand = {
 display:'flex',
 background:'-webkit-linear-gradient(azure,#3500D3)',
 WebkitBackgroundClip:'text',
-WebkitTextFillColor:'transparent'
+WebkitTextFillColor:'transparent',
+fontSize:'2.4rem'
 
 }
 
@@ -68,7 +69,8 @@ class Header extends Component {
       style={{
         WebkitTextFillColor:'#fff',
         color:'#fff',
-        backgroundColor:'rgba(0,0,0,.5)'
+        backgroundColor:'rgba(0,0,0,.5)',
+        fontSize:'1.5rem'
       }}
       >
        <Link to='/' className='navbar-brand'><span style={brand} title='return true;'><b style={brand_this}>This.</b><b style={brand_guy}>Guy</b><b style={brand_signs}>(</b><b style={brand_codez}>Codez</b><b style={brand_signs}>)</b></span></Link>
@@ -84,7 +86,8 @@ class Header extends Component {
               style={{
                 WebkitTextFillColor:'#fff',
                 color:'#fff',
-                 backgroundColor:'rgba(0,0,0,.5)'
+                 backgroundColor:'rgba(0,0,0,.5)',
+                 fontSize:'1.4rem'
               }}
 
               >

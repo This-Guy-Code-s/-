@@ -48,11 +48,11 @@ class Intro extends React.Component{
 		<Row>
 		<figure>
 		<img src={this.props.me} style={me} alt='me' width='50' height='50'/>
-		<figcaption>Guyton M. Oriji</figcaption>
+		<figcaption style={{fontSize:'1.3rem'}}>Guyton M. Oriji</figcaption>
 		</figure>
 		<Card style={introCard}>
-		<h4 className="alt">A Full-Stack Web Developer</h4>
-		<p>I was self taught for a few years, with a lot of work done for clients(private and public).
+		<h2 className="alt">A Full-Stack Web Developer</h2>
+		<p style={{fontSize:'1.5rem'}}>I was self taught for a few years, with a lot of work done for clients(private and public).
 		Now I'll be graduating soon at <a href="http://LambdaSchool.com">LambdaSchool</a> and I am also open for projects and hire.</p>
 		</Card>
 	 	</Row>

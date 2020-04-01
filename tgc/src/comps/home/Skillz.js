@@ -50,8 +50,8 @@ class Skillz extends React.Component{
 
 		<Row>
 		<figure>
-		<i class="fab fa-linux" style={skills}></i>
-		<figcaption>
+		<i className="fab fa-linux" style={skills}></i>
+		<figcaption style={{fontSize:'1.6rem'}}>
 		Linux(deb)
 		</figcaption>
 		</figure>
@@ -59,8 +59,8 @@ class Skillz extends React.Component{
 		</div>
 
 		<figure>
-		<i class="fab fa-js-square" style={skills}></i>
-		<figcaption>
+		<i className="fab fa-js-square" style={skills}></i>
+		<figcaption style={{fontSize:'1.6rem'}}>
 		Javascript
 		</figcaption>
 		</figure>
@@ -68,8 +68,8 @@ class Skillz extends React.Component{
 		</div>
 
 		<figure>
-		<i class="fab fa-react" style={skills}></i>
-		<figcaption>
+		<i className="fab fa-react" style={skills}></i>
+		<figcaption style={{fontSize:'1.6rem'}}>
 		React.js
 		</figcaption>
 		</figure>
@@ -77,8 +77,8 @@ class Skillz extends React.Component{
 		</div>
 
 		<figure>
-		<i class="fab fa-node-js" style={skills}></i>
-		<figcaption>
+		<i className="fab fa-node-js" style={skills}></i>
+		<figcaption style={{fontSize:'1.6rem'}}>
 		Node.js
 		</figcaption>
 		</figure>

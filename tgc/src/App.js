@@ -12,6 +12,7 @@ import bg from './img/bg.jpg'
 
 import Header from './Header'
 import Home from './comps/'
+import Projects from './comps/projects/'
 const store = createStore(reducer,applyMiddleware(thunk))
 
 
@@ -19,7 +20,7 @@ const store = createStore(reducer,applyMiddleware(thunk))
 
 class App extends Component {
   
-
+ 
 
 
 
@@ -31,6 +32,8 @@ class App extends Component {
       background-position:center;
       background-size:cover;
       `
+
+
     }
 
 
@@ -40,22 +43,33 @@ class App extends Component {
   render() {
 
     return (
-    	<Route render={()=>{
-
-    		return(
-<Provider store={store}>
+      <Provider store={store}>
       <div className="App">
       <Header logo={logo}/>
+    	<Route exact path='/' render={()=>{
+
+    		return(
       <Container>
         <Home imgz={[me]} />
 
 
       
       </Container>
-      </div>
-      </Provider>
     			)
     	}}/>
+
+      <Route exact path='/projects' render={()=>{
+
+        return (
+
+          <Projects />
+
+          )
+
+      }} />
+       </div>
+      }
+      </Provider>
     );
   }
 }

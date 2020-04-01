@@ -28,8 +28,20 @@ class Home extends React.Component{
 
 			 		paddingTop:'100px',
 			 		height:'100%',
-
+			 		WebkitTextFillColor:'azure',
+			 		fontWeight:'bolder'
 			 	}}>
+			 	<p style={{fontSize:'1.6rem'}}>
+			 	With your own website you can build your brand's credibility,
+			 	showcase your work at all times,
+			 	increase your audience, 
+			 	and always have your self open for opportunities.
+			 	 You never know who's admiring your content ,
+			 	  bring your audience into the world they want to be in.
+			 	   Creating content, bringing "wows" and good vibes can never get old to me.
+			 	     From custom websites to pre made websites,
+			 	 I can help. Contact Me.
+			 	 </p>
 			 <Contact buttonLabel='Contact Me'/>
 			 </div>
 			</div>

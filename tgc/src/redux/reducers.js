@@ -1,9 +1,10 @@
-import {MOVING} from './actions'
+import {MOVING,MOVED,ERR} from './actions'
 
 
 
 const initialState = {
 	work:'',
+	error:''
 }
 
 
@@ -13,8 +14,18 @@ export const reducer =  (state = initialState, action) =>{
 			case MOVING:
 			return {
 				...state,
+			}
+
+			case MOVED:
+			return {
+				...state,
 				work:action.payload,
-				msg:action.msg
+			}
+
+			case ERR:
+			return {
+				...state,
+				error:action.payload,
 			}
 
 			default:
