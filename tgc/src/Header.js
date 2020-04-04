@@ -8,7 +8,8 @@ import { Collapse,
   DropdownMenu,
   DropdownItem
 } from 'reactstrap'
-
+import {connect} from 'react-redux'
+import {getMyWork} from './redux/actions'
 
 import {Link} from 'react-router-dom'
 
@@ -18,7 +19,6 @@ display:'flex',
 background:'-webkit-linear-gradient(azure,azure,#4df7ff)',
 WebkitBackgroundClip:'text',
 WebkitTextFillColor:'transparent',
-fontSize:'2.4rem'
 
 }
 
@@ -53,6 +53,12 @@ class Header extends Component {
   }
 
 
+ componentDidMount(){
+    this.props.getMyWork()
+      
+  }
+
+
 
   toggle(){
     this.setState({
@@ -70,11 +76,12 @@ class Header extends Component {
         WebkitTextFillColor:'#fff',
         color:'#fff',
         backgroundColor:'rgba(0,0,0,.5)',
-        fontSize:'1.5rem'
       }}
       >
        <Link to='/' className='navbar-brand'><span style={brand} title='return true;'><b style={brand_this}>This.</b><b style={brand_guy}>Guy</b><b style={brand_signs}>(</b><b style={brand_codez}>Codez</b><b style={brand_signs}>)</b></span></Link>
-        <NavbarToggler onClick={this.toggle} />
+        <NavbarToggler onClick={this.toggle} style={{WebkitTextFillColor:'azure'}}>
+        <i className="fas fa-ellipsis-v"></i>
+        </NavbarToggler>
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
             
@@ -87,35 +94,36 @@ class Header extends Component {
                 WebkitTextFillColor:'#fff',
                 color:'#fff',
                  backgroundColor:'rgba(0,0,0,.5)',
-                 fontSize:'1.4rem'
               }}
 
               >
-                <DropdownItem style={{
+              {
+
+                this.props.work && this.props.work.map(wrk=>{
+
+               if(wrk.action==='PLAY'){
+                    return (
+                     <DropdownItem style={{
                 WebkitTextFillColor:'#fff',
                 color:'#fff',
                  backgroundColor:'rgba(0,0,0,.5)'
               }}
->
-                  Tic Tac Toe
+href={wrk.link} key={wrk.id}>
+                {wrk.title}
                 </DropdownItem>
-                <DropdownItem style={{
-                WebkitTextFillColor:'#fff',
-                color:'#fff',
-                 backgroundColor:'rgba(0,0,0,.5)'
-              }}
->
-                  flappy Bird
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem style={{
-                WebkitTextFillColor:'#fff',
-                color:'#fff',
-                 backgroundColor:'rgba(0,0,0,.5)'
-              }}
->
-                  Chess
-                </DropdownItem>
+
+                    )
+                  }else{
+                    return true
+                  }
+                  
+
+
+                })
+
+
+              }
+               
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
@@ -128,4 +136,14 @@ class Header extends Component {
   }
 }
 
-export default Header;
+
+  const mapStateToProps = state =>{
+    return {
+     work:state.work
+    }
+  }
+
+export default connect(
+  mapStateToProps,
+    {getMyWork}
+  )(Header);

@@ -2,6 +2,7 @@ import React from 'react'
 import Intro from './home/Intro.js'
 import Skillz from './home/Skillz.js'
 import Contact from './home/Contact.js'
+import Services from './home/Services.js'
 
 
 
@@ -43,6 +44,7 @@ class Home extends React.Component{
 			 	 I can help. Contact Me.
 			 	 </p>
 			 <Contact buttonLabel='Contact Me'/>
+			 <Services buttonLabel='My Services'/>
 			 </div>
 			</div>
 

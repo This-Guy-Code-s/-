@@ -8,6 +8,8 @@ html{
 
 #root{
   position:absolute;
+  -webkit-width:100%;
+  -webkit-height:100%;
   width:100%;
   height:100%;
   display:flex;
@@ -36,4 +38,61 @@ html{
   background-color:#fff;
   -webkit-text-fill-color:#000;
   color:#000;
+}
+
+
+
+.skillzAnime{
+   transform: translate3d(20px, 20px, 0px);
+  -webkit-animation:skillz 2s linear infinite;
+  animation:skillz 2s linear infinite;
+  
+}
+
+
+.phone_{
+   transform: translate3d(20px, 20px, 0px);
+  -webkit-animation:phone 2s linear infinite;
+  animation:phone 2s linear infinite;
+  
+}
+
+
+
+
+
+@keyframes phone{
+   0% {
+         -webkit-transform:rotateZ(10deg); 
+         transform:rotateZ(10deg); 
+
+    }
+    50% {
+        -webkit-transform:rotateZ(-40deg); 
+        transform:rotateZ(-40deg); 
+    }
+    100% {
+         -webkit-transform:rotateZ(10deg); 
+         transform:rotateZ(10deg); 
+    }
+}
+
+
+@keyframes skillz{
+   0% {
+        -webkit-transform: translate3d(0px, 40px, 0px);
+        transform: translate3d(0px, 40px, 0px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        -webkit-transform: translate3d(0px, 50px, 0px);
+        transform: translate3d(0px, 50px, 0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    100% {
+        -webkit-transform: translate3d(0px, 40px, 0px);
+        transform: translate3d(0px, 40px, 0px);
+    }
 }

@@ -21,6 +21,30 @@ display:flex;
 flex-direction:row;
 -webkit-text-fill-color:azure;
 grid-gap:10px;
+
+
+
+
+
+@media screen and (max-width:500px){
+flex-direction:column;
+
+}
+
+
+
+
+
+@media screen and (max-width:900px){
+	
+	figure{
+		margin-top:-50px;
+		
+	}
+
+}
+
+
 `
 
 const me = {

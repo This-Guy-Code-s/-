@@ -1,7 +1,7 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import axios from 'axios'
 import React  from 'react';
-import {Form,FormGroup,Input,Label, Button,Spinner, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {Form,FormGroup,Input,Label, Button,Spinner, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import styled from 'styled-components'
 
 
@@ -31,7 +31,7 @@ const pulse = {
   const conBtn = {
     backgroundColor:"rgba(0,0,0,.5)",
     border:'double azure',
-    fontSize:'2rem'
+    fontSize:'1.8rem'
 
   }
 
@@ -54,7 +54,7 @@ const pulse = {
 
 
    const formBoxh = {
-    backgroundColor:'#000',
+    backgroundColor:'rgba(0,0,0,.9)',
     flex:'1',
     WebkitTextFillColor:'#fff',
     border:'none'
@@ -63,37 +63,12 @@ const pulse = {
   }
 
       const formio = {
-    background:'linear-gradient(to bottom right,#000 ,#111, #222, #212529)',
-    borderRaduis:'10px',
-     WebkitTextFillColor:'azure',
-     border:'double ',
+    background:'linear-gradient(to bottom right,#4df7ff ,#5539f3)',
+     WebkitTextFillColor:'#000',
+     border:'double #333 ',
      padding:'10px'
   }
 
-
-
-const brand = {
-display:'flex',
-background:'-webkit-linear-gradient(azure,#3500D3)',
-WebkitBackgroundClip:'text',
-WebkitTextFillColor:'transparent'
-}
-
-const brand_signs = {
-}
-
-const brand_this = {
-WebkitTextFillColor:'#700022',
-  
-}
-
-const brand_guy = {
-  
-}
-
-const brand_codez = {
-  
-}
 
 
 
@@ -103,7 +78,7 @@ class Contact extends React.Component {
   this.state={
     modal:false,
     msg:{
-      usr_name:'',
+      name:'',
       email:'',
       message:''
     },
@@ -123,10 +98,10 @@ class Contact extends React.Component {
 
  send(e){
     e.preventDefault()
-    //https://thisguycodez.herokuapp.com/
+    //https://thisguycodez.herokuapp.com/api/mailer
     
     if(
-      !this.state.msg.usr_name.match(/[A-z]/i) ||
+      !this.state.msg.name.match(/[A-z]/i) ||
       !this.state.msg.email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ||  
       !this.state.msg.message.match(/[A-z]/i) 
 
@@ -142,13 +117,13 @@ class Contact extends React.Component {
 
 
 
-    axios.post('https://thisguycodez.herokuapp.com/api/admin/inbox'
+    axios.post('https://thisguycodez.herokuapp.com/api/mailer'
       ,this.state.msg)
     .then(res=>{
       console.log(res)
 
         this.setState({
-        passMsg:`Thank You ${res.data.newMsg.usr_name} Your Message Was Sent.`,
+        passMsg:`Thank You ${this.state.name} Your Message Was Sent.`,
         errMsg:""
       })
 
@@ -184,22 +159,22 @@ return (
         <ModalHeader toggle={this.toggle} style={formBoxh}>
         <span style={pulse}>
         <Spinner type="grow" color="primary" />
-        <small><a href='tel:2402737952'><i className="fas fa-phone"></i> Call Instead? </a></small>
+        <small><a href='tel:2402737952'><i className="fas fa-phone phone_"></i> Call Instead? </a></small>
         </span>
        </ModalHeader>
         <ModalBody  style={formBox}>
        {/*FORM*/}
         <Form style={formio} onSubmit={this.send}>
        <FormGroup>
-        <Label htmlFor="name" style={{WebkitTextFillColor:'azure'}}>Name:</Label>
-        <Input type="text" name="name" id="name" value={this.state.msg.usr_name} onChange={(e)=>{this.setState({msg:{...this.state.msg,usr_name:e.target.value}})}} placeholder="Name..."  style={{WebkitTextFillColor:'#000'}} required/>
+        <Label htmlFor="name" style={{WebkitTextFillColor:'#000',fontWeight:'bolderd'}}>Name:</Label>
+        <Input type="text" name="name" id="name" value={this.state.msg.name} onChange={(e)=>{this.setState({msg:{...this.state.msg,name:e.target.value}})}} placeholder="Name..."  style={{WebkitTextFillColor:'#000'}} required/>
       </FormGroup>
        <FormGroup>
-        <Label htmlFor="email" style={{WebkitTextFillColor:'azure'}}>Email:</Label>
+        <Label htmlFor="email" style={{WebkitTextFillColor:'#000',fontWeight:'bolderd'}}>Email:</Label>
         <Input type="email" name="email" id="email" value={this.state.msg.email} onChange={(e)=>{this.setState({msg:{...this.state.msg,email:e.target.value}})}} placeholder="Email..."  style={{WebkitTextFillColor:'#000'}} required/>
       </FormGroup>
        <FormGroup>
-        <Label htmlFor="message:" style={{WebkitTextFillColor:'azure'}}>Message</Label>
+        <Label htmlFor="message:" style={{WebkitTextFillColor:'#000',fontWeight:'bolderd'}}>Message</Label>
         <Input type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..."  style={{WebkitTextFillColor:'#000'}} required/>
       </FormGroup>
       <Button style={
@@ -207,8 +182,10 @@ return (
           WebkitTextFillColor:'#fff',
           WebkitTextStroke:'.3px #000',
           textShadow:'0 0 5px #000',
-          background:"linear-gradient(to bottom right,#000,#212529)",
-          fontWeight:"bolder"
+          backgroundColor:"rgba(0,0,0,.5)",
+          fontWeight:"bolder",
+          border:'double #000',
+          boxShadow:'0 0 5px #000',
         }}
         >Send</Button>
         </Form>
