@@ -46,7 +46,7 @@ class App extends Component {
       <Provider store={store}>
       <div className="App">
       <Header logo={logo}/>
-    	<Route render={()=>{
+    	<Route exact path='/-/' render={()=>{
 
     		return(
       <Container>
