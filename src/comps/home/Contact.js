@@ -98,6 +98,7 @@ class Contact extends React.Component {
 
  send(e){
     e.preventDefault()
+
     //https://thisguycodez.herokuapp.com/api/mailer
     
     if(
@@ -120,8 +121,6 @@ class Contact extends React.Component {
     axios.post('https://thisguycodez.herokuapp.com/api/admin/inbox'
       ,this.state.msg)
     .then(res=>{
-      console.log(res)
-
         this.setState({
         passMsg:`Thank You ${this.state.name} Your Message Was Sent.`,
         errMsg:""
@@ -136,17 +135,19 @@ class Contact extends React.Component {
       })
      },2000)   
 
+
     })
     .catch(err=>{
-      console.log(err)
       this.setState({
         errMsg:"server overwhelmed please wait or try again",
-      passMsg:""
+        passMsg:""
       })
 
     })
 
-    e.target.reset()
+  
+      e.target.reset()
+
   }
 render(){
 

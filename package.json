@@ -5,6 +5,8 @@
   "dependencies": {
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "fs": "0.0.1-security",
+    "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
@@ -16,11 +18,14 @@
     "styled-components": "^5.0.1"
   },
   "devDependencies": {},
-  "proxy": "http://localhost:3001",
+  "proxy":"localhost:3001",
+  "homepage": "https://this-guy-code-s.github.io/-/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }

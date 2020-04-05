@@ -33,12 +33,7 @@ const Row = styled.div`
 
 
  		componentDidMount(prevProps){
-    console.log('did mount')
- 			if(localStorage.getItem('likesGlitch')){
- 				this.setState({
- 					likesGlitch:JSON.parse(localStorage.getItem('likesGlitch'))
- 				})
- 			}
+ 		
  			this.props.getMyWork()
  		}
 
