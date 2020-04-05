@@ -58,7 +58,7 @@ class App extends Component {
     			)
     	}}/>
 
-      <Route exact path='/projects' render={()=>{
+      <Route exact path='/-/projects' render={()=>{
 
         return (
 
