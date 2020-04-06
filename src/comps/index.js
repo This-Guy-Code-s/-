@@ -28,8 +28,10 @@ class Home extends React.Component{
 			 	{
 
 			 		paddingTop:'100px',
+			 		WebkitHeight:'100%',
 			 		height:'100%',
 			 		WebkitTextFillColor:'azure',
+			 		color:'azure',
 			 		fontWeight:'bolder'
 			 	}}>
 			 	<p style={{fontSize:'1.6rem'}}>

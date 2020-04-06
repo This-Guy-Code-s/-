@@ -30,6 +30,8 @@ class App extends Component {
       .style=`
       background-image:url(${bg});
       background-position:center;
+      -moz-background-size:cover;
+      -webkit-background-size:cover;
       background-size:cover;
       `
 

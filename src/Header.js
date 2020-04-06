@@ -18,7 +18,9 @@ const brand = {
 display:'flex',
 background:'-webkit-linear-gradient(azure,azure,#4df7ff)',
 WebkitBackgroundClip:'text',
+backgroundClip:'text',
 WebkitTextFillColor:'transparent',
+color:'transparent',
 
 }
 
@@ -27,6 +29,7 @@ const brand_signs = {
 
 const brand_this = {
 WebkitTextFillColor:'#700022',
+color:'#700022',
   
 }
 
@@ -79,7 +82,7 @@ class Header extends Component {
       }}
       >
        <Link to='/-/' className='navbar-brand'><span style={brand} title='return true;'><b style={brand_this}>This.</b><b style={brand_guy}>Guy</b><b style={brand_signs}>(</b><b style={brand_codez}>Codez</b><b style={brand_signs}>)</b></span></Link>
-        <NavbarToggler onClick={this.toggle} style={{WebkitTextFillColor:'azure'}}>
+        <NavbarToggler onClick={this.toggle} style={{WebkitTextFillColor:'azure',color:'azure'}}>
         <i className="fas fa-ellipsis-v"></i>
         </NavbarToggler>
         <Collapse isOpen={this.state.isOpen} navbar>

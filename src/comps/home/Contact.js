@@ -39,6 +39,7 @@ const pulse = {
     background:"-webkit-linear-gradient(azure,azure,#4df7ff)",
     WebkitBackgroundClip:'text',
     WebkitTextFillColor:'transparent',
+    color:'transparent',
 
   }
 
@@ -47,8 +48,10 @@ const pulse = {
       const formBox = {
     backgroundColor:'rgba(0,0,0,1)',
     padding:'1%',
+    WebkitBorderRaduis:'10px',
     borderRaduis:'10px',
     WebkitTextFillColor:'#fff',
+    color:'#fff',
     
   }
 
@@ -57,6 +60,7 @@ const pulse = {
     backgroundColor:'rgba(0,0,0,.9)',
     flex:'1',
     WebkitTextFillColor:'#fff',
+    color:'#fff',
     border:'none'
 
     
@@ -65,6 +69,7 @@ const pulse = {
       const formio = {
     background:'linear-gradient(to bottom right,#4df7ff ,#5539f3)',
      WebkitTextFillColor:'#000',
+     color:'#000',
      border:'double #333 ',
      padding:'10px'
   }
@@ -181,11 +186,13 @@ return (
       <Button style={
         {
           WebkitTextFillColor:'#fff',
+          color:'#fff',
           WebkitTextStroke:'.3px #000',
           textShadow:'0 0 5px #000',
           backgroundColor:"rgba(0,0,0,.5)",
           fontWeight:"bolder",
           border:'double #000',
+          WebkitBoxShadow:'0 0 5px #000',
           boxShadow:'0 0 5px #000',
         }}
         >Send</Button>

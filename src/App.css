@@ -17,6 +17,7 @@ html{
 
 .App {
   flex:1;
+  -webkit-text-align: center;
   text-align: center;
   background-color:#0C0032;
   overflow-x:hidden;
@@ -43,6 +44,7 @@ html{
 
 
 .skillzAnime{
+   -webkit-transform: translate3d(20px, 20px, 0px);
    transform: translate3d(20px, 20px, 0px);
   -webkit-animation:skillz 2s linear infinite;
   animation:skillz 2s linear infinite;
@@ -51,6 +53,7 @@ html{
 
 
 .phone_{
+   -webkit-transform: translate3d(20px, 20px, 0px);
    transform: translate3d(20px, 20px, 0px);
   -webkit-animation:phone 2s linear infinite;
   animation:phone 2s linear infinite;

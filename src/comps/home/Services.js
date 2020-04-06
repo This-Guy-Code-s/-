@@ -10,6 +10,7 @@ import {  Toast, ToastBody, ToastHeader,Alert,Button,Badge, Modal, ModalHeader, 
     backgroundColor:"rgba(0,0,0,0)",
     fontSize:'1.8rem',
     WebkitTextFillColor:'#4df7ff',
+    color:'#4df7ff',
     textShadow:'0 0 5px #5539f3',
     cursor:'pointer'
   }
@@ -60,7 +61,7 @@ class Services extends React.Component{
             Show Case:
           </ToastHeader>
           <ToastBody>
-           Digital projects,Dishes you've prepared, Articles, Gallery of pictures,YouTube videos , and/or Social media content.
+           Digital projects, Dishes you've prepared, Articles, Gallery of pictures, YouTube videos, and/or Social media content.
           </ToastBody>
         </Toast>
       </div>
@@ -104,7 +105,7 @@ class Services extends React.Component{
             Show Case:
           </ToastHeader>
           <ToastBody>
-           Digital projects,Dishes you've prepared, Articles, Gallery of pictures,YouTube videos , and/or Social media content.
+           Digital projects, Dishes you've prepared, Articles, Gallery of pictures, YouTube videos, and/or Social media content.
           </ToastBody>
         </Toast>
       </div>
@@ -116,9 +117,9 @@ class Services extends React.Component{
             Communication:
           </ToastHeader>
           <ToastBody>
-            Visitors will be able to contact you through a business number and/or business email.
-            Social Media links can be added if requested.Visitors can also email you directly from your website.
-          </ToastBody>
+           Visitors will be able to contact you through a business number and/or business email.
+            Social Media links can be added if requested. Visitors can also email you directly from your website.
+           </ToastBody>
         </Toast>
       </div>
 
@@ -130,9 +131,9 @@ class Services extends React.Component{
             Pages: 1-5
           </ToastHeader>
           <ToastBody>
-           With this service type you can get up to 5 pages.
-            Wheather its an ' About Me' page or Gallery, its your choice I'll code it.
-          </ToastBody>
+            With this service type, you can get up to 5 pages.
+            Whether it's an ' About Me' page or Gallery, it's your choice I'll code it.
+           </ToastBody>
         </Toast>
       </div>
          
@@ -149,8 +150,7 @@ class Services extends React.Component{
             Show Case:
           </ToastHeader>
           <ToastBody>
-           Digital projects,Dishes you've prepared, Articles, Gallery of pictures,YouTube videos , Social media content,
-           Allow visitors to download content,Direct Messaging from the Web App,& Visitors Comments/Likes.
+          Digital projects,Dishes you've prepared, Articles, Gallery of pictures, YouTube videos , and/or Social media content.
           </ToastBody>
         </Toast>
       </div>
@@ -178,8 +178,8 @@ class Services extends React.Component{
             Pages: 1-5
           </ToastHeader>
           <ToastBody>
-          With this service type you can get up to 5 pages.
-            Wheather its an ' About Me' page, Gallery,Chatroom, Support Page, etc. The choice is yours I'll code it.
+         With this service type, you can get up to 5 pages.
+            Whether it's an ' About Me' page, Gallery, Chatroom, Support Page, etc. The choice is yours I'll code it.
           
           </ToastBody>
         </Toast>
@@ -187,10 +187,10 @@ class Services extends React.Component{
          
 
           </Alert>
-
+          <small>extra fees may apply for extra content(contact for more detail.)</small> 
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={this.toggle}>Got It</Button>
+         <Button color="primary" onClick={this.toggle}>Got It</Button>
         </ModalFooter>
       </Modal>
     </div>
