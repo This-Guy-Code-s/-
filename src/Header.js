@@ -78,7 +78,7 @@ class Header extends Component {
         backgroundColor:'rgba(0,0,0,.5)',
       }}
       >
-       <Link to='/' className='navbar-brand'><span style={brand} title='return true;'><b style={brand_this}>This.</b><b style={brand_guy}>Guy</b><b style={brand_signs}>(</b><b style={brand_codez}>Codez</b><b style={brand_signs}>)</b></span></Link>
+       <Link to='/-/' className='navbar-brand'><span style={brand} title='return true;'><b style={brand_this}>This.</b><b style={brand_guy}>Guy</b><b style={brand_signs}>(</b><b style={brand_codez}>Codez</b><b style={brand_signs}>)</b></span></Link>
         <NavbarToggler onClick={this.toggle} style={{WebkitTextFillColor:'azure'}}>
         <i className="fas fa-ellipsis-v"></i>
         </NavbarToggler>
@@ -127,7 +127,7 @@ href={wrk.link} key={wrk.id}>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-              <Link to='/projects'>Projects</Link>
+              <Link to='/-/projects'>Projects</Link>
         </Collapse>
       </Navbar>
     </div>
