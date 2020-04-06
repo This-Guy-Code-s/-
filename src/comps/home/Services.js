@@ -53,7 +53,7 @@ class Services extends React.Component{
         <ModalBody>
           
           <Alert color='secondary'>
-          <i className="far fa-star">Basic<Badge color='success'>$25-$50</Badge></i>
+          <i className="far fa-star">Basic<Badge color='success'>$80-$150</Badge></i>
            
            <div className="p-3 my-2 rounded bg-docs-transparent-grid">
         <Toast>
@@ -97,7 +97,7 @@ class Services extends React.Component{
 
 
           <Alert color='success'>
-          <i className="fas fa-star-half-alt"> Basic Multi Page<Badge color='success'>$80-$120</Badge></i>
+          <i className="fas fa-star-half-alt"> Basic Multi Page<Badge color='success'>$150-$200</Badge></i>
           
            <div className="p-3 my-2 rounded bg-docs-transparent-grid">
         <Toast>
@@ -142,7 +142,7 @@ class Services extends React.Component{
 
 
           <Alert color='danger'>
-          <i className="fas fa-star">Full Web App(DataBase)<Badge color='success'>$300-$500</Badge></i>
+          <i className="fas fa-star">Full Web App(DataBase)<Badge color='success'>$300+</Badge></i>
            
            <div className="p-3 my-2 rounded bg-docs-transparent-grid">
         <Toast>
