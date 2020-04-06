@@ -18,7 +18,7 @@
     "styled-components": "^5.0.1"
   },
   "devDependencies": {},
-  "proxy":"localhost:3001",
+  "proxy": "localhost:3001",
   "homepage": "https://this-guy-code-s.github.io/-/",
   "scripts": {
     "start": "react-scripts start",
