@@ -20,7 +20,7 @@
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.1.0"
   },
-   "proxy": "https://localhost:3001",
+  "proxy": "https://localhost:3001",
   "homepage": "https://this-guy-code-s.github.io/-/",
   "scripts": {
     "start": "react-scripts start",

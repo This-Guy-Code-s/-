@@ -1,27 +1,26 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import axios from 'axios'
 import React  from 'react';
-import {Form,FormGroup,Input,Label, Button,Spinner, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import {Form,Toast, ToastBody, ToastHeader,FormGroup,Input,Label, Button,Spinner } from 'reactstrap';
 
 import {
   Err,
   Pass,
-  Div,
   pulse,
-  conBtn,
+  conBtn, 
   conLink,
-  formBox,
+  middle,
   formBoxh,
-  formio,
-  formBtn
+  formio
 } from '../../util/contactStyles'
+
 
 
 class Contact extends React.Component {
  constructor(props){
   super(props)
   this.state={
-    modal:false,
+    show:false,
     msg:{
       name:'',
       email:'',
@@ -37,7 +36,7 @@ class Contact extends React.Component {
 
  toggle(){
   this.setState({
-    modal:!this.state.modal
+    show:!this.state.show
   })
  }
 
@@ -84,39 +83,43 @@ class Contact extends React.Component {
 render(){
 
 return (
-    <Div>
+
+
+   <div style={middle}>
+      <br />
       <Button style={conBtn} onClick={this.toggle}><span style={conLink}><i className="fas fa-envelope"></i> {this.props.buttonLabel} <i className="fas fa-envelope"></i></span></Button>
-      <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-        <Err>{this.state.errMsg}</Err>
-        <Pass>{this.state.passMsg}</Pass>
-        <ModalHeader toggle={this.toggle} style={formBoxh}>
+      <br />
+
+      <Toast isOpen={this.state.show}>
+      <ToastHeader>
         <span style={pulse}>
-        <Spinner type="grow" color="primary" />
-        <small><a href='tel:2402737952'><i className="fas fa-phone phone_"></i> Call Instead? </a></small>
-        </span>
-       </ModalHeader>
-        <ModalBody  style={formBox}>
-       {/*FORM*/}
+     <Spinner type="grow" color="primary" />
+      <small><a href='tel:2402737952'><i className="fas fa-phone phone_"></i> Call Instead? </a></small>
+      </span>
+      <Err>{this.state.errMsg}</Err>
+        <Pass>{this.state.passMsg}</Pass>
+      </ToastHeader>
+      <ToastBody style={formBoxh}>
+         {/*FORM*/}
         <Form style={formio} onSubmit={this.send}>
        <FormGroup>
-        <Label htmlFor="name" style={{WebkitTextFillColor:'#000',fontWeight:'bolderd'}}>Name:</Label>
+        <Label htmlFor="name" style={{WebkitTextFillColor:'#fff',fontWeight:'bolderd'}}>Name:</Label>
         <Input type="text" name="name" id="name" value={this.state.msg.name} onChange={(e)=>{this.setState({msg:{...this.state.msg,name:e.target.value}})}} placeholder="Name..."  style={{WebkitTextFillColor:'#000'}} required/>
       </FormGroup>
        <FormGroup>
-        <Label htmlFor="email" style={{WebkitTextFillColor:'#000',fontWeight:'bolderd'}}>Email:</Label>
+        <Label htmlFor="email" style={{WebkitTextFillColor:'#fff',fontWeight:'bolderd'}}>Email:</Label>
         <Input type="email" name="email" id="email" value={this.state.msg.email} onChange={(e)=>{this.setState({msg:{...this.state.msg,email:e.target.value}})}} placeholder="Email..."  style={{WebkitTextFillColor:'#000'}} required/>
       </FormGroup>
        <FormGroup>
-        <Label htmlFor="message:" style={{WebkitTextFillColor:'#000',fontWeight:'bolderd'}}>Message</Label>
+        <Label htmlFor="message:" style={{WebkitTextFillColor:'#fff',fontWeight:'bolderd'}}>Message</Label>
         <Input type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..."  style={{WebkitTextFillColor:'#000'}} required/>
       </FormGroup>
-      <Button style={formBtn}>Send</Button>
+      <Button style={conBtn}>Send</Button>
         </Form>
         {/*FORM*/}
-        </ModalBody>
-       
-      </Modal>
-    </Div>
+        </ToastBody>
+      </Toast>
+    </div>
   );
 
 

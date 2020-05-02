@@ -1,7 +1,7 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React from 'react';
-import {  Toast, ToastBody, ToastHeader,Alert,Button,Badge, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {  Toast, ToastBody, ToastHeader,Alert,Badge } from 'reactstrap';
 
 
 
@@ -16,13 +16,24 @@ import {  Toast, ToastBody, ToastHeader,Alert,Button,Badge, Modal, ModalHeader, 
   }
 
 
+  const middle = {
+           display:"flex",
+          flexDirection:"column",
+          justifyContent:"center",
+          alignItems:"center",
+          marginTop:'30px',
+          WebkitTextFillColor:"#000"
+  }
+
+
+
 
 
 class Services extends React.Component{
   constructor(props){
     super(props)
     this.state={
-      modal:false,
+      show:false,
 
     }
 
@@ -35,23 +46,25 @@ class Services extends React.Component{
    toggle(){
 
     this.setState({
-      modal:!this.state.modal
+      show:!this.state.show
     })
 
    }
     render(){
   return (
-    <div style={{marginTop:'30px'}}>
-      <Badge onClick={this.toggle} style={conBtn}>
+    <div style={middle}>
+      <br />
+       <Badge onClick={this.toggle} style={conBtn}>
     
       <sup><i className="fas fa-hand-holding-medical servio"></i></sup>
       {this.props.buttonLabel}
      
       </Badge>
-      <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-        <ModalHeader toggle={this.toggle}>Services: Web Apps</ModalHeader>
-        <ModalBody>
-          
+      <br />
+      <Toast isOpen={this.state.show}>
+        <ToastHeader toggle={this.toggle}>Services: Web Apps</ToastHeader>
+        <ToastBody>
+
           <Alert color='secondary'>
           <i className="far fa-star">Basic<Badge color='success'>$80-$150</Badge></i>
            
@@ -188,11 +201,9 @@ class Services extends React.Component{
 
           </Alert>
           <small>extra fees may apply for extra content(contact for more detail.)</small> 
-        </ModalBody>
-        <ModalFooter>
-         <Button color="primary" onClick={this.toggle}>Got It</Button>
-        </ModalFooter>
-      </Modal>
+        
+        </ToastBody>
+      </Toast>
     </div>
   );
   }
