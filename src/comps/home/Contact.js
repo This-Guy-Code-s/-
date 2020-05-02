@@ -2,79 +2,19 @@
 import axios from 'axios'
 import React  from 'react';
 import {Form,FormGroup,Input,Label, Button,Spinner, Modal, ModalHeader, ModalBody } from 'reactstrap';
-import styled from 'styled-components'
 
-
-const Err = styled.span`
-  color:red;
-  -webkit-text-fill-color:red;
-`
-
-const Pass = styled.span`
-  color:green;
-  -webkit-text-fill-color:green;
-`
-
-
-const Div = styled.div`
-
-
-
-
-`
-
-
-const pulse = {
-    float:'right'
-  }
-
-  const conBtn = {
-    backgroundColor:"rgba(0,0,0,.5)",
-    border:'double azure',
-    fontSize:'1.8rem'
-
-  }
-
-    const conLink = {
-    background:"-webkit-linear-gradient(azure,azure,#4df7ff)",
-    WebkitBackgroundClip:'text',
-    WebkitTextFillColor:'transparent',
-    color:'transparent',
-
-  }
-
-
-
-      const formBox = {
-    backgroundColor:'rgba(0,0,0,1)',
-    padding:'1%',
-    WebkitBorderRaduis:'10px',
-    borderRaduis:'10px',
-    WebkitTextFillColor:'#fff',
-    color:'#fff',
-    
-  }
-
-
-   const formBoxh = {
-    backgroundColor:'rgba(0,0,0,.9)',
-    flex:'1',
-    WebkitTextFillColor:'#fff',
-    color:'#fff',
-    border:'none'
-
-    
-  }
-
-      const formio = {
-    background:'linear-gradient(to bottom right,#4df7ff ,#5539f3)',
-     WebkitTextFillColor:'#000',
-     color:'#000',
-     border:'double #333 ',
-     padding:'10px'
-  }
-
-
+import {
+  Err,
+  Pass,
+  Div,
+  pulse,
+  conBtn,
+  conLink,
+  formBox,
+  formBoxh,
+  formio,
+  formBtn
+} from '../../util/contactStyles'
 
 
 class Contact extends React.Component {
@@ -103,9 +43,7 @@ class Contact extends React.Component {
 
  send(e){
     e.preventDefault()
-
     //https://thisguycodez.herokuapp.com/api/mailer
-    
     if(
       !this.state.msg.name.match(/[A-z]/i) ||
       !this.state.msg.email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ||  
@@ -119,11 +57,8 @@ class Contact extends React.Component {
       })
 
       return false
-    }
-
-
-
-    axios.post('https://thisguycodez.herokuapp.com/api/admin/inbox'
+    }else{
+       axios.post('https://thisguycodez.herokuapp.com/api/admin/inbox'
       ,this.state.msg)
     .then(res=>{
         this.setState({
@@ -131,29 +66,21 @@ class Contact extends React.Component {
         errMsg:""
       })
 
-
      setTimeout(()=>{
     this.toggle()
-     this.setState({
-        passMsg:"",
-        errMsg:""
-      })
-     },2000)   
+     this.setState({passMsg:"",errMsg:""})
+   },2000)
 
-
-    })
-    .catch(err=>{
+    }).catch(err=>{
       this.setState({
         errMsg:"server overwhelmed please wait or try again",
         passMsg:""
       })
-
-    })
-
-  
+  })
       e.target.reset()
-
   }
+}
+
 render(){
 
 return (
@@ -183,19 +110,7 @@ return (
         <Label htmlFor="message:" style={{WebkitTextFillColor:'#000',fontWeight:'bolderd'}}>Message</Label>
         <Input type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..."  style={{WebkitTextFillColor:'#000'}} required/>
       </FormGroup>
-      <Button style={
-        {
-          WebkitTextFillColor:'#fff',
-          color:'#fff',
-          WebkitTextStroke:'.3px #000',
-          textShadow:'0 0 5px #000',
-          backgroundColor:"rgba(0,0,0,.5)",
-          fontWeight:"bolder",
-          border:'double #000',
-          WebkitBoxShadow:'0 0 5px #000',
-          boxShadow:'0 0 5px #000',
-        }}
-        >Send</Button>
+      <Button style={formBtn}>Send</Button>
         </Form>
         {/*FORM*/}
         </ModalBody>
