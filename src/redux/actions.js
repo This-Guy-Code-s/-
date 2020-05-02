@@ -1,6 +1,8 @@
 import axios from 'axios'
 export const MOVING = 'MOVING'
 export const MOVED = 'MOVED'
+export const BTN = 'BTN'
+export const BTNN = 'BTNN'
 export const ERR = 'ERR'
 
 
@@ -22,3 +24,15 @@ export const getMyWork = () => dispatch => {
 }
 
 
+
+export const changeBtnLabel = label => dispatch =>{
+
+			return dispatch({type:BTN,payload:label})
+}
+
+
+
+export const changeBtnLabel_ = label => dispatch =>{
+
+			return dispatch({type:BTNN,payload:label})
+}

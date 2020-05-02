@@ -1,7 +1,8 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import axios from 'axios'
 import React  from 'react';
-import {Form,Toast, ToastBody, ToastHeader,FormGroup,Input,Label, Button,Spinner } from 'reactstrap';
+import {Form,Toast, ToastBody, ToastHeader,FormGroup,Input,Label, Button,Spinner , FormText 
+} from 'reactstrap';
 
 import {
   Err,
@@ -13,13 +14,17 @@ import {
   formBoxh,
   formio
 } from '../../util/contactStyles'
-
+import {connect} from 'react-redux'
+import {changeBtnLabel} from '../../redux/actions'
 
 
 class Contact extends React.Component {
  constructor(props){
   super(props)
   this.state={
+    valOrNah1:'',
+    valOrNah2:'',
+    valOrNah3:'',
     show:false,
     msg:{
       name:'',
@@ -34,11 +39,31 @@ class Contact extends React.Component {
   this.send = this.send.bind(this)
  }
 
- toggle(){
-  this.setState({
-    show:!this.state.show
-  })
+
+
+
+ componentDidUpdate(){
+    this.state.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');
  }
+
+
+
+
+ async toggle(){
+          try{
+         this.setState({
+        show:!this.state.show
+           })
+
+          }
+        catch(err){
+          throw new Error(err)
+        }
+        finally{
+            this.state.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');
+    }
+        }
+ 
 
  send(e){
     e.preventDefault()
@@ -52,6 +77,9 @@ class Contact extends React.Component {
 
       this.setState({
         errMsg:"We Cant Send This, please check for errors",
+        valOrNah1:"is-invalid",
+        valOrNah2:"is-invalid",
+        valOrNah3:"is-invalid",
         passMsg:""
       })
 
@@ -62,12 +90,21 @@ class Contact extends React.Component {
     .then(res=>{
         this.setState({
         passMsg:`Thank You ${this.state.name} Your Message Was Sent.`,
+        valOrNah1:"is-valid",
+        valOrNah2:"is-valid",
+        valOrNah3:"is-valid",
         errMsg:""
       })
 
      setTimeout(()=>{
     this.toggle()
-     this.setState({passMsg:"",errMsg:""})
+     this.setState({
+      passMsg:"",
+      errMsg:"",
+      valOrNah1:"",
+      valOrNah2:"",
+      valOrNah3:"",
+    })
    },2000)
 
     }).catch(err=>{
@@ -96,26 +133,32 @@ return (
      <Spinner type="grow" color="primary" />
       <small><a href='tel:2402737952'><i className="fas fa-phone phone_"></i> Call Instead? </a></small>
       </span>
-      <Err>{this.state.errMsg}</Err>
-        <Pass>{this.state.passMsg}</Pass>
+      
       </ToastHeader>
       <ToastBody style={formBoxh}>
          {/*FORM*/}
-        <Form style={formio} onSubmit={this.send}>
-       <FormGroup>
+
+
+          <Form style={formio}  onSubmit={this.send}>
+     <FormGroup>
         <Label htmlFor="name" style={{WebkitTextFillColor:'#fff',fontWeight:'bolderd'}}>Name:</Label>
-        <Input type="text" name="name" id="name" value={this.state.msg.name} onChange={(e)=>{this.setState({msg:{...this.state.msg,name:e.target.value}})}} placeholder="Name..."  style={{WebkitTextFillColor:'#000'}} required/>
+        <Input className={this.state.valOrNah1} type="text" name="name" id="name" value={this.state.msg.name} onChange={(e)=>{this.setState({msg:{...this.state.msg,name:e.target.value}})}} placeholder="Name..."  style={{WebkitTextFillColor:'#000'}} required/>
+        <FormText>What name can I refer to you as.</FormText>
       </FormGroup>
-       <FormGroup>
+      <FormGroup>
         <Label htmlFor="email" style={{WebkitTextFillColor:'#fff',fontWeight:'bolderd'}}>Email:</Label>
-        <Input type="email" name="email" id="email" value={this.state.msg.email} onChange={(e)=>{this.setState({msg:{...this.state.msg,email:e.target.value}})}} placeholder="Email..."  style={{WebkitTextFillColor:'#000'}} required/>
+        <Input className={this.state.valOrNah2}  type="email" name="email" id="email" value={this.state.msg.email} onChange={(e)=>{this.setState({msg:{...this.state.msg,email:e.target.value}})}} placeholder="Email..." style={{WebkitTextFillColor:'#000'}} required/>
+        <FormText>You will not recieve any spam or emails period.</FormText>
       </FormGroup>
-       <FormGroup>
-        <Label htmlFor="message:" style={{WebkitTextFillColor:'#fff',fontWeight:'bolderd'}}>Message</Label>
-        <Input type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..."  style={{WebkitTextFillColor:'#000'}} required/>
+      <FormGroup>
+        <Label htmlFor="message:" style={{WebkitTextFillColor:'#fff',fontWeight:'bolderd'}}>Message:</Label>
+        <Input className={this.state.valOrNah3} type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..." style={{WebkitTextFillColor:'#000'}} required/>
+        <FormText><Err>{this.state.errMsg}</Err>
+        <Pass>{this.state.passMsg}</Pass></FormText>
       </FormGroup>
       <Button style={conBtn}>Send</Button>
-        </Form>
+    </Form>
+
         {/*FORM*/}
         </ToastBody>
       </Toast>
@@ -127,4 +170,13 @@ return (
   
 }
 
-export default Contact;
+const mapStateToProps = state =>{
+return {
+...state
+}
+}
+
+export default connect(
+mapStateToProps,
+{changeBtnLabel}
+)(Contact)

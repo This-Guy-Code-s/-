@@ -3,7 +3,8 @@ import Intro from './home/Intro.js'
 import Skillz from './home/Skillz.js'
 import Contact from './home/Contact.js'
 import Services from './home/Services.js'
-
+import {connect} from 'react-redux'
+import {changeBtnLabel} from '../redux/actions'
 
 
 const pitchStyle={
@@ -28,12 +29,12 @@ class Home extends React.Component{
 			 	  bring your audience into the world they want to be in.
 			 	   Creating content and good vibes can never get old to me.
 			 	     From custom websites to updates to your websites,
-			 	 I can help. Contact Me.`
+			 	 I can help. Contact Me.`,
+			
 		}
 	}
 
-
-
+		
 
 	render(){
 		return(
@@ -45,8 +46,8 @@ class Home extends React.Component{
 			 	<p style={{fontSize:'1.6rem'}}>
 			 	{this.state.pitch}
 			 	 </p>
-			 <Contact buttonLabel='Contact Me'/>
-			 <Services buttonLabel='My Services'/>
+			 <Contact buttonLabel={this.props.btnL}/>
+			 <Services buttonLabel={this.props.btnLL} />
 			 </div>
 			</div>
 
@@ -57,4 +58,14 @@ class Home extends React.Component{
 
 
 
-export default Home
+
+const mapStateToProps = state =>{
+return {
+...state
+}
+}
+
+export default connect(
+mapStateToProps,
+{changeBtnLabel}
+)(Home)

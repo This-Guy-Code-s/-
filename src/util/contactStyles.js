@@ -52,7 +52,9 @@ export const pulse = {
      WebkitTextFillColor:'#fff',
      color:'#fff',
      border:'double #333 ',
-     padding:'10px'
+     padding:'10px',
+     width:"100%",
+     flex:"1"
   }
 
   export const middle = {

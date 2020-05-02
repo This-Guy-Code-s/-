@@ -76,7 +76,7 @@ class Header extends Component {
 
                if(wrk.action==='PLAY'){
                     return (
-                     <DropdownItem style={dropdowStyles}href={wrk.link} key={wrk.id}>
+                     <DropdownItem style={dropdowStyles} href={wrk.link} key={wrk.id}>
                 {wrk.title}
                 </DropdownItem>
 

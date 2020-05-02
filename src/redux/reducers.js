@@ -1,10 +1,15 @@
-import {MOVING,MOVED,ERR} from './actions'
+import {MOVING,MOVED,BTN,BTNN,ERR} from './actions'
 
 
 
 const initialState = {
 	work:'',
-	error:''
+	error:'',
+
+
+	//contact btn name toggle
+	btnL:'Contact Me',
+	btnLL:'My Services'
 }
 
 
@@ -22,11 +27,25 @@ export const reducer =  (state = initialState, action) =>{
 				work:action.payload,
 			}
 
+			case BTN:
+			return {
+				...state,
+				btnL:action.payload,
+			}
+
+			case BTNN:
+			return {
+				...state,
+				btnLL:action.payload,
+			}
+
 			case ERR:
 			return {
 				...state,
 				error:action.payload,
 			}
+
+
 
 			default:
 			return state

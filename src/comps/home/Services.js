@@ -2,6 +2,8 @@
 
 import React from 'react';
 import {  Toast, ToastBody, ToastHeader,Alert,Badge } from 'reactstrap';
+import {connect} from 'react-redux'
+import {changeBtnLabel_} from '../../redux/actions'
 
 
 
@@ -41,15 +43,34 @@ class Services extends React.Component{
 
     }
 
+       componentDidUpdate(){
+    this.state.show?this.props.changeBtnLabel_('Hide..'):this.props.changeBtnLabel_('My Services');
+ }
 
 
-   toggle(){
 
-    this.setState({
-      show:!this.state.show
-    })
 
-   }
+
+ async toggle(){
+          try{
+         this.setState({
+        show:!this.state.show
+           })
+
+          }
+        catch(err){
+          throw new Error(err)
+        }
+        finally{
+            this.state.show?this.props.changeBtnLabel_('Hide..'):this.props.changeBtnLabel_('My Services');
+    }
+        }
+ 
+
+
+
+
+   
     render(){
   return (
     <div style={middle}>
@@ -209,4 +230,13 @@ class Services extends React.Component{
   }
 }
 
-export default Services;
+const mapStateToProps = state =>{
+return {
+...state
+}
+}
+
+export default connect(
+mapStateToProps,
+{changeBtnLabel_}
+)(Services)
