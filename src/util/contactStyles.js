@@ -38,7 +38,6 @@ export const pulse = {
      WebkitTextFillColor:'#fff',
      color:'#fff',
      border:'double #333 ',
-     flex:"1",
      padding:"0px 20px",
      marginLeft:"5%"
   }
