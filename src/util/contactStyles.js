@@ -16,6 +16,7 @@ color:green;
 export const pulse = {
 WebkitTextFillColor:"#000",
 fontWeight:"bolder",
+fontSize:"1.4rem"
 }
 
 
@@ -29,6 +30,8 @@ alignItems:"center",
 
 
 export let formBoxh ={
+	margin:"0",
+	padding:"0",
 backgroundColor:'rgba(0,0,0,0)',
 minWidth:"500px",
 maxWidth:"700px",
@@ -38,9 +41,9 @@ border:'double #333 ',
 borderTop:'none',
 borderRight:'none',
 display:"flex",
-flexDirection:"column",
+flexDirection:'column',
 justifyContent:"center",
-alignItems:"flex-start",
+alignItems:"flex-start"
 }
 
 
@@ -49,7 +52,7 @@ backgroundColor:'rgba(0,0,0,0)',
 WebkitTextFillColor:'#fff',
 color:'#fff',
 padding:"0px 20px",
-marginLeft:"5%"
+width:"350px"
 }
 
 export const formToats = {
