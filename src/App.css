@@ -25,23 +25,47 @@ html{
 }
 
 
+  .serviceHolder{
+    min-width:100%;
+    max-width:100%;
+    width:100%;
+     display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:30px;
+    -webkit-text-fill-color:#000;
+  }
 
-
-
-.dark-mode{
-  background-color:#000;
-  -webkit-text-fill-color:#fff;
-  color:#fff;
+.serviceToatsHolder{
+   min-width:100%;
+    max-width:100%;
+    width:100%;
+     display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:30px;
+    -webkit-text-fill-color:#000;
 }
 
-
-.light-mode{
-  background-color:#fff;
-  -webkit-text-fill-color:#000;
-  color:#000;
+.servicesFlow{
+  display:flex;
+  flex-direction:column;
+   justify-content:center;
+    align-items:center;
+  flex:1;
+  overflow-x:auto;
 }
 
+.toatsBlock{
+  height:300px;
+  width:280px;
+}
 
+.toatsText{
+  font-size:1rem;
+}
 
 .skillzAnime{
    -webkit-transform: translate3d(20px, 20px, 0px);
@@ -99,3 +123,92 @@ html{
         transform: translate3d(0px, 40px, 0px);
     }
 }
+
+
+
+@media (max-width:500px){
+.servicesFlow{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+    align-items:center;
+
+}
+
+
+
+
+
+}
+
+
+
+@media (max-width:900px) and (max-height:500px) and (min-width:500px){
+  .servicesFlow{
+  display:flex;
+  flex-direction:column;
+   justify-content:center;
+    align-items:center;
+
+}
+
+
+
+
+
+}
+
+
+
+@media (max-width:800px) and (max-height:1380px) and (min-width:700px) and (min-height:1000px){
+  .servicesFlow{
+  display:flex;
+  flex-direction:column;
+   justify-content:center;
+    align-items:center;
+
+}
+
+}
+
+
+
+
+@media (max-width:1380px) and (max-height:900px) and (min-width:700px){
+  .servicesFlow{
+  display:flex;
+  flex-direction:row;
+   justify-content:center;
+    align-items:flex-start;
+
+}
+
+
+.toatsBlock{
+  flex:1;
+  height:300px;
+  width:100%;
+
+}
+
+.toatsText{
+  font-size:.7rem;
+  padding:5px 0px;
+}
+
+
+}
+
+
+
+@media (min-width:1380px){
+  .servicesFlow{
+  display:flex;
+  flex-direction:row;
+   justify-content:center;
+    align-items:center;
+
+}
+
+}
+

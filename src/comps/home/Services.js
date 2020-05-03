@@ -18,17 +18,6 @@ import {changeBtnLabel_} from '../../redux/actions'
   }
 
 
-  const middle = {
-           display:"flex",
-          flexDirection:"column",
-          justifyContent:"center",
-          alignItems:"center",
-          marginTop:'30px',
-          WebkitTextFillColor:"#000"
-  }
-
-
-
 
 
 class Services extends React.Component{
@@ -70,10 +59,10 @@ class Services extends React.Component{
 
 
 
-   
+
     render(){
   return (
-    <div style={middle}>
+    <div className="serviceHolder">
       <br />
        <Badge onClick={this.toggle} style={conBtn}>
     
@@ -82,19 +71,19 @@ class Services extends React.Component{
      
       </Badge>
       <br />
-      <Toast isOpen={this.state.show}>
+      <Toast isOpen={this.state.show} className="serviceToatsHolder">
         <ToastHeader toggle={this.toggle}>Services: Web Apps</ToastHeader>
         <ToastBody>
 
-          <Alert color='secondary'>
-          <i className="far fa-star">Basic<Badge color='success'>$80-$150</Badge></i>
+          <Alert color='secondary' className="servicesFlow">
+          <i className="far fa-star">Basic<br /><Badge color='success'>$80-$150</Badge></i>
            
            <div className="p-3 my-2 rounded bg-docs-transparent-grid">
-        <Toast>
+        <Toast className="toatsBlock">
           <ToastHeader>
             Show Case:
           </ToastHeader>
-          <ToastBody>
+          <ToastBody className="toatsText">
            Digital projects, Dishes you've prepared, Articles, Gallery of pictures, YouTube videos, and/or Social media content.
           </ToastBody>
         </Toast>
@@ -102,11 +91,11 @@ class Services extends React.Component{
       
 
         <div className="p-3 my-2 rounded bg-docs-transparent-grid">
-        <Toast>
+        <Toast className="toatsBlock">
           <ToastHeader>
             Communication:
           </ToastHeader>
-          <ToastBody>
+          <ToastBody className="toatsText">
             Visitors will be able to contact you through a business number and/or business email.
             Social Media links can be added if requested.Visitors can also email you directly from your website.
           </ToastBody>
@@ -116,11 +105,11 @@ class Services extends React.Component{
 
 
        <div className="p-3 my-2 rounded bg-docs-transparent-grid">
-        <Toast>
+        <Toast className="toatsBlock">
           <ToastHeader>
             Pages: 1
           </ToastHeader>
-          <ToastBody>
+          <ToastBody className="toatsText">
            This service type only consists of 1 page.
           </ToastBody>
         </Toast>
@@ -130,15 +119,15 @@ class Services extends React.Component{
           </Alert>
 
 
-          <Alert color='success'>
-          <i className="fas fa-star-half-alt"> Basic Multi Page<Badge color='success'>$150-$200</Badge></i>
+          <Alert color='success' className="servicesFlow">
+          <i className="fas fa-star-half-alt"> Basic Multi Page<br /><Badge color='success'>$150-$200</Badge></i>
           
            <div className="p-3 my-2 rounded bg-docs-transparent-grid">
-        <Toast>
+        <Toast className="toatsBlock">
           <ToastHeader>
             Show Case:
           </ToastHeader>
-          <ToastBody>
+          <ToastBody className="toatsText">
            Digital projects, Dishes you've prepared, Articles, Gallery of pictures, YouTube videos, and/or Social media content.
           </ToastBody>
         </Toast>
@@ -146,11 +135,11 @@ class Services extends React.Component{
 
 
         <div className="p-3 my-2 rounded bg-docs-transparent-grid">
-        <Toast>
+        <Toast className="toatsBlock">
           <ToastHeader>
             Communication:
           </ToastHeader>
-          <ToastBody>
+          <ToastBody className="toatsText">
            Visitors will be able to contact you through a business number and/or business email.
             Social Media links can be added if requested. Visitors can also email you directly from your website.
            </ToastBody>
@@ -160,11 +149,11 @@ class Services extends React.Component{
 
 
        <div className="p-3 my-2 rounded bg-docs-transparent-grid">
-        <Toast>
+        <Toast className="toatsBlock">
           <ToastHeader>
             Pages: 1-5
           </ToastHeader>
-          <ToastBody>
+          <ToastBody className="toatsText">
             With this service type, you can get up to 5 pages.
             Whether it's an ' About Me' page or Gallery, it's your choice I'll code it.
            </ToastBody>
@@ -175,15 +164,15 @@ class Services extends React.Component{
           </Alert>
 
 
-          <Alert color='danger'>
-          <i className="fas fa-star">Full Web App(DataBase)<Badge color='success'>$300+</Badge></i>
+          <Alert color='danger' className="servicesFlow">
+          <i className="fas fa-star">Full Web App(DataBase)<br /><Badge color='success'>$300+</Badge></i>
            
            <div className="p-3 my-2 rounded bg-docs-transparent-grid">
-        <Toast>
+        <Toast className="toatsBlock">
           <ToastHeader>
             Show Case:
           </ToastHeader>
-          <ToastBody>
+          <ToastBody className="toatsText">
           Digital projects,Dishes you've prepared, Articles, Gallery of pictures, YouTube videos , and/or Social media content.
           </ToastBody>
         </Toast>
@@ -191,15 +180,14 @@ class Services extends React.Component{
 
 
         <div className="p-3 my-2 rounded bg-docs-transparent-grid">
-        <Toast>
+        <Toast className="toatsBlock">
           <ToastHeader>
             Communication:
           </ToastHeader>
-          <ToastBody>
+          <ToastBody className="toatsText">
             
-            See Visitors Comments and Comment back. Join Chatrooms Or 1 on 1 messaging.
-            Have a private admin version of your web app to view all content visitors send you. Visitors will be able to contact you through a business number and/or business email.
-            Social Media links can be added if requested. Visitors can also email you directly from your website.
+             Visitors can leave Comments, contact you through a business number and/or email you directly from your website, etc.
+            You can have a private admin version of your web app to view/update all content.If you have an Ecommerce, you will recieve a copy of every transaction.
           </ToastBody>
         </Toast>
       </div>
@@ -207,13 +195,13 @@ class Services extends React.Component{
 
 
        <div className="p-3 my-2 rounded bg-docs-transparent-grid">
-        <Toast>
+        <Toast className="toatsBlock">
           <ToastHeader>
             Pages: 1-5
           </ToastHeader>
-          <ToastBody>
+          <ToastBody className="toatsText">
          With this service type, you can get up to 5 pages.
-            Whether it's an ' About Me' page, Gallery, Chatroom, Support Page, etc. The choice is yours I'll code it.
+            Whether it's an ' About Me' page, Gallery, Chatroom, Support Page, Ecommerce etc. The choice is yours I'll code it.
           
           </ToastBody>
         </Toast>

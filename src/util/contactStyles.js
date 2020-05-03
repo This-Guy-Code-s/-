@@ -20,16 +20,29 @@ export const pulse = {
   }
 
 
-
-   export const formBoxh = {
+        export let formBoxh ={
     backgroundColor:'rgba(0,0,0,.9)',
-    flex:'1',
+    minWidth:"500px",
+    maxWidth:"700px",
     WebkitTextFillColor:'#fff',
     color:'#fff',
-    border:'none'
-
-    
+    border:'none',
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"center",
+    alignItems:"flex-start",
   }
+             
+
+     export const formio = {
+     WebkitTextFillColor:'#fff',
+     color:'#fff',
+     border:'double #333 ',
+     flex:"1",
+     padding:"0px 20px",
+     marginLeft:"5%"
+  }
+
 
   export const conBtn = {
     backgroundColor:"rgba(0,0,0,.5)",
@@ -47,15 +60,6 @@ export const pulse = {
   }
 
 
-
-     export const formio = {
-     WebkitTextFillColor:'#fff',
-     color:'#fff',
-     border:'double #333 ',
-     padding:'10px',
-     width:"100%",
-     flex:"1"
-  }
 
   export const middle = {
           display:"flex",
