@@ -71,11 +71,11 @@ class Services extends React.Component{
      
       </Badge>
       <br />
-      <Toast isOpen={this.state.show} className="serviceToatsHolder">
-        <ToastHeader toggle={this.toggle}>Services: Web Apps</ToastHeader>
+      <Toast isOpen={this.state.show} className="serviceToatsHolder" style={{backgroundColor:"rgba(0,0,0,0)"}}>
+        <ToastHeader toggle={this.toggle} style={{backgroundColor:"rgba(250,250,250,.5)"}}>Services: Web Apps</ToastHeader>
         <ToastBody>
 
-          <Alert color='secondary' className="servicesFlow">
+          <Alert className="servicesFlow" style={{backgroundColor:"rgba(250,250,250,.3)"}}>
           <i className="far fa-star">Basic<br /><Badge color='success'>$80-$150</Badge></i>
            
            <div className="p-3 my-2 rounded bg-docs-transparent-grid">
@@ -84,7 +84,7 @@ class Services extends React.Component{
             Show Case:
           </ToastHeader>
           <ToastBody className="toatsText">
-           Digital projects, Dishes you've prepared, Articles, Gallery of pictures, YouTube videos, and/or Social media content.
+          Display your meals you've prepared, Art, Music, Videos, Articles, pictures, and/or Social media content,etc.
           </ToastBody>
         </Toast>
       </div>
@@ -119,7 +119,7 @@ class Services extends React.Component{
           </Alert>
 
 
-          <Alert color='success' className="servicesFlow">
+          <Alert className="servicesFlow" style={{backgroundColor:"rgba(144,238,144,.3)"}}>
           <i className="fas fa-star-half-alt"> Basic Multi Page<br /><Badge color='success'>$150-$200</Badge></i>
           
            <div className="p-3 my-2 rounded bg-docs-transparent-grid">
@@ -128,7 +128,7 @@ class Services extends React.Component{
             Show Case:
           </ToastHeader>
           <ToastBody className="toatsText">
-           Digital projects, Dishes you've prepared, Articles, Gallery of pictures, YouTube videos, and/or Social media content.
+           Display your meals you've prepared, Art, Music, Videos, Articles, pictures, and/or Social media content,etc.
           </ToastBody>
         </Toast>
       </div>
@@ -164,7 +164,7 @@ class Services extends React.Component{
           </Alert>
 
 
-          <Alert color='danger' className="servicesFlow">
+          <Alert className="servicesFlow"  style={{backgroundColor:"rgba(0,0,128,.3)"}}>
           <i className="fas fa-star">Full Web App(DataBase)<br /><Badge color='success'>$300+</Badge></i>
            
            <div className="p-3 my-2 rounded bg-docs-transparent-grid">
@@ -173,7 +173,7 @@ class Services extends React.Component{
             Show Case:
           </ToastHeader>
           <ToastBody className="toatsText">
-          Digital projects,Dishes you've prepared, Articles, Gallery of pictures, YouTube videos , and/or Social media content.
+          Display your meals you've prepared, Art, Music, Videos, Articles, pictures, Items to sell to your users, relevant ads,  and/or Social media content.
           </ToastBody>
         </Toast>
       </div>
@@ -185,8 +185,7 @@ class Services extends React.Component{
             Communication:
           </ToastHeader>
           <ToastBody className="toatsText">
-            
-             Visitors can leave Comments, contact you through a business number and/or email you directly from your website, etc.
+             Visitors can leave Comments, contact you via business number and/or email you directly from your website, etc.
             You can have a private admin version of your web app to view/update all content.If you have an Ecommerce, you will recieve a copy of every transaction.
           </ToastBody>
         </Toast>
@@ -201,7 +200,7 @@ class Services extends React.Component{
           </ToastHeader>
           <ToastBody className="toatsText">
          With this service type, you can get up to 5 pages.
-            Whether it's an ' About Me' page, Gallery, Chatroom, Support Page, Ecommerce etc. The choice is yours I'll code it.
+            Whether it's an ' About Me' page, Gallery, Chatroom, Support Page, Ecommerce(Store) etc. The choice is yours I'll code it.
           
           </ToastBody>
         </Toast>
@@ -209,7 +208,7 @@ class Services extends React.Component{
          
 
           </Alert>
-          <small>extra fees may apply for extra content(contact for more detail.)</small> 
+          <small>extra fees may apply for extra content(contact for more detail).</small> 
         
         </ToastBody>
       </Toast>
