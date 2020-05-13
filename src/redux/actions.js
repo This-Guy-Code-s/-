@@ -7,12 +7,10 @@ export const ERR = 'ERR'
 
 
 
-
-
 export const getMyWork = () => dispatch => {
 //get my work that ill be displaying on my page
 	dispatch({type:MOVING})
-	axios.get('https://thisguycodez.herokuapp.com/api/myWork')
+	axios.get(process.env.REACT_APP_mywork)
 	.then(res=>{
 	dispatch({type:MOVED,payload:res.data.work})
 

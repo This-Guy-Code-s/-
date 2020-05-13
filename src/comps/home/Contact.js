@@ -35,7 +35,6 @@ class Contact extends React.Component {
 
  send(e){
     e.preventDefault()
-    //https://thisguycodez.herokuapp.com/api/mailer
 
     !name_(this.state.msg.name)?this.setState({//check name
         errMsg:"We Cant Send This, please check for errors",
@@ -58,7 +57,7 @@ class Contact extends React.Component {
 
     setTimeout(()=>{//take a sec to let state settle then check vals
        if(this.state.valOrNah1 === 'is-valid' && this.state.valOrNah2 === 'is-valid' && this.state.valOrNah3 === 'is-valid'){
-        axios.post('https://thisguycodez.herokuapp.com/api/admin/inbox'
+        axios.post(process.env.REACT_APP_sendmail
       ,this.state.msg)
     .then(res=>{
         this.setState({
