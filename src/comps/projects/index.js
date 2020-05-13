@@ -39,9 +39,9 @@ this.props.getMyWork()
 
 actionStyle(act){
 if(act==='PLAY'){
-return {WebkitTextFillColor:'red'}
+return {WebkitTextFillColor:'#fc0303'}
 }else{
-return {WebkitTextFillColor:'blue'}
+return {WebkitTextFillColor:'#03fc13'}
 }
 }
 render(){
@@ -64,6 +64,7 @@ style={cardStylez}
 >
 <CardBody>
 <CardTitle>{post.title}</CardTitle>
+<CardTitle style={{WebkitTextFillColor:"#fc5203"}}><a href={post.github}><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a></CardTitle>
 </CardBody>
 <CardImg width="100%" src={post.image} alt={post.alt} />
 <CardBody>

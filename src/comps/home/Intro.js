@@ -3,7 +3,6 @@ import {Card} from 'reactstrap'
 import {
 	Block,
 	Row,
-	me,
 	introCard
 } from '../../util/introStyles'
 

@@ -6,11 +6,6 @@ display:'flex',
 gridGap:'3px'
 }
 
-export const brand_this = {
-WebkitTextFillColor:'#961909',
-color:'#961909',
-  
-}
 
 export const guyStyles = {
 display:'flex',
@@ -27,14 +22,6 @@ color:'#fff',
 
 }
 
-
-
-export const codezStyles = {
-display:'flex',
-WebkitTextFillColor:'#916952',
-color:'#4df7ff',
-
-}
 
 export const dropdowStyles = {
 WebkitTextFillColor:'#fff',

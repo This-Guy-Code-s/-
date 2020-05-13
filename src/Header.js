@@ -14,10 +14,8 @@ import {getMyWork} from './redux/actions'
 import {Link} from 'react-router-dom'
 
 import {brand,
- brand_this,
  parenthStyles,
   guyStyles,
-  codezStyles,
   dropdowStyles,
   me
 } from './util/headerStyles'
