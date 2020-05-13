@@ -22,7 +22,7 @@ class Intro extends React.Component{
 		</figure>
 		<Card style={introCard}>
 		<h2 className="alt">A Full-Stack Web Developer</h2>
-		<p style={{fontSize:'1.5rem'}}>Hello World, Im a Full-Stack Web App Developer and also studying at<a href="http://LambdaSchool.com">LambdaSchool</a>.I help start-ups, small businesses, entrepreneur's, and agencies get better business with good quality websites and satisfying user experience.</p>
+		<p style={{fontSize:'1.5rem'}}>Hello World, Im a Full-Stack Web App Developer and also studying at <a href="http://LambdaSchool.com">LambdaSchool</a>. I help start-ups, small businesses, entrepreneur's, and agencies get better business with good quality websites and satisfying user experience.</p>
 		</Card>
 	 	</Row>
 

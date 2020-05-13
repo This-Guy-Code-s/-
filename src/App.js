@@ -47,7 +47,7 @@ class App extends Component {
     
 
      `
-        }else{
+        }else{ 
 
        document.querySelector('.App')
       .style=`

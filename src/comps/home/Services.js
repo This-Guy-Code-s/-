@@ -10,11 +10,13 @@ import {changeBtnLabel_} from '../../redux/actions'
 
   const conBtn = {
     backgroundColor:"rgba(0,0,0,0)",
-    fontSize:'1.8rem',
+    fontSize:'1.9rem',
     WebkitTextFillColor:'#4df7ff',
     color:'#4df7ff',
-    textShadow:'0 0 5px #5539f3',
-    cursor:'pointer'
+    textShadow:'0 0 10px #000',
+    WebkitTextStroke:'.7px #000',
+    cursor:'pointer',
+    fontWeight:'bolder'
   }
 
 
@@ -186,7 +188,7 @@ class Services extends React.Component{
           </ToastHeader>
           <ToastBody className="toatsText">
              Visitors can leave Comments, contact you via business number and/or email you directly from your website, etc.
-            You can have a private admin version of your web app to view/update all content.If you have an Ecommerce, you will recieve a copy of every transaction.
+            You can have a private admin version of your web app to view/update all content and also check mail.If you have an Ecommerce, you will recieve a copy of every transaction.
           </ToastBody>
         </Toast>
       </div>
