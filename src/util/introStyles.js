@@ -29,7 +29,7 @@ grid-gap:10px;
 
 
 
-
+ 
 
 @media screen and (max-width:500px){
 -webkit-flex-direction:column;
@@ -53,13 +53,6 @@ flex-direction:column;
 
 `
 
-export const me = {
-	WebkitBorderRadius:'100%',
-	borderRadius:'100%',
-	border:'double 3px #240090',
-	WebkitBoxShadow:'0 0 10px #4df7ff',
-	boxShadow:'0 0 10px #4df7ff'
-}
 
 export const introCard = {
 	backgroundColor:'rgba(0,0,0,.5)',

@@ -3,7 +3,7 @@
 
 export const brand = {
 display:'flex',
-
+gridGap:'3px'
 }
 
 export const brand_this = {
@@ -41,3 +41,12 @@ WebkitTextFillColor:'#fff',
 color:'#fff',
 backgroundColor:'rgba(0,0,0,.5)',
 } 
+
+
+export const me = {
+	WebkitBorderRadius:'100%',
+	borderRadius:'100%',
+	border:'double 3px #240090',
+	WebkitBoxShadow:'0 0 10px #4df7ff',
+	boxShadow:'0 0 10px #4df7ff'
+}

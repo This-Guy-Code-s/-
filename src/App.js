@@ -75,12 +75,12 @@ class App extends Component {
     return (
       <Provider store={store}>
       <div className="App">
-      <Header logo={logo}/>
+      <Header logo={logo} me={[me]}/>
     	<Route exact path='/-/' render={()=>{
 
     		return(
       <Container>
-        <Home imgz={[me]} />
+        <Home />
 
 
       

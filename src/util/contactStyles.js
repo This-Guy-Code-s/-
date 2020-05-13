@@ -33,7 +33,7 @@ export let formBoxh ={
 	margin:"0",
 	padding:"0",
 backgroundColor:'rgba(0,0,0,0)',
-minWidth:"500px",
+minWidth:"450px",
 maxWidth:"700px",
 WebkitTextFillColor:'#fff',
 color:'#fff',
@@ -52,7 +52,7 @@ backgroundColor:'rgba(0,0,0,0)',
 WebkitTextFillColor:'#fff',
 color:'#fff',
 padding:"0px 20px",
-width:"350px"
+width:"340px"
 }
 
 export const formToats = {

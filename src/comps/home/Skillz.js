@@ -150,7 +150,7 @@ class Skillz extends React.Component{
 			<figure>
 		<i className="fas fa-database" ></i>
 		<figcaption>
-		mySql
+		postgresql
 		</figcaption>
 		</figure>
 		</SkillzCard>

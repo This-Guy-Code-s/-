@@ -18,7 +18,8 @@ import {brand,
  parenthStyles,
   guyStyles,
   codezStyles,
-  dropdowStyles
+  dropdowStyles,
+  me
 } from './util/headerStyles'
 
 
@@ -58,7 +59,9 @@ class Header extends Component {
         backgroundColor:'rgba(0,0,0,.5)',
       }}
       >
-       <Link to='/-/' className='navbar-brand'><span style={brand} title='return true;'><b style={brand_this}>This.</b><b style={guyStyles}>Guy</b><b style={parenthStyles}>(</b><b style={codezStyles}>Codez</b><b style={parenthStyles}>)</b></span></Link>
+       <Link to='/-/' className='navbar-brand'><span style={brand} title='return true;'><figure>
+    <img src={this.props.me} style={me} alt='me' width='50' height='50'/>
+    </figure><b style={guyStyles}>Guyton</b> {"  "} <b style={parenthStyles}>Oriji</b></span></Link>
         <NavbarToggler onClick={this.toggle} style={{WebkitTextFillColor:'azure',color:'azure'}}>
         <i className="fas fa-ellipsis-v"></i>
         </NavbarToggler>

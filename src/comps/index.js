@@ -40,7 +40,7 @@ class Home extends React.Component{
 		return(
 
 			<div>
-			 <Intro me={this.props.imgz[0]} />
+			 <Intro/>
 			 <Skillz/>
 			 <div style={pitchStyle}>
 			 	<p style={{fontSize:'1.6rem'}}>

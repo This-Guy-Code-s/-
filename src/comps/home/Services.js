@@ -78,7 +78,7 @@ class Services extends React.Component{
         <ToastBody>
 
           <Alert className="servicesFlow" style={{backgroundColor:"rgba(250,250,250,.3)"}}>
-          <i className="far fa-star">Basic<br /><Badge color='success'>$80-$150</Badge></i>
+          <i className="far fa-star"><b>Basic</b><br /><Badge color='success'>$80-$150</Badge></i>
            
            <div className="p-3 my-2 rounded bg-docs-transparent-grid">
         <Toast className="toatsBlock">
