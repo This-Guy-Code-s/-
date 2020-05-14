@@ -10,7 +10,6 @@ import styled from 'styled-components'
 
 
 const Row = styled.div`
-flex:1;
 display:flex;
 flex-direction:column;
 grid-gap:50px;
@@ -33,7 +32,7 @@ constructor(){
 super()
 this.actionStyle = this.actionStyle.bind(this)
 }
-componentDidMount(prevProps){
+componentWillMount(prevProps){
 this.props.getMyWork()
 }
 

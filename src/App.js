@@ -12,27 +12,15 @@ import Header from './Header'
 import Home from './comps/'
 import Projects from './comps/projects/'
 
-
-import {createStore,applyMiddleware} from 'redux'
-import thunk from 'redux-thunk'
-import {reducer} from './redux/reducers'
-import {Provider} from 'react-redux'
-
-
-const store = createStore(reducer,applyMiddleware(thunk))
-
-
+import {connect} from 'react-redux'
+import {getMyWork} from './redux/actions'
    
 
 class App extends Component {
-  
- 
-
-
-
 
     componentDidMount(){
      
+this.props.getMyWork()
 
 
         if(window.innerWidth===500){
@@ -73,7 +61,6 @@ class App extends Component {
 
 
     return (
-      <Provider store={store}>
       <div className="App">
       <Header logo={logo} me={[me]}/>
     	<Route exact path='/-/' render={()=>{
@@ -88,7 +75,7 @@ class App extends Component {
     			)
     	}}/>
 
-      <Route exact path='/-/projects' render={()=>{
+      <Route exact path='/-/Projects' render={()=>{
 
         return (
 
@@ -99,9 +86,20 @@ class App extends Component {
       }} />
        </div>
      
-      </Provider>
     );
   }
 }
 
-export default App;
+
+
+const mapStateToProps = state =>{
+return {
+...state
+}
+}
+
+
+export default connect(
+mapStateToProps,
+{getMyWork}
+)(App)

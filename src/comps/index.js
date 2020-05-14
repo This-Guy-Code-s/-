@@ -6,7 +6,6 @@ import Services from './home/Services.js'
 import {connect} from 'react-redux'
 import {changeBtnLabel} from '../redux/actions'
 
-
 const pitchStyle={
 paddingTop:'100px',
 WebkitHeight:'100%',
@@ -15,7 +14,6 @@ WebkitTextFillColor:'azure',
 color:'azure',
 fontWeight:'bolder'
 			 	}
-
 
 class Home extends React.Component{
 	constructor(props){
@@ -34,6 +32,7 @@ class Home extends React.Component{
 		}
 	}
 
+
 		
 
 	render(){
@@ -47,7 +46,7 @@ class Home extends React.Component{
 			 	{this.state.pitch}
 			 	 </p>
 			 <Contact buttonLabel={this.props.btnL}/>
-			 <Services buttonLabel={this.props.btnLL} />
+		    <Services buttonLabel={this.props.btnLL} />
 			 </div>
 			</div>
 

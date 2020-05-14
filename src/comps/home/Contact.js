@@ -12,6 +12,7 @@ class Contact extends React.Component {
  constructor(props){
   super(props)
   this.state={
+    calling:'',
     valOrNah1:'',valOrNah2:'',valOrNah3:'',
     show:false,
     msg:{name:'',email:'',message:''},
@@ -20,10 +21,13 @@ class Contact extends React.Component {
 
   this.toggle = this.toggle.bind(this)
   this.send = this.send.bind(this)
- }
+
+}
+
 
  componentDidUpdate(){
     this.state.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');
+    
  }
 
  async toggle(){
@@ -31,6 +35,7 @@ class Contact extends React.Component {
     catch(err){throw new Error(err) }
        finally{ this.state.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');}
 }
+  
  
 
  send(e){
@@ -91,7 +96,7 @@ return (
       <ToastHeader style={formToatsHeader}>
         <span style={pulse}>
      <Spinner type="grow" color="primary" />
-      <small><a href='tel:2402737952'><i className="fas fa-phone phone_"></i> Call Instead? </a></small>
+      <small><a href='tel:2402737952' ><i className="fas fa-phone phone_"></i> Call Instead? </a>2402737952</small>
       </span>
       
       </ToastHeader>

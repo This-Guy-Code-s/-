@@ -7,8 +7,16 @@ import {
 } from '../../util/introStyles'
 
 
+
+
 class Intro extends React.Component{
-	
+		constructor(props){
+			super(props)
+			this.state={
+			tooltipOpen:false,
+			}
+		}
+toggle = () => this.setState({tooltipOpen:!this.state.tooltipOpen});
 
 	render(){
 	return(
@@ -21,7 +29,7 @@ class Intro extends React.Component{
 		<p style={{fontSize:'1.5rem'}}>I am here to help start-ups, small businesses, entrepreneur's, and agencies get better business with good quality websites and satisfying user experience. I believe, to be a sucessful developer one must constantly self improve, have multiple approaches to problems, and stay up to date with technologies.</p>
 		</Card>
 	 	</Row>
-
+	 
       </Block>
 	)
 
