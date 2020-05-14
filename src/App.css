@@ -12,7 +12,8 @@ html{
   width:100%;
   height:100%;
   display:flex;
-
+  overflow:hidden;
+  
 }
 
 .App {
@@ -129,75 +130,6 @@ html{
 
 
 
-
-
-@keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-}
-.waveWrapper {
-    overflow: hidden;
-    flex:1;
-    width:100%;
-    height:30%;
-    bottom: 0;
-    opacity:80%;
-
-}
-.waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 10%;
-    bottom: -1px;
-}
-.bgTop {
-}
-.bgMiddle {
-}
-.bgBottom {
-  z-index:23
-}
-.wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-}
-.waveTop {
-    background-size: 25% 100px;
-}
-.waveAnimation .waveTop {
-  animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
-}
-.waveMiddle {
-    background-size: 25% 120px;
-}
-.waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
-}
-.waveBottom {
-    background-size: 25% 100px;
-}
-.waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
-}
-
-
-
 /*mobile standing up*/
 @media (max-width:500px){
 .servicesFlow{
@@ -209,15 +141,6 @@ html{
 }
 
 
-.waveWrapperInner {
-    width: 150%;
-    height: 20%;
-}
-
-.waveWrapper {
-    height:40%;
-
-}
 }
 
 
@@ -235,14 +158,11 @@ html{
 
 
 .waveWrapperInner {
+    -webkit-height: 40%;
     height: 40%;
 }
 
 
-.waveWrapper {
-    height:70%;
-
-}
 }
 
 
@@ -259,13 +179,12 @@ html{
 
 
 .toatsBlock{
+  -webkit-height:300px;
+  -webkit-min-width:450px;
   height:300px;
   min-width:450px
 }
 
-.waveWrapperInner {
-    height: 20%;
-}
 
  }
 
@@ -297,9 +216,6 @@ html{
   padding:5px 0px;
 }
 
-.waveWrapperInner {
-    height: 15%;
-}
  }
 
 @media (min-width:1380px){
