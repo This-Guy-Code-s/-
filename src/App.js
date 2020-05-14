@@ -123,9 +123,10 @@ const Div = styled.div`
     -webkit-width: 150%;
     -webkit-height: 20%;
     width: 150%;
-    height: 20%;
+    height: 25%;
 }
-
+ 
+ 
 .waveWrapper {
     -webkit-height:40%;
     height:40%;
