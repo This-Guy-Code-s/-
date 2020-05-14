@@ -2,7 +2,6 @@ import React from 'react'
 import Intro from './home/Intro.js'
 import Skillz from './home/Skillz.js'
 import Contact from './home/Contact.js'
-import Services from './home/Services.js'
 import {connect} from 'react-redux'
 import {changeBtnLabel} from '../redux/actions'
 
@@ -46,7 +45,6 @@ class Home extends React.Component{
 			 	{this.state.pitch}
 			 	 </p>
 			 <Contact buttonLabel={this.props.btnL}/>
-		    <Services buttonLabel={this.props.btnLL} />
 			 </div>
 			</div>
 

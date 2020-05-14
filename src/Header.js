@@ -48,6 +48,18 @@ class Header extends Component {
           this.setState({tooltipOpen:!this.state.tooltipOpen})
   }
 
+  componentDidUpdate(){
+     setTimeout(()=>{
+           if(/Projects/.test(this.props.history.location.pathname)){
+      this.setState({currLink:'Home',currPushLink:'/-/'})
+    }else{
+      this.setState({currLink:'Projects',currPushLink:'/-/Projects'})
+
+    }
+    },0)
+  }
+
+
   checkUrl(){
     setTimeout(()=>{
            if(/Projects/.test(this.props.history.location.pathname)){
@@ -91,7 +103,7 @@ class Header extends Component {
         <i class="fab fa-youtube" style={{cursor:'pointer'}} onClick={()=>alert('Youtube Channel comming soon...')}></i>
         <i className="fab fa-github" style={{cursor:'pointer'}} onClick={()=>window.location.href='https://www.github.com/guytonoriji'}></i>
         <i className="fab fa-twitter" style={{cursor:'pointer'}} onClick={()=>window.location.href='https://www.twitter.com/iSpam_The_Code'}></i>
-        <i className="fas fa-minus-circle" title='remove this...' style={xOut} onClick={()=>this.setState({tooltipOpen:!this.state.tooltipOpen})}></i>
+        <i className="fas fa-minus-circle" title='remove this...' style={xOut} onClick={(e)=>{e.target.parentNode.parentNode.remove()}}></i>
       </Tooltip>
     </div>
   {/*ME AS MY OWN LOGO AND SOCIAL LINKS TOO*/}
