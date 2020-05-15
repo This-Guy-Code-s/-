@@ -10,9 +10,7 @@ import { Collapse,
   Tooltip
 } from 'reactstrap'
 import {connect} from 'react-redux'
-import {getMyWork} from './redux/actions'
-import { withRouter } from 'react-router-dom';
-import {Link} from 'react-router-dom'
+import {getMyWork,navBar} from './redux/actions'
 
 import {brand,
  parenthStyles,
@@ -22,10 +20,7 @@ import {brand,
 } from './util/headerStyles'
 
 
-
 const soci={width:'100%',WebkitTextFillColor:'azure',color:'azure',fontWeight:'bolder',display:'flex',gridGap:'3px'}
-
-const xOut={marginLeft:'10px',cursor:'pointer',WebkitTextFillColor:'red'}
 
 
 class Header extends Component {
@@ -35,8 +30,10 @@ class Header extends Component {
     this.state={
       tooltipOpen:false,
       currLink:'Projects',
-      currPushLink:'/-/Projects',
       isOpen:false,
+      mode_:this.props.mode,
+      xOutLight:{marginLeft:'10px',cursor:'pointer',WebkitTextFillColor:'yellow'},
+      xOutDark:{marginLeft:'10px',cursor:'pointer',WebkitTextFillColor:'darkgray'}
 
     }
     this.toggle = this.toggle.bind(this)
@@ -44,66 +41,39 @@ class Header extends Component {
 
 
  componentDidMount(){
-    this.props.getMyWork() 
           this.setState({tooltipOpen:!this.state.tooltipOpen})
   }
-
-  componentDidUpdate(){
-     setTimeout(()=>{
-           if(/Projects/.test(this.props.history.location.pathname)){
-      this.setState({currLink:'Home',currPushLink:'/-/'})
-    }else{
-      this.setState({currLink:'Projects',currPushLink:'/-/Projects'})
-
-    }
-    },0)
-  }
-
-
-  checkUrl(){
-    setTimeout(()=>{
-           if(/Projects/.test(this.props.history.location.pathname)){
-      this.setState({currLink:'Home',currPushLink:'/-/'})
-    }else{
-      this.setState({currLink:'Projects',currPushLink:'/-/Projects'})
-
-    }
-    },0)
- 
-  }
-
 
   toggle(){
     this.setState({
       isOpen:!this.state.isOpen,
-      tooltipOpen:!this.state.tooltipOpen
+      tooltipOpen:!this.state.tooltipOpen,
     })
   }
 
+   async changingMode(){try{this.props.DarkMode()}catch(err){throw new Error(err)}}
+
   render() {
-
-
     return (
        <div>
-      <Navbar  expand="md"  
-      style={{
-        WebkitTextFillColor:'#fff',
-        color:'#fff',
-        backgroundColor:'rgba(0,0,0,.5)',
-      }}
-      >
-
+      <Navbar expand="md" style={{WebkitTextFillColor:'#fff',color:'#fff',backgroundColor:'rgba(0,0,0,.5)',}}>
 
   {/*ME AS MY OWN LOGO AND SOCIAL LINKS TOO*/}
         <div>
-       <Link to='/-/' className='navbar-brand' id="DisabledAutoHideExample"><span style={brand} ><figure>
+       <span className='navbar-brand' id="me"><span style={brand} ><figure>
     <img src={this.props.me} style={me} alt='me' width='50' height='50'/>
-    </figure><b style={guyStyles}>Guyton</b> {"  "} <b style={parenthStyles}>Oriji</b></span></Link>
-      <Tooltip style={soci} placement="bottom" isOpen={this.state.tooltipOpen} autohide={false} target="DisabledAutoHideExample" >
-        <i class="fab fa-youtube" style={{cursor:'pointer'}} onClick={()=>alert('Youtube Channel comming soon...')}></i>
+    </figure><b style={guyStyles}>Guyton</b> {"  "} <b style={parenthStyles}>Oriji</b></span></span>
+      <Tooltip style={soci} placement="bottom" isOpen={this.state.tooltipOpen} autohide={false} target="me" >
+        <i className="fab fa-youtube" style={{cursor:'pointer'}} onClick={()=>alert('Youtube Channel comming soon...')}></i>
         <i className="fab fa-github" style={{cursor:'pointer'}} onClick={()=>window.location.href='https://www.github.com/guytonoriji'}></i>
         <i className="fab fa-twitter" style={{cursor:'pointer'}} onClick={()=>window.location.href='https://www.twitter.com/iSpam_The_Code'}></i>
-        <i className="fas fa-minus-circle" title='remove this...' style={xOut} onClick={(e)=>{e.target.parentNode.parentNode.remove()}}></i>
+        {
+          this.state.mode_?(
+        <i className="fas fa-sun" title='remove this...' style={this.state.xOutLight} onClick={()=>this.changingMode()}></i>
+            ):(
+        <i className="fas fa-moon" title='remove this...' style={this.state.xOutDark} onClick={()=>this.changingMode()}></i>
+            )
+        }
       </Tooltip>
     </div>
   {/*ME AS MY OWN LOGO AND SOCIAL LINKS TOO*/}
@@ -118,7 +88,7 @@ class Header extends Component {
               <DropdownToggle nav caret >
                 Games
               </DropdownToggle>
-              <DropdownMenu left='true'
+              <DropdownMenu
               style={dropdowStyles}>
               {
                 this.props.work && this.props.work.map(wrk=>{
@@ -136,7 +106,10 @@ class Header extends Component {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-              <Link to={this.state.currPushLink} onClick={()=>this.checkUrl()}>{this.state.currLink}</Link>
+          {
+            this.props.compRendered==='Home'?<span onClick={()=>this.props.navBar('Projects')} style={{cursor:'pointer',fontWeight:'bolder'}}>Projects</span>:<span onClick={()=>this.props.navBar('Home')} style={{cursor:'pointer',fontWeight:'bolder'}}>Home</span>
+          }
+              
         </Collapse>
       </Navbar>
     </div>
@@ -151,7 +124,7 @@ class Header extends Component {
     }
   }
 
-export default withRouter(connect(
+export default connect(
   mapStateToProps,
-    {getMyWork}
-  )(Header))
+    {getMyWork,navBar}
+  )(Header)

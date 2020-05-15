@@ -1,18 +1,19 @@
 import axios from 'axios'
-export const MOVING = 'MOVING'
-export const MOVED = 'MOVED'
+export const LOADING = 'LOADING'
+export const SUCCESS = 'SUCCESS'
 export const BTN = 'BTN'
-export const BTNN = 'BTNN'
-export const ERR = 'ERR'
 
+export const NAVIGATION = 'NAVIGATION'
+
+export const ERR = 'ERR'
 
 
 export const getMyWork = () => dispatch => {
 //get my work that ill be displaying on my page
-	dispatch({type:MOVING})
+	dispatch({type:LOADING})
 	axios.get(process.env.REACT_APP_mywork)
 	.then(res=>{
-	dispatch({type:MOVED,payload:res.data.work})
+	dispatch({type:SUCCESS,payload:res.data.work})
 
 	})
 	.catch(err=>{
@@ -29,8 +30,16 @@ export const changeBtnLabel = label => dispatch =>{
 }
 
 
+export const navBar = whereTo => dispatch =>{
+				switch(whereTo){
+					case 'Home':
+					return dispatch({type:NAVIGATION,payload:whereTo})
 
-export const changeBtnLabel_ = label => dispatch =>{
+					case 'Projects':
+					return dispatch({type:NAVIGATION,payload:whereTo})
 
-			return dispatch({type:BTNN,payload:label})
+					default:
+					return false
+				}
 }
+

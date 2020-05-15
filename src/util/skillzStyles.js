@@ -60,12 +60,12 @@ color:azure;
 justify-content:space-between;
 -webkit-align-items:center;
 align-items:center;
-font-size:1rem;
+font-size:${window.innerWidth<=300?'.6rem':'1rem'};
 font-weight:bolder;
 
 
 figure i{
-	font-size:2rem;
+	font-size:${window.innerWidth<=300?'1.3rem':'2rem'};
 }
 
 

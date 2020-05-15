@@ -82,7 +82,7 @@ marginBottom:"15px"
 export const conBtn = {
 backgroundColor:"rgba(0,0,0,.5)",
 border:'double azure',
-fontSize:'1.8rem',
+fontSize:window.innerWidth<=500?'1rem':'1.8rem',
 cursor: "pointer",
 marginBottom:"20px"
 }
