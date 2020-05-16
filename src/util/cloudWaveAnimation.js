@@ -22,7 +22,7 @@ export const Div = styled.div`
     -webkit-width: 100%;
     -webkit-height: 10%;
      width: 100%;
-    height: 10%;
+    height: 15%;
     bottom: -1px;
     z-index:0;
 }

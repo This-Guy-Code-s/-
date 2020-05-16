@@ -22,7 +22,7 @@
     "styled-components": "^5.1.0"
   },
   "proxy": "https://localhost:3001",
-  "homepage": "http://www.guytonoriji.site/",
+  "homepage": "https://guytonoriji.site/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

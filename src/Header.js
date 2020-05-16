@@ -10,7 +10,7 @@ import { Collapse,
   Tooltip
 } from 'reactstrap'
 import {connect} from 'react-redux'
-import {getMyWork,navBar} from './redux/actions'
+import {getMyWork,navBar,DarkMode} from './redux/actions'
 
 import {brand,
  parenthStyles,
@@ -31,7 +31,6 @@ class Header extends Component {
       tooltipOpen:false,
       currLink:'Projects',
       isOpen:false,
-      mode_:this.props.mode,
       xOutLight:{marginLeft:'10px',cursor:'pointer',WebkitTextFillColor:'yellow'},
       xOutDark:{marginLeft:'10px',cursor:'pointer',WebkitTextFillColor:'darkgray'}
 
@@ -41,6 +40,7 @@ class Header extends Component {
 
 
  componentDidMount(){
+  console.log('mode in header.js willMount()',this.props.mode)
           this.setState({tooltipOpen:!this.state.tooltipOpen})
   }
 
@@ -51,9 +51,9 @@ class Header extends Component {
     })
   }
 
-   async changingMode(){try{this.props.DarkMode()}catch(err){throw new Error(err)}}
 
   render() {
+  console.log('mode in header.js render()',this.props.mode)
     return (
        <div>
       <Navbar expand="md" style={{WebkitTextFillColor:'#fff',color:'#fff',backgroundColor:'rgba(0,0,0,.5)',}}>
@@ -68,10 +68,10 @@ class Header extends Component {
         <i className="fab fa-github" style={{cursor:'pointer',WebkitTextFillColor:'#888'}} onClick={()=>window.location.href='https://www.github.com/guytonoriji'}></i>
         <i className="fab fa-twitter" style={{cursor:'pointer',WebkitTextFillColor:'rgb(29, 161, 242)'}} onClick={()=>window.location.href='https://www.twitter.com/iSpam_The_Code'}></i>
         {
-          this.state.mode_?(
-        <i className="fas fa-sun" title='Light Mode!' style={this.state.xOutLight} onClick={()=>this.changingMode()}></i>
+          this.props.mode?(
+        <i className="fas fa-sun" title='Light Mode!' style={this.state.xOutLight} onClick={()=>this.props.DarkMode(false)}></i>
             ):(
-        <i className="fas fa-moon" title='Dark Mode!' style={this.state.xOutDark} onClick={()=>this.changingMode()}></i>
+        <i className="fas fa-moon" title='Dark Mode!' style={this.state.xOutDark} onClick={()=>this.props.DarkMode(true)}></i>
             )
         }
       </Tooltip>
@@ -93,21 +93,18 @@ class Header extends Component {
               {
                 this.props.work && this.props.work.map(wrk=>{
 
-               if(wrk.action==='PLAY'){
-                     return (
+              return wrk.action==='PLAY'?(
                      <DropdownItem style={dropdowStyles} href={wrk.link} key={wrk.id}>
                 {wrk.title}
-                </DropdownItem>
-
-                    )
-                  }else{return true}
+                </DropdownItem>):true
                 })
               }  
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
           {
-            this.props.compRendered==='Home'?<span onClick={()=>this.props.navBar('Projects')} style={{cursor:'pointer',fontWeight:'bolder'}}>Projects</span>:<span onClick={()=>this.props.navBar('Home')} style={{cursor:'pointer',fontWeight:'bolder'}}>Home</span>
+            this.props.compRendered==='Home'?<span onClick={()=>this.props.navBar('Projects')} style={{cursor:'pointer'}}><b>Projects</b></span>
+            :<span onClick={()=>this.props.navBar('Home')} style={{cursor:'pointer'}}><b>Home</b></span>
           }
               
         </Collapse>
@@ -120,11 +117,11 @@ class Header extends Component {
 
   const mapStateToProps = state =>{
     return {
-     work:state.work
+     ...state
     }
   }
 
 export default connect(
   mapStateToProps,
-    {getMyWork,navBar}
+    {getMyWork,navBar,DarkMode}
   )(Header)

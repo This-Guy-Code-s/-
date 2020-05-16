@@ -4,7 +4,7 @@ import React  from 'react';
 import {Form,Toast, ToastBody, ToastHeader,FormGroup,Input,Label, Button,Spinner , FormText } from 'reactstrap';
 import { Err,Pass,pulse,conBtn,conLink,middle,formToats,formToatsHeader,formBoxh,formBtn,formio} from '../../util/contactStyles'
 import {connect} from 'react-redux'
-import {changeBtnLabel} from '../../redux/actions'
+import {changeBtnLabel,showOrNot} from '../../redux/actions'
 import {name_,email_,msg_} from '../../util/contactValidations'
 
 
@@ -14,26 +14,31 @@ class Contact extends React.Component {
   this.state={
     calling:'',
     valOrNah1:'',valOrNah2:'',valOrNah3:'',
-    show:false,
+    // show:false,
     msg:{name:'',email:'',message:''},
     errMsg:'',passMsg:''
   }
-
+ 
   this.toggle = this.toggle.bind(this)
   this.send = this.send.bind(this)
 
 }
 
 
+componentDidMount(){
+    this.props.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');
+    
+ }
+
  componentDidUpdate(){
-    this.state.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');
+    this.props.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');
     
  }
 
  async toggle(){
-  try{ this.setState({ show:!this.state.show})}
+  try{ this.props.showOrNot(this.props.show)}
     catch(err){throw new Error(err) }
-       finally{ this.state.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');}
+       finally{ this.props.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');}
 }
   
  
@@ -92,7 +97,7 @@ return (
       <Button style={conBtn} onClick={this.toggle}><span style={conLink}><i className="fas fa-envelope"></i> {this.props.buttonLabel} <i className="fas fa-envelope"></i></span></Button>
       <br />
 
-      <Toast isOpen={this.state.show} style={formToats}>
+      <Toast isOpen={this.props.show} style={formToats}>
       <ToastHeader style={formToatsHeader}>
         <span style={pulse}>
      <Spinner type="grow" color="primary" />
@@ -143,5 +148,5 @@ return {
 
 export default connect(
 mapStateToProps,
-{changeBtnLabel}
+{changeBtnLabel,showOrNot}
 )(Contact)
