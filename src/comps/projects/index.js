@@ -18,7 +18,7 @@ grid-gap:50px;
 const cardStylez = {
 backgroundColor:'rgba(0,0,0,.5)',
 WebkitTextFillColor:'azure',
-fontSize:'1.4rem',
+fontSize:window.innerWidth<=500?'1rem':'1.4rem',
 fontWeight:'bolder',
 border:'double #4df7ff',
 boxShadow:'0 0 20px #5539f3'

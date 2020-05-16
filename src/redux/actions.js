@@ -33,9 +33,11 @@ export const changeBtnLabel = label => dispatch =>{
 export const navBar = whereTo => dispatch =>{
 				switch(whereTo){
 					case 'Home':
+					window.localStorage.setItem('nav',whereTo)
 					return dispatch({type:NAVIGATION,payload:whereTo})
 
 					case 'Projects':
+					window.localStorage.setItem('nav',whereTo)
 					return dispatch({type:NAVIGATION,payload:whereTo})
 
 					default:

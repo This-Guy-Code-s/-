@@ -64,14 +64,14 @@ class Header extends Component {
     <img src={this.props.me} style={me} alt='me' width='50' height='50'/>
     </figure><b style={guyStyles}>Guyton</b> {"  "} <b style={parenthStyles}>Oriji</b></span></span>
       <Tooltip style={soci} placement="bottom" isOpen={this.state.tooltipOpen} autohide={false} target="me" >
-        <i className="fab fa-youtube" style={{cursor:'pointer'}} onClick={()=>alert('Youtube Channel comming soon...')}></i>
-        <i className="fab fa-github" style={{cursor:'pointer'}} onClick={()=>window.location.href='https://www.github.com/guytonoriji'}></i>
-        <i className="fab fa-twitter" style={{cursor:'pointer'}} onClick={()=>window.location.href='https://www.twitter.com/iSpam_The_Code'}></i>
+        <i className="fab fa-youtube" style={{cursor:'pointer',WebkitTextFillColor:'red'}} onClick={()=>alert('Youtube Channel comming soon...')}></i>
+        <i className="fab fa-github" style={{cursor:'pointer',WebkitTextFillColor:'#888'}} onClick={()=>window.location.href='https://www.github.com/guytonoriji'}></i>
+        <i className="fab fa-twitter" style={{cursor:'pointer',WebkitTextFillColor:'rgb(29, 161, 242)'}} onClick={()=>window.location.href='https://www.twitter.com/iSpam_The_Code'}></i>
         {
           this.state.mode_?(
-        <i className="fas fa-sun" title='remove this...' style={this.state.xOutLight} onClick={()=>this.changingMode()}></i>
+        <i className="fas fa-sun" title='Light Mode!' style={this.state.xOutLight} onClick={()=>this.changingMode()}></i>
             ):(
-        <i className="fas fa-moon" title='remove this...' style={this.state.xOutDark} onClick={()=>this.changingMode()}></i>
+        <i className="fas fa-moon" title='Dark Mode!' style={this.state.xOutDark} onClick={()=>this.changingMode()}></i>
             )
         }
       </Tooltip>
@@ -86,7 +86,7 @@ class Header extends Component {
             
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret >
-                Games
+                <b>Games</b>
               </DropdownToggle>
               <DropdownMenu
               style={dropdowStyles}>

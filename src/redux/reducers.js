@@ -2,7 +2,7 @@ import {LOADING,SUCCESS,BTN,NAVIGATION,ERR} from './actions'
 
 
 const initialState = {
-	compRendered:'Home',
+	compRendered:localStorage.getItem('nav') || 'Home',
 	work:'',
 	error:'',
 	//contact btn name toggle
