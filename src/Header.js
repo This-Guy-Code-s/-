@@ -40,7 +40,6 @@ class Header extends Component {
 
 
  componentDidMount(){
-  console.log('mode in header.js willMount()',this.props.mode)
           this.setState({tooltipOpen:!this.state.tooltipOpen})
   }
 
@@ -51,9 +50,7 @@ class Header extends Component {
     })
   }
 
-
   render() {
-  console.log('mode in header.js render()',this.props.mode)
     return (
        <div>
       <Navbar expand="md" style={{WebkitTextFillColor:'#fff',color:'#fff',backgroundColor:'rgba(0,0,0,.5)',}}>

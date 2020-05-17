@@ -139,7 +139,6 @@ export const showOrNot = choice => dispatch =>{
 
 //=============================================================================/
 export const DarkMode = mode => dispatch =>{
-	console.log('mode in actions',mode)
      if(mode){
               APP_COMP = styled.div`
 flex:1;

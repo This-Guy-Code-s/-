@@ -11,7 +11,8 @@ import {
 
 
 class Skillz extends React.Component{
-	
+
+
 	render(){
 	return(
 		<div>

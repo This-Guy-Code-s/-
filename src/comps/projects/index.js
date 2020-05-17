@@ -18,7 +18,7 @@ grid-gap:50px;
 const cardStylez = {
 backgroundColor:'rgba(0,0,0,.5)',
 WebkitTextFillColor:'azure',
-fontSize:window.innerWidth<=500?'1rem':'1.4rem',
+fontSize:window.innerWidth<=700?'1.15rem':'1.4rem',
 fontWeight:'bolder',
 border:'double #4df7ff',
 boxShadow:'0 0 20px #5539f3'
@@ -43,6 +43,7 @@ return {WebkitTextFillColor:'#fc0303'}
 return {WebkitTextFillColor:'#03fc13'}
 }
 }
+
 render(){
 return (
 

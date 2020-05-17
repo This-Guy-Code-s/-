@@ -33,8 +33,6 @@ export let formBoxh ={
 	margin:"0",
 	padding:"0",
 backgroundColor:'rgba(0,0,0,0)',
-minWidth:"450px",
-maxWidth:"700px",
 WebkitTextFillColor:'#fff',
 color:'#fff',
 border:'double #333 ',
@@ -51,8 +49,8 @@ export const formio = {
 backgroundColor:'rgba(0,0,0,0)',
 WebkitTextFillColor:'#fff',
 color:'#fff',
-padding:"0px 20px",
-width:"340px"
+padding:"0px 10px",
+width:"320px"
 }
 
 export const formToats = {
@@ -82,7 +80,7 @@ marginBottom:"15px"
 export const conBtn = {
 backgroundColor:"rgba(0,0,0,.5)",
 border:'double azure',
-fontSize:window.innerWidth<=500?'1rem':'1.8rem',
+fontSize:window.innerWidth<=500?'1.5rem':'1.8rem',
 cursor: "pointer",
 marginBottom:"20px"
 }

@@ -39,7 +39,6 @@ export const reducer =  (state = initialState, action) =>{
 			}
 
 			case MODE:
-	console.log('mode in reducer',action.payload)
 			return {
 				...state,
 				mode:action.payload,
@@ -48,7 +47,6 @@ export const reducer =  (state = initialState, action) =>{
 
 
 			case SHOW:
-	console.log('mode in reducer',action.payload)
 			return {
 				...state,
 				show:action.payload,

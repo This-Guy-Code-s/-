@@ -42,7 +42,6 @@ componentDidMount(){
 }
   
  
-
  send(e){
     e.preventDefault()
 

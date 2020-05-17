@@ -26,16 +26,13 @@ import {Div} from './util/cloudWaveAnimation'
 
 class App extends React.Component{
 componentWillMount(){
-  console.log('mode in app.js willMount()',this.props.mode)
-
     this.props.getMyWork() 
 
     }
 
-
     render(){ 
     return (
-      <APP_COMP className="App lightMode">
+      <APP_COMP className="App">
 
       <Header logo={logo} me={[me]} compRendered={this.props.compRendered}/>
       <Container>

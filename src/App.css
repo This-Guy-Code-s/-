@@ -41,6 +41,10 @@ html{
     -webkit-text-fill-color:#000;
 }
 
+.skillzAnime{
+  font-size:1rem;
+}
+
 .servicesFlow{
   display:flex;
   flex-direction:column;
@@ -129,6 +133,17 @@ html{
   justify-content:center;
     align-items:center;
 
+}
+
+.alt{
+  font-size:1.60rem;
+  text-decoration:underline rgba(250,250,250,.2);
+}
+
+.skillzAnime{
+  max-width:105px;
+  font-size:.85rem;
+  font-weight:400;
 }
 
 

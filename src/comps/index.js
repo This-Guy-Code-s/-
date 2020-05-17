@@ -31,9 +31,6 @@ class Home extends React.Component{
 		}
 	}
 
-
-		
-
 	render(){
 		return(
 
@@ -41,7 +38,7 @@ class Home extends React.Component{
 			 <Intro/>
 			 <Skillz/>
 			 <div style={pitchStyle}>
-			 	<p style={{fontSize:'1.6rem'}}>
+			 	<p style={{fontSize:window.innerWidth<=700?'1.2rem':'1.6rem'}}>
 			 	{this.state.pitch}
 			 	 </p>
 			 <Contact buttonLabel={this.props.btnL}/>
