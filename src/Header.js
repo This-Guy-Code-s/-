@@ -7,7 +7,8 @@ import { Collapse,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  Tooltip
+  Tooltip,
+  Spinner
 } from 'reactstrap'
 import {connect} from 'react-redux'
 import {getMyWork,navBar,DarkMode} from './redux/actions'
@@ -88,13 +89,15 @@ class Header extends Component {
               <DropdownMenu
               style={dropdowStyles}>
               {
-                this.props.work && this.props.work.map(wrk=>{
+                this.props.work?this.props.work.map(wrk=>{
 
               return wrk.action==='PLAY'?(
                      <DropdownItem style={dropdowStyles} href={wrk.link} key={wrk.id}>
                 {wrk.title}
                 </DropdownItem>):true
-                })
+                }):(
+                  <Spinner size="sm" color="info" />
+                )
               }  
               </DropdownMenu>
             </UncontrolledDropdown>

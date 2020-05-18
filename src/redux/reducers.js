@@ -2,10 +2,10 @@ import {LOADING,SUCCESS,BTN,NAVIGATION,MODE,SHOW,ERR} from './actions'
  
 
 const initialState = {
-	compRendered:localStorage.getItem('nav') || 'Home',
+	compRendered:sessionStorage.getItem('nav') || 'Home',
 	work:'',
 	error:'',
-	mode:localStorage.getItem('toggleDarkMode') && localStorage.getItem('toggleDarkMode') === 'true'? true:false,
+	mode:sessionStorage.getItem('toggleDarkMode') && sessionStorage.getItem('toggleDarkMode') === 'true'? true:false,
 	show:false,
 	//contact btn name toggle
 	btnL:'Contact Me'

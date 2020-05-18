@@ -12,15 +12,14 @@ import {
 
 class Skillz extends React.Component{
 
-
 	render(){
 	return(
 		<div>
 		
 				<Blockk><figure>
-		<i className="fas fa-layer-group"
-		 style={{fontSize:'2.3rem'}}></i>
-		<figcaption>My Stack</figcaption>
+		<i className="fas fa-layer-group "
+		 style={{fontSize:window.innerWidth<=700?'3rem':'4rem'}}></i>
+		<figcaption style={{fontSize:window.innerWidth<=700?'1.8rem':'2.7rem',fontFamily:"Permanent Marker, cursive"}}>My Stack</figcaption>
 		</figure></Blockk>
 		<Block>
 

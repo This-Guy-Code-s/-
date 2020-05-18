@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {getMyWork} from '../../redux/actions'
 import {
 Card, CardImg, CardText, CardBody, CardLink,
-CardTitle,Container
+CardTitle,Container,Spinner
 } from 'reactstrap';
 
 import styled from 'styled-components'
@@ -55,8 +55,7 @@ return (
 <Container>
 <Row>
 {
-this.props.work && 
-this.props.work.map(post=>{
+this.props.work?this.props.work.map(post=>{
 return	(
 
 <Card key={post.id} 
@@ -81,7 +80,12 @@ style={this.actionStyle(post.action)}
 </Card>
 
 )
-})
+}):(	
+<div>
+	 <h4><b style={{WebkitTextFillColor:'azure'}}>Loading Projects...</b></h4>
+        <Spinner style={{ width: '3rem', height: '3rem' }} color='danger' type="grow" />
+</div>
+)
 
 }
 </Row>

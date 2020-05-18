@@ -36,7 +36,7 @@ background-size:cover;
   `
 
 
-   if(window.localStorage.getItem('toggleDarkMode') === null){
+   if(window.sessionStorage.getItem('toggleDarkMode') === null){
    APP_COMP = styled.div`
 flex:1;
 -webkit-text-align: center;
@@ -54,7 +54,7 @@ background-size:cover;
   
 					
 
-        }else if(window.localStorage.getItem('toggleDarkMode') !== null && window.localStorage.getItem('toggleDarkMode') !== 'true'){
+        }else if(window.sessionStorage.getItem('toggleDarkMode') !== null && window.sessionStorage.getItem('toggleDarkMode') !== 'true'){
 
         	   APP_COMP = styled.div`
 flex:1;
@@ -120,11 +120,11 @@ export const changeBtnLabel = label => dispatch =>{
 export const navBar = whereTo => dispatch =>{
 				switch(whereTo){
 					case 'Home':
-					window.localStorage.setItem('nav',whereTo)
+					window.sessionStorage.setItem('nav',whereTo)
 					return dispatch({type:NAVIGATION,payload:whereTo})
 
 					case 'Projects':
-					window.localStorage.setItem('nav',whereTo)
+					window.sessionStorage.setItem('nav',whereTo)
 					return dispatch({type:NAVIGATION,payload:whereTo})
 
 					default:
@@ -155,7 +155,7 @@ background-size:cover;
 
   `
   
-					window.localStorage.setItem('toggleDarkMode',mode)
+					window.sessionStorage.setItem('toggleDarkMode',mode)
 
   return dispatch({type:MODE,payload:mode})
         }else{ 
@@ -176,7 +176,7 @@ background-position:center;
 background-size:cover;
  
   `
-					window.localStorage.setItem('toggleDarkMode',mode)
+					window.sessionStorage.setItem('toggleDarkMode',mode)
 
   return dispatch({type:MODE,payload:mode})
 }  

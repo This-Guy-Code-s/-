@@ -40,7 +40,7 @@ componentWillMount(){
       {
         this.props.compRendered==='Home'?<Home />:<Projects />
       }
-    
+        
       </Container>
 
        <Div className="waveWrapper waveAnimation">
