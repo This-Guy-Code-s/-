@@ -46,7 +46,7 @@ alignItems:"flex-start"
 
 
 export const formio = {
-backgroundColor:'rgba(0,0,0,0)',
+backgroundColor:'rgba(0,0,0,0.4)',
 WebkitTextFillColor:'#fff',
 color:'#fff',
 padding:"0px 10px",

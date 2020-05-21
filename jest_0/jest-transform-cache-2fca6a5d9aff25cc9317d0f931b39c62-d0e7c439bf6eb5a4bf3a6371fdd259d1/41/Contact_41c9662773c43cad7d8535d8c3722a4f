@@ -1,0 +1,196 @@
+d8e4ee9847f883225e63ac2364e16974
+"use strict";
+
+var _interopRequireDefault = require("/home/tgc/Desktop/newSite/-/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _contactStyles = require("../../util/contactStyles");
+
+var _reactstrap = require("reactstrap");
+
+var _reactRedux = require("react-redux");
+
+var _actions = require("../../redux/actions");
+
+var _Form = _interopRequireDefault(require("./Form"));
+
+var _jsxFileName = "/home/tgc/Desktop/newSite/-/src/comps/home/Contact.js";
+
+class Contact extends _react.default.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      calling: ''
+    };
+    this.toggle = this.toggle.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.show ? this.props.changeBtnLabel('Hide..') : this.props.changeBtnLabel('Contact Me');
+  }
+
+  componentDidUpdate() {
+    this.props.show ? this.props.changeBtnLabel('Hide..') : this.props.changeBtnLabel('Contact Me');
+  }
+
+  async toggle() {
+    try {
+      this.props.showOrNot(this.props.show);
+    } catch (err) {
+      throw new Error(err);
+    } finally {
+      this.props.show ? this.props.changeBtnLabel('Hide..') : this.props.changeBtnLabel('Contact Me');
+    }
+  }
+
+  render() {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      style: _contactStyles.middle,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42,
+        columnNumber: 4
+      }
+    }, /*#__PURE__*/_react.default.createElement("br", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43,
+        columnNumber: 7
+      }
+    }), /*#__PURE__*/_react.default.createElement(_reactstrap.Button, {
+      style: _contactStyles.conBtn,
+      onClick: this.toggle,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/_react.default.createElement("span", {
+      style: _contactStyles.conLink,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 52
+      }
+    }, /*#__PURE__*/_react.default.createElement("i", {
+      className: "fas fa-envelope",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 74
+      }
+    }), " ", this.props.buttonLabel, " ", /*#__PURE__*/_react.default.createElement("i", {
+      className: "fas fa-envelope",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 135
+      }
+    }))), /*#__PURE__*/_react.default.createElement("br", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45,
+        columnNumber: 7
+      }
+    }), /*#__PURE__*/_react.default.createElement(_reactstrap.Toast, {
+      isOpen: this.props.show,
+      style: _contactStyles.formToats,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/_react.default.createElement(_reactstrap.ToastHeader, {
+      style: _contactStyles.formToatsHeader,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/_react.default.createElement("span", {
+      style: _contactStyles.pulse,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49,
+        columnNumber: 9
+      }
+    }, /*#__PURE__*/_react.default.createElement(_reactstrap.Spinner, {
+      type: "grow",
+      color: "primary",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50,
+        columnNumber: 6
+      }
+    }), /*#__PURE__*/_react.default.createElement("small", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/_react.default.createElement("a", {
+      href: "tel:2402737952",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51,
+        columnNumber: 14
+      }
+    }, /*#__PURE__*/_react.default.createElement("i", {
+      className: "fas fa-phone phone_",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51,
+        columnNumber: 40
+      }
+    }), " Call Instead? "), "2402737952"))), /*#__PURE__*/_react.default.createElement(_reactstrap.ToastBody, {
+      style: _contactStyles.formBoxh,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/_react.default.createElement(_Form.default, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57,
+        columnNumber: 10
+      }
+    }))));
+  }
+
+}
+
+const mapStateToProps = state => {
+  return { ...state
+  };
+};
+
+var _default = (0, _reactRedux.connect)(mapStateToProps, {
+  changeBtnLabel: _actions.changeBtnLabel,
+  showOrNot: _actions.showOrNot
+})(Contact);
+
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNvbnRhY3QuanMiXSwibmFtZXMiOlsiQ29udGFjdCIsIlJlYWN0IiwiQ29tcG9uZW50IiwiY29uc3RydWN0b3IiLCJwcm9wcyIsInN0YXRlIiwiY2FsbGluZyIsInRvZ2dsZSIsImJpbmQiLCJjb21wb25lbnREaWRNb3VudCIsInNob3ciLCJjaGFuZ2VCdG5MYWJlbCIsImNvbXBvbmVudERpZFVwZGF0ZSIsInNob3dPck5vdCIsImVyciIsIkVycm9yIiwicmVuZGVyIiwibWlkZGxlIiwiY29uQnRuIiwiY29uTGluayIsImJ1dHRvbkxhYmVsIiwiZm9ybVRvYXRzIiwiZm9ybVRvYXRzSGVhZGVyIiwicHVsc2UiLCJmb3JtQm94aCIsIm1hcFN0YXRlVG9Qcm9wcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7Ozs7QUFFQSxNQUFNQSxPQUFOLFNBQXNCQyxlQUFNQyxTQUE1QixDQUFzQztBQUNyQ0MsRUFBQUEsV0FBVyxDQUFDQyxLQUFELEVBQU87QUFDakIsVUFBTUEsS0FBTjtBQUNBLFNBQUtDLEtBQUwsR0FBVztBQUNUQyxNQUFBQSxPQUFPLEVBQUM7QUFEQyxLQUFYO0FBS0EsU0FBS0MsTUFBTCxHQUFjLEtBQUtBLE1BQUwsQ0FBWUMsSUFBWixDQUFpQixJQUFqQixDQUFkO0FBQ0Q7O0FBRURDLEVBQUFBLGlCQUFpQixHQUFFO0FBQ2YsU0FBS0wsS0FBTCxDQUFXTSxJQUFYLEdBQWdCLEtBQUtOLEtBQUwsQ0FBV08sY0FBWCxDQUEwQixRQUExQixDQUFoQixHQUFvRCxLQUFLUCxLQUFMLENBQVdPLGNBQVgsQ0FBMEIsWUFBMUIsQ0FBcEQ7QUFFRjs7QUFFREMsRUFBQUEsa0JBQWtCLEdBQUU7QUFDakIsU0FBS1IsS0FBTCxDQUFXTSxJQUFYLEdBQWdCLEtBQUtOLEtBQUwsQ0FBV08sY0FBWCxDQUEwQixRQUExQixDQUFoQixHQUFvRCxLQUFLUCxLQUFMLENBQVdPLGNBQVgsQ0FBMEIsWUFBMUIs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SGEsQyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludCByZWFjdC9uby1tdWx0aS1jb21wOiAwLCByZWFjdC9wcm9wLXR5cGVzOiAwICovXG5pbXBvcnQgUmVhY3QgIGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IHB1bHNlLGNvbkJ0bixjb25MaW5rLG1pZGRsZSxmb3JtVG9hdHMsZm9ybVRvYXRzSGVhZGVyLGZvcm1Cb3hofSBmcm9tICcuLi8uLi91dGlsL2NvbnRhY3RTdHlsZXMnXG5pbXBvcnQge1RvYXN0LCBUb2FzdEJvZHksIFRvYXN0SGVhZGVyLCBCdXR0b24sU3Bpbm5lciAgfSBmcm9tICdyZWFjdHN0cmFwJztcbmltcG9ydCB7Y29ubmVjdH0gZnJvbSAncmVhY3QtcmVkdXgnXG5pbXBvcnQge2NoYW5nZUJ0bkxhYmVsLHNob3dPck5vdH0gZnJvbSAnLi4vLi4vcmVkdXgvYWN0aW9ucydcbmltcG9ydCBGb3JtIGZyb20gJy4vRm9ybSdcblxuY2xhc3MgQ29udGFjdCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gY29uc3RydWN0b3IocHJvcHMpe1xuICBzdXBlcihwcm9wcylcbiAgdGhpcy5zdGF0ZT17XG4gICAgY2FsbGluZzonJyxcbiAgIFxuICB9XG4gXG4gIHRoaXMudG9nZ2xlID0gdGhpcy50b2dnbGUuYmluZCh0aGlzKVxufVxuXG5jb21wb25lbnREaWRNb3VudCgpe1xuICAgIHRoaXMucHJvcHMuc2hvdz90aGlzLnByb3BzLmNoYW5nZUJ0bkxhYmVsKCdIaWRlLi4nKTp0aGlzLnByb3BzLmNoYW5nZUJ0bkxhYmVsKCdDb250YWN0IE1lJyk7XG4gICAgXG4gfVxuXG4gY29tcG9uZW50RGlkVXBkYXRlKCl7XG4gICAgdGhpcy5wcm9wcy5zaG93P3RoaXMucHJvcHMuY2hhbmdlQnRuTGFiZWwoJ0hpZGUuLicpOnRoaXMucHJvcHMuY2hhbmdlQnRuTGFiZWwoJ0NvbnRhY3QgTWUnKTtcbiAgICBcbiB9XG5cbiBhc3luYyB0b2dnbGUoKXtcbiAgdHJ5eyB0aGlzLnByb3BzLnNob3dPck5vdCh0aGlzLnByb3BzLnNob3cpfVxuICAgIGNhdGNoKGVycil7dGhyb3cgbmV3IEVycm9yKGVycikgfVxuICAgICAgIGZpbmFsbHl7IHRoaXMucHJvcHMuc2hvdz90aGlzLnByb3BzLmNoYW5nZUJ0bkxhYmVsKCdIaWRlLi4nKTp0aGlzLnByb3BzLmNoYW5nZUJ0bkxhYmVsKCdDb250YWN0IE1lJyk7fVxufVxuICBcblxucmVuZGVyKCl7XG5cbnJldHVybiAoXG5cblxuICAgPGRpdiBzdHlsZT17bWlkZGxlfT5cbiAgICAgIDxiciAvPlxuICAgICAgPEJ1dHRvbiBzdHlsZT17Y29uQnRufSBvbkNsaWNrPXt0aGlzLnRvZ2dsZX0+PHNwYW4gc3R5bGU9e2Nvbkxpbmt9PjxpIGNsYXNzTmFtZT1cImZhcyBmYS1lbnZlbG9wZVwiPjwvaT4ge3RoaXMucHJvcHMuYnV0dG9uTGFiZWx9IDxpIGNsYXNzTmFtZT1cImZhcyBmYS1lbnZlbG9wZVwiPjwvaT48L3NwYW4+PC9CdXR0b24+XG4gICAgICA8YnIgLz5cblxuICAgICAgPFRvYXN0IGlzT3Blbj17dGhpcy5wcm9wcy5zaG93fSBzdHlsZT17Zm9ybVRvYXRzfT5cbiAgICAgIDxUb2FzdEhlYWRlciBzdHlsZT17Zm9ybVRvYXRzSGVhZGVyfT5cbiAgICAgICAgPHNwYW4gc3R5bGU9e3B1bHNlfT5cbiAgICAgPFNwaW5uZXIgdHlwZT1cImdyb3dcIiBjb2xvcj1cInByaW1hcnlcIiAvPlxuICAgICAgPHNtYWxsPjxhIGhyZWY9J3RlbDoyNDAyNzM3OTUyJyA+PGkgY2xhc3NOYW1lPVwiZmFzIGZhLXBob25lIHBob25lX1wiPjwvaT4gQ2FsbCBJbnN0ZWFkPyA8L2E+MjQwMjczNzk1Mjwvc21hbGw+XG4gICAgICA8L3NwYW4+XG4gICAgICBcbiAgICAgIDwvVG9hc3RIZWFkZXI+XG4gICAgICA8VG9hc3RCb2R5IHN0eWxlPXtmb3JtQm94aH0+XG4gICAgICAgICB7LypGT1JNKi99XG4gICAgICAgICA8Rm9ybSAvPlxuICAgICAgICB7LypGT1JNKi99XG4gICAgICAgIDwvVG9hc3RCb2R5PlxuICAgICAgPC9Ub2FzdD5cbiAgICA8L2Rpdj5cbiAgKTtcblxuXG59XG4gIFxufVxuXG5jb25zdCBtYXBTdGF0ZVRvUHJvcHMgPSBzdGF0ZSA9PntcbnJldHVybiB7XG4uLi5zdGF0ZVxufVxufVxuXG5leHBvcnQgZGVmYXVsdCBjb25uZWN0KFxubWFwU3RhdGVUb1Byb3BzLFxue2NoYW5nZUJ0bkxhYmVsLHNob3dPck5vdH1cbikoQ29udGFjdCkiXX0=

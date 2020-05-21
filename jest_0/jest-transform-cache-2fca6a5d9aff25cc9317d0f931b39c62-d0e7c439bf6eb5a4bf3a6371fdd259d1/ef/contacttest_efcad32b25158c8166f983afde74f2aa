@@ -1,0 +1,57 @@
+694ac0c13bd5e9c8fc5b4142a305bbd5
+"use strict";
+
+var _interopRequireDefault = require("/home/tgc/Desktop/newSite/-/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+var _Contact = _interopRequireDefault(require("../Contact"));
+
+var _Form = _interopRequireDefault(require("../Form"));
+
+var _react2 = require("@testing-library/react");
+
+var _redux = require("redux");
+
+var _reduxThunk = _interopRequireDefault(require("redux-thunk"));
+
+var _reducers = require("../../../redux/reducers");
+
+var _reactRedux = require("react-redux");
+
+var _jsxFileName = "/home/tgc/Desktop/newSite/-/src/comps/home/testing/contact.test.js";
+const store = (0, _redux.createStore)(_reducers.reducer, (0, _redux.applyMiddleware)(_reduxThunk.default));
+test('Form renders with out crashing', async () => {
+  const {
+    fireEvent,
+    waitFor,
+    screen,
+    findByText,
+    getNodeText,
+    createEvent,
+    getByLabelText
+  } = (0, _react2.render)( /*#__PURE__*/_react.default.createElement(_reactRedux.Provider, {
+    store: store,
+    __self: void 0,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 69
+    }
+  }, /*#__PURE__*/_react.default.createElement(_Form.default, {
+    __self: void 0,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 93
+    }
+  })));
+  let nameLabel = getByLabelText('Name:');
+  let emailLabel = getByLabelText('Email:');
+  let msgLabel = getByLabelText('Message:');
+  console.log('container========::>');
+  console.log('form========::>', nameLabel.textContent);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnRhY3QudGVzdC5qcyJdLCJuYW1lcyI6WyJzdG9yZSIsInJlZHVjZXIiLCJ0aHVuayIsInRlc3QiLCJmaXJlRXZlbnQiLCJ3YWl0Rm9yIiwic2NyZWVuIiwiZmluZEJ5VGV4dCIsImdldE5vZGVUZXh0IiwiY3JlYXRlRXZlbnQiLCJnZXRCeUxhYmVsVGV4dCIsIm5hbWVMYWJlbCIsImVtYWlsTGFiZWwiLCJtc2dMYWJlbCIsImNvbnNvbGUiLCJsb2ciLCJ0ZXh0Q29udGVudCJdLCJtYXBwaW5ncyI6Ijs7OztBQUFBOztBQUNBOztBQUNBOztBQUNBOztBQUNBOztBQUVBOztBQUNBOztBQUNBOztBQUNBOzs7QUFHQSxNQUFNQSxLQUFLLEdBQUcsd0JBQVlDLGlCQUFaLEVBQW9CLDRCQUFnQkMsbUJBQWhCLENBQXBCLENBQWQ7QUFJQUMsSUFBSSxDQUFDLGdDQUFELEVBQW1DLFlBQVU7QUFDaEQsUUFBTTtBQUFFQyxJQUFBQSxTQUFGO0FBQWFDLElBQUFBLE9BQWI7QUFDTkMsSUFBQUEsTUFETTtBQUNDQyxJQUFBQSxVQUREO0FBQ1lDLElBQUFBLFdBRFo7QUFDd0JDLElBQUFBLFdBRHhCO0FBQ29DQyxJQUFBQTtBQURwQyxNQUNzRCxrQ0FBTyw2QkFBQyxvQkFBRDtBQUFVLElBQUEsS0FBSyxFQUFFVixLQUFqQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGtCQUF3Qiw2QkFBQyxhQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFBeEIsQ0FBUCxDQUQ1RDtBQUVHLE1BQUlXLFNBQVMsR0FBR0QsY0FBYyxDQUFDLE9BQUQsQ0FBOUI7QUFDQSxNQUFJRSxVQUFVLEdBQUdGLGNBQWMsQ0FBQyxRQUFELENBQS9CO0FBQ0EsTUFBSUcsUUFBUSxHQUFHSCxjQUFjLENBQUMsVUFBRCxDQUE3QjtBQUlESSxFQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWSxzQkFBWjtBQUNBRCxFQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWSxpQkFBWixFQUE4QkosU0FBUyxDQUFDSyxXQUF4QztBQUNGLENBWEcsQ0FBSiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCBSZWFjdERPTSBmcm9tICdyZWFjdC1kb20nXG5pbXBvcnQgQ29udGFjdEJ0biBmcm9tICcuLi9Db250YWN0J1xuaW1wb3J0IEZvcm0gZnJvbSAnLi4vRm9ybSdcbmltcG9ydCB7IHJlbmRlciB9IGZyb20gJ0B0ZXN0aW5nLWxpYnJhcnkvcmVhY3QnXG5cbmltcG9ydCB7Y3JlYXRlU3RvcmUsYXBwbHlNaWRkbGV3YXJlfSBmcm9tICdyZWR1eCdcbmltcG9ydCB0aHVuayBmcm9tICdyZWR1eC10aHVuaydcbmltcG9ydCB7cmVkdWNlcn0gZnJvbSAnLi4vLi4vLi4vcmVkdXgvcmVkdWNlcnMnXG5pbXBvcnQge1Byb3ZpZGVyfSBmcm9tICdyZWFjdC1yZWR1eCdcblxuXG5jb25zdCBzdG9yZSA9IGNyZWF0ZVN0b3JlKHJlZHVjZXIsYXBwbHlNaWRkbGV3YXJlKHRodW5rKSlcblxuXG5cbnRlc3QoJ0Zvcm0gcmVuZGVycyB3aXRoIG91dCBjcmFzaGluZycsIGFzeW5jICgpPT57XG5cdGNvbnN0IHsgZmlyZUV2ZW50LCB3YWl0Rm9yLCBcblx0c2NyZWVuLGZpbmRCeVRleHQsZ2V0Tm9kZVRleHQsY3JlYXRlRXZlbnQsZ2V0QnlMYWJlbFRleHR9ID0gcmVuZGVyKDxQcm92aWRlciBzdG9yZT17c3RvcmV9PjxGb3JtIC8+PC9Qcm92aWRlcj4pXG5cdFx0XHRcdGxldCBuYW1lTGFiZWwgPSBnZXRCeUxhYmVsVGV4dCgnTmFtZTonKVxuXHRcdFx0XHRsZXQgZW1haWxMYWJlbCA9IGdldEJ5TGFiZWxUZXh0KCdFbWFpbDonKVxuXHRcdFx0XHRsZXQgbXNnTGFiZWwgPSBnZXRCeUxhYmVsVGV4dCgnTWVzc2FnZTonKVxuXG5cblxuXHRcdFx0Y29uc29sZS5sb2coJ2NvbnRhaW5lcj09PT09PT09Ojo+Jylcblx0XHRcdGNvbnNvbGUubG9nKCdmb3JtPT09PT09PT06Oj4nLG5hbWVMYWJlbC50ZXh0Q29udGVudFx0KVx0XG59KVx0XHQiXX0=
