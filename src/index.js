@@ -37,7 +37,7 @@ const fadeAway = setInterval(() => {
     preloader.style.opacity = 1;
   }
   if (preloader.style.opacity > 0) {
-    preloader.style.opacity -= 0.08;
+    preloader.style.opacity -= 0.15;
     	if(preloader.style.opacity<=0){
     		preloader.style.zIndex='-221';
     		preloader.remove()
