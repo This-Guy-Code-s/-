@@ -1,0 +1,175 @@
+d93024a1f6d7ea1174ef7a10c6741098
+"use strict";
+
+var _interopRequireDefault = require("/home/tgc/Desktop/newSite/-/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./App.css");
+
+var _reactstrap = require("reactstrap");
+
+var _Header = _interopRequireDefault(require("./Header"));
+
+var _comps = _interopRequireDefault(require("./comps/"));
+
+var _projects = _interopRequireDefault(require("./comps/projects/"));
+
+var _reactRedux = require("react-redux");
+
+var _actions = require("./redux/actions");
+
+var _cloudWaveAnimation = require("./util/cloudWaveAnimation");
+
+var _jsxFileName = "/home/tgc/Desktop/newSite/-/src/App.js";
+const preloader = document.querySelector('.preloader');
+
+class App extends _react.default.Component {
+  componentDidMount() {
+    this.props.getMyWork();
+    this.porps.fadeEffect();
+  }
+
+  render() {
+    return /*#__PURE__*/_react.default.createElement(_actions.APP_COMP, {
+      className: "App",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "preloader",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: "spinner.svg",
+      alt: "spinner",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28,
+        columnNumber: 3
+      }
+    })), /*#__PURE__*/_react.default.createElement(_Header.default, {
+      compRendered: this.props.compRendered,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30,
+        columnNumber: 7
+      }
+    }), /*#__PURE__*/_react.default.createElement(_reactstrap.Container, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31,
+        columnNumber: 7
+      }
+    }, this.props.compRendered === 'Home' ? /*#__PURE__*/_react.default.createElement(_comps.default, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34,
+        columnNumber: 42
+      }
+    }) : /*#__PURE__*/_react.default.createElement(_projects.default, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34,
+        columnNumber: 51
+      }
+    })), /*#__PURE__*/_react.default.createElement(_cloudWaveAnimation.Div, {
+      className: "waveWrapper waveAnimation",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39,
+        columnNumber: 8
+      }
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "waveWrapperInner bgTop",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40,
+        columnNumber: 3
+      }
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "wave waveTop",
+      style: {
+        backgroundImage: `url(${this.props.wavio})`
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41,
+        columnNumber: 5
+      }
+    })), /*#__PURE__*/_react.default.createElement("div", {
+      className: "waveWrapperInner bgMiddle",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43,
+        columnNumber: 3
+      }
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "wave waveMiddle",
+      style: {
+        backgroundImage: `url(${this.props.wavio})`
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 5
+      }
+    })), /*#__PURE__*/_react.default.createElement("div", {
+      className: "waveWrapperInner bgBottom",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 3
+      }
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "wave waveBottom",
+      style: {
+        backgroundImage: `url(${this.props.wavio})`
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 5
+      }
+    }))));
+  }
+
+}
+
+const mapStateToProps = state => {
+  return { ...state
+  };
+};
+
+var _default = (0, _reactRedux.connect)(mapStateToProps, {
+  getMyWork: _actions.getMyWork,
+  DarkMode: _actions.DarkMode,
+  fadeEffect: _actions.fadeEffect
+})(App);
+
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkFwcC5qcyJdLCJuYW1lcyI6WyJwcmVsb2FkZXIiLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJBcHAiLCJSZWFjdCIsIkNvbXBvbmVudCIsImNvbXBvbmVudERpZE1vdW50IiwicHJvcHMiLCJnZXRNeVdvcmsiLCJwb3JwcyIsImZhZGVFZmZlY3QiLCJyZW5kZXIiLCJjb21wUmVuZGVyZWQiLCJiYWNrZ3JvdW5kSW1hZ2UiLCJ3YXZpbyIsIm1hcFN0YXRlVG9Qcm9wcyIsInN0YXRlIiwiRGFya01vZGUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUFBOztBQUNBOztBQUNBOztBQUVBOztBQUNBOztBQUNBOztBQUVBOztBQUNBOztBQUVBOzs7QUFHQSxNQUFNQSxTQUFTLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixZQUF2QixDQUFsQjs7QUFFQSxNQUFNQyxHQUFOLFNBQWtCQyxlQUFNQyxTQUF4QixDQUFpQztBQUNqQ0MsRUFBQUEsaUJBQWlCLEdBQUU7QUFDZixTQUFLQyxLQUFMLENBQVdDLFNBQVg7QUFDQSxTQUFLQyxLQUFMLENBQVdDLFVBQVg7QUFDQzs7QUFFREMsRUFBQUEsTUFBTSxHQUFFO0FBQ1Isd0JBRUUsNkJBQUMsaUJBQUQ7QUFBVSxNQUFBLFNBQVMsRUFBQyxLQUFwQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLG9CQUNBO0FBQUssTUFBQSxTQUFTLEVBQUMsV0FBZjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLG9CQUNKO0FBQUssTUFBQSxHQUFHLEVBQUMsYUFBVDtBQUF1QixNQUFBLEdBQUcsRUFBQyxTQUEzQjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLE1BREksQ0FEQSxlQUlBLDZCQUFDLGVBQUQ7QUFBUSxNQUFBLFlBQVksRUFBRSxLQUFLSixLQUFMLENBQVdLLFlBQWpDO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsTUFKQSxlQUtBLDZCQUFDLHFCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsT0FHRSxLQUFLTCxLQUFMLENBQVdLLFlBQVgsS0FBMEIsTUFBMUIsZ0JBQWlDLDZCQUFDLGNBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxNQUFqQyxnQkFBMEMsNkJBQUMsaUJBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxNQUg1QyxDQUxBLGVBYUMsNkJBQUMsdUJBQUQ7QUFBSyxNQUFBLFNBQVMsRUFBQywyQkFBZjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLG9CQUNMO0FBQUssTUFBQSxTQUFTLEVBQUMsd0JBQWY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxvQkFDRTtBQUFLLE1BQUEsU0FBUyxFQUFDLGNBQWY7QUFBOEIsTUFBQSxLQUFLLEVBQUU7QUFBQ0MsUUFBQUEsZUFBZSxFQUFFLE9BQU0sS0FBS04sS0FBTCxDQUFXTyxLQUFNO0FBQXpDLE9BQXJDO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsTUFERixDQURLLGVBSUw7QUFBSyxNQUFBLFNBQVMsRUFBQywyQkFBZjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLG9CQUNFO0FBQUssTUFBQSxTQUFTLEVBQUMsaUJBQWY7QUFBaUMsTUFBQSxLQUFLLEVBQUU7QUFBQ0QsUUFBQUEsZUFBZSxFQUFFLE9BQU0sS0FBS04sS0FBTCxDQUFXTyxLQUFNO0FBQXpDLE9BQXhDO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsTUFERixDQUpLLGVBT0w7QUFBSyxNQUFBLFNBQVMsRUFBQywyQkFBZjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLG9CQUNFO0FBQUssTUFBQSxTQUFTLEVBQUMsaUJBQWY7QUFBaUMsTUFBQSxLQUFLLEVBQUU7QUFBQ0QsUUFBQUEsZUFBZSxFQUFFLE9BQU0sS0FBS04sS0FBTCxDQUFXTyxLQUFNO0FBQXpDLE9BQXhDO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsTUFERixDQVBLLENBYkQsQ0FGRjtBQWdDRDs7QUF2QzhCOztBQTRDakMsTUFBTUMsZUFBZSxHQUFHQyxLQUFLLElBQUc7QUFDaEMsU0FBTyxFQUNQLEdBQUdBO0FBREksR0FBUDtBQUdDLENBSkQ7O2VBT2UseUJBQ2ZELGVBRGUsRUFFZjtBQUFDUCxFQUFBQSxTQUFTLEVBQVRBLGtCQUFEO0FBQVdTLEVBQUFBLFFBQVEsRUFBUkEsaUJBQVg7QUFBb0JQLEVBQUFBLFVBQVUsRUFBVkE7QUFBcEIsQ0FGZSxFQUdiUCxHQUhhLEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0ICcuL0FwcC5jc3MnO1xuaW1wb3J0IHtDb250YWluZXJ9IGZyb20gJ3JlYWN0c3RyYXAnXG5cbmltcG9ydCBIZWFkZXIgZnJvbSAnLi9IZWFkZXInXG5pbXBvcnQgSG9tZSBmcm9tICcuL2NvbXBzLydcbmltcG9ydCBQcm9qZWN0cyBmcm9tICcuL2NvbXBzL3Byb2plY3RzLydcblxuaW1wb3J0IHtjb25uZWN0fSBmcm9tICdyZWFjdC1yZWR1eCdcbmltcG9ydCB7Z2V0TXlXb3JrLEFQUF9DT01QLERhcmtNb2RlLGZhZGVFZmZlY3R9IGZyb20gJy4vcmVkdXgvYWN0aW9ucydcblxuaW1wb3J0IHtEaXZ9IGZyb20gJy4vdXRpbC9jbG91ZFdhdmVBbmltYXRpb24nXG5cblxuY29uc3QgcHJlbG9hZGVyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcignLnByZWxvYWRlcicpO1xuXG5jbGFzcyBBcHAgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnR7XG5jb21wb25lbnREaWRNb3VudCgpe1xuICAgIHRoaXMucHJvcHMuZ2V0TXlXb3JrKCkgXG4gICAgdGhpcy5wb3Jwcy5mYWRlRWZmZWN0KClcbiAgICB9XG5cbiAgICByZW5kZXIoKXsgXG4gICAgcmV0dXJuIChcblxuICAgICAgPEFQUF9DT01QIGNsYXNzTmFtZT1cIkFwcFwiPlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJwcmVsb2FkZXJcIj5cbiAgPGltZyBzcmM9XCJzcGlubmVyLnN2Z1wiIGFsdD1cInNwaW5uZXJcIiAvPlxuICAgICAgPC9kaXY+XG4gICAgICA8SGVhZGVyIGNvbXBSZW5kZXJlZD17dGhpcy5wcm9wcy5jb21wUmVuZGVyZWR9Lz5cbiAgICAgIDxDb250YWluZXI+XG5cbiAgICAgIHtcbiAgICAgICAgdGhpcy5wcm9wcy5jb21wUmVuZGVyZWQ9PT0nSG9tZSc/PEhvbWUgLz46PFByb2plY3RzIC8+XG4gICAgICB9XG4gICAgICAgIFxuICAgICAgPC9Db250YWluZXI+XG5cbiAgICAgICA8RGl2IGNsYXNzTmFtZT1cIndhdmVXcmFwcGVyIHdhdmVBbmltYXRpb25cIj5cbiAgPGRpdiBjbGFzc05hbWU9XCJ3YXZlV3JhcHBlcklubmVyIGJnVG9wXCI+XG4gICAgPGRpdiBjbGFzc05hbWU9XCJ3YXZlIHdhdmVUb3BcIiBzdHlsZT17e2JhY2tncm91bmRJbWFnZTpgdXJsKCR7dGhpcy5wcm9wcy53YXZpb30pYH19PjwvZGl2PlxuICA8L2Rpdj5cbiAgPGRpdiBjbGFzc05hbWU9XCJ3YXZlV3JhcHBlcklubmVyIGJnTWlkZGxlXCI+XG4gICAgPGRpdiBjbGFzc05hbWU9XCJ3YXZlIHdhdmVNaWRkbGVcIiBzdHlsZT17e2JhY2tncm91bmRJbWFnZTpgdXJsKCR7dGhpcy5wcm9wcy53YXZpb30pYH19PjwvZGl2PlxuICA8L2Rpdj5cbiAgPGRpdiBjbGFzc05hbWU9XCJ3YXZlV3JhcHBlcklubmVyIGJnQm90dG9tXCI+XG4gICAgPGRpdiBjbGFzc05hbWU9XCJ3YXZlIHdhdmVCb3R0b21cIiBzdHlsZT17e2JhY2tncm91bmRJbWFnZTpgdXJsKCR7dGhpcy5wcm9wcy53YXZpb30pYH19PjwvZGl2PlxuICA8L2Rpdj5cbjwvRGl2PlxuICAgICAgXG4gICAgICAgPC9BUFBfQ09NUD5cblxuICAgICAgIFxuICAgICBcbiAgICApO1xuICB9XG59XG5cblxuXG5jb25zdCBtYXBTdGF0ZVRvUHJvcHMgPSBzdGF0ZSA9PntcbnJldHVybiB7XG4uLi5zdGF0ZVxufVxufVxuXG5cbmV4cG9ydCBkZWZhdWx0IGNvbm5lY3QoXG5tYXBTdGF0ZVRvUHJvcHMsXG57Z2V0TXlXb3JrLERhcmtNb2RlLGZhZGVFZmZlY3R9XG4pKEFwcClcblxuXG5cblxuXG5cblxuXG5cblxuXG5cblxuXG5cblxuIl19

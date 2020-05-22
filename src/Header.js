@@ -84,17 +84,17 @@ class Header extends Component {
             
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret >
-                <b>Games</b>
+                <b style={{fontSize:window.innerWidth<=700?'1rem':'1.1rem'}}>Games</b>
               </DropdownToggle>
               <DropdownMenu
-              style={dropdowStyles}>
+              style={dropdowStyles} left='true'>
               {
                 this.props.work?this.props.work.map(wrk=>{
 
               return wrk.action==='PLAY'?(
                      <DropdownItem style={dropdowStyles} href={wrk.link} key={wrk.id}>
                 {wrk.title}
-                </DropdownItem>):true
+                </DropdownItem>):false
                 }):(
                   <Spinner size="sm" color="info" />
                 )
@@ -103,8 +103,8 @@ class Header extends Component {
             </UncontrolledDropdown>
           </Nav>
           {
-            this.props.compRendered==='Home'?<span onClick={()=>this.props.navBar('Projects')} style={{cursor:'pointer'}}><b>Projects</b></span>
-            :<span onClick={()=>this.props.navBar('Home')} style={{cursor:'pointer'}}><b>Home</b></span>
+            this.props.compRendered==='Home'?<span onClick={()=>this.props.navBar('Projects')} style={{cursor:'pointer',fontSize:window.innerWidth<=700?'1rem':'1.3rem'}}><b>Projects</b></span>
+            :<span onClick={()=>this.props.navBar('Home')} style={{cursor:'pointer',fontSize:window.innerWidth<=700?'1rem':'1.3rem'}}><b>Home</b></span>
           }
               
         </Collapse>

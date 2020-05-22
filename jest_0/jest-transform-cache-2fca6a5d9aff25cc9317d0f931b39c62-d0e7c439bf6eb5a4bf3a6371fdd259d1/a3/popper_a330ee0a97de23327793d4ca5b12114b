@@ -1,0 +1,21 @@
+1794aa5f16538a82d0398285f5175e1a
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+class Popper {
+  constructor() {
+    return {
+      destroy: () => {},
+      scheduleUpdate: () => {}
+    };
+  }
+
+}
+
+exports.default = Popper;
+Popper.placements = PopperJs.placements;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcHBlci5qcyJdLCJuYW1lcyI6WyJQb3BwZXIiLCJjb25zdHJ1Y3RvciIsImRlc3Ryb3kiLCJzY2hlZHVsZVVwZGF0ZSIsInBsYWNlbWVudHMiLCJQb3BwZXJKcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUNlLE1BQU1BLE1BQU4sQ0FBYTtBQUcxQkMsRUFBQUEsV0FBVyxHQUFHO0FBQ1osV0FBTztBQUNMQyxNQUFBQSxPQUFPLEVBQUUsTUFBTSxDQUFFLENBRFo7QUFFTEMsTUFBQUEsY0FBYyxFQUFFLE1BQU0sQ0FBRTtBQUZuQixLQUFQO0FBSUQ7O0FBUnlCOzs7QUFBUEgsTSxDQUNaSSxVLEdBQWFDLFFBQVEsQ0FBQ0QsVSIsInNvdXJjZXNDb250ZW50IjpbIlxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgUG9wcGVyIHtcbiAgc3RhdGljIHBsYWNlbWVudHMgPSBQb3BwZXJKcy5wbGFjZW1lbnRzXG5cbiAgY29uc3RydWN0b3IoKSB7XG4gICAgcmV0dXJuIHtcbiAgICAgIGRlc3Ryb3k6ICgpID0+IHt9LFxuICAgICAgc2NoZWR1bGVVcGRhdGU6ICgpID0+IHt9XG4gICAgfVxuICB9XG59XG4iXX0=

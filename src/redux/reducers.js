@@ -1,4 +1,9 @@
 import {LOADING,SUCCESS,BTN,NAVIGATION,MODE,SHOW,ERR} from './actions'
+ import logo from '../img/tgc1.png'
+import me from '../img/me.png'
+import wavio from '../img/wave.png'
+
+
  
 
 const initialState = {
@@ -7,6 +12,9 @@ const initialState = {
 	error:'',
 	mode:sessionStorage.getItem('toggleDarkMode') && sessionStorage.getItem('toggleDarkMode') === 'true'? true:false,
 	show:false,
+	me:me,
+	logo:logo,
+	wavio:wavio,
 	//contact btn name toggle
 	btnL:'Contact Me'
 }

@@ -83,7 +83,7 @@ style={this.actionStyle(post.action)}
 }):(	
 <div>
 	 <h4><b style={{WebkitTextFillColor:'azure'}}>Loading Projects...</b></h4>
-        <Spinner style={{ width: '3rem', height: '3rem' }} color='danger' type="grow" />
+        <Spinner style={{ width: '3rem', height: '3rem' }} color='danger'/>
 </div>
 )
 

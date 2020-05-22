@@ -4,8 +4,6 @@ import bg from '../img/bg6.jpg'
 import mbg from '../img/bg6mobile.jpg'
 
 
- 
-
 export const LOADING = 'LOADING'
 export const SUCCESS = 'SUCCESS'
 export const BTN = 'BTN'
@@ -182,4 +180,3 @@ background-size:cover;
 }  
  
 }
-

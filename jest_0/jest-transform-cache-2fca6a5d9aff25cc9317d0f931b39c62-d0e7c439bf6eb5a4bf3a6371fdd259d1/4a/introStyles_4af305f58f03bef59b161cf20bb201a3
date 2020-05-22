@@ -1,0 +1,88 @@
+56bbb11c108f7a69626c809bc53479b5
+"use strict";
+
+var _interopRequireDefault = require("/home/tgc/Desktop/newSite/-/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.introCard = exports.Row = exports.myRole = exports.Block = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+const Block = _styledComponents.default.div`
+padding-top:50px;
+flex:1;
+display:flex;
+-webkit-flex-direction:column;
+flex-direction:column;
+-webkit-justify-content:flex-start;
+-webkit-align-items:flex-start;
+justify-content:flex-start;
+align-items:flex-start;
+-webkit-text-fill-color:azure;
+color:azure;
+
+
+
+`;
+exports.Block = Block;
+const myRole = _styledComponents.default.div`
+
+  padding: 40px;
+  font-size: 75px;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+  color: red;
+
+`;
+exports.myRole = myRole;
+const Row = _styledComponents.default.div`
+padding-top:50px;
+flex:1;
+display:flex;
+-webkit-flex-direction:row;
+flex-direction:row;
+-webkit-text-fill-color:azure;
+color:azure;
+-webkit-grid-gap:10px;
+grid-gap:10px;
+
+
+
+ 
+
+@media screen and (max-width:500px){
+-webkit-flex-direction:column;
+flex-direction:column;
+
+}
+
+
+
+
+
+@media screen and (max-width:900px){
+	
+	figure{
+		margin-top:-50px;
+		
+	}
+
+}
+
+
+`;
+exports.Row = Row;
+const introCard = {
+  backgroundColor: 'rgba(0,0,0,.5)',
+  WebkitTextFillColor: 'azure',
+  color: 'azure',
+  border: 'double rgba(250,250,250,.5)',
+  WebkitBoxShadow: '2px 0 10px #888',
+  boxShadow: '2px 0 10px #888'
+};
+exports.introCard = introCard;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImludHJvU3R5bGVzLmpzIl0sIm5hbWVzIjpbIkJsb2NrIiwic3R5bGVkIiwiZGl2IiwibXlSb2xlIiwiUm93IiwiaW50cm9DYXJkIiwiYmFja2dyb3VuZENvbG9yIiwiV2Via2l0VGV4dEZpbGxDb2xvciIsImNvbG9yIiwiYm9yZGVyIiwiV2Via2l0Qm94U2hhZG93IiwiYm94U2hhZG93Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTs7QUFHTyxNQUFNQSxLQUFLLEdBQUdDLDBCQUFPQyxHQUFJOzs7Ozs7Ozs7Ozs7Ozs7Q0FBekI7O0FBZ0JBLE1BQU1DLE1BQU0sR0FBR0YsMEJBQU9DLEdBQUk7Ozs7Ozs7Ozs7Q0FBMUI7O0FBY0EsTUFBTUUsR0FBRyxHQUFHSCwwQkFBT0MsR0FBSTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Q0FBdkI7O0FBc0NBLE1BQU1HLFNBQVMsR0FBRztBQUN4QkMsRUFBQUEsZUFBZSxFQUFDLGdCQURRO0FBRXhCQyxFQUFBQSxtQkFBbUIsRUFBQyxPQUZJO0FBR3hCQyxFQUFBQSxLQUFLLEVBQUMsT0FIa0I7QUFJeEJDLEVBQUFBLE1BQU0sRUFBQyw2QkFKaUI7QUFLdkJDLEVBQUFBLGVBQWUsRUFBQyxpQkFMTztBQU12QkMsRUFBQUEsU0FBUyxFQUFDO0FBTmEsQ0FBbEIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgc3R5bGVkIGZyb20gJ3N0eWxlZC1jb21wb25lbnRzJ1xuXG5cbmV4cG9ydCBjb25zdCBCbG9jayA9IHN0eWxlZC5kaXZgXG5wYWRkaW5nLXRvcDo1MHB4O1xuZmxleDoxO1xuZGlzcGxheTpmbGV4O1xuLXdlYmtpdC1mbGV4LWRpcmVjdGlvbjpjb2x1bW47XG5mbGV4LWRpcmVjdGlvbjpjb2x1bW47XG4td2Via2l0LWp1c3RpZnktY29udGVudDpmbGV4LXN0YXJ0O1xuLXdlYmtpdC1hbGlnbi1pdGVtczpmbGV4LXN0YXJ0O1xuanVzdGlmeS1jb250ZW50OmZsZXgtc3RhcnQ7XG5hbGlnbi1pdGVtczpmbGV4LXN0YXJ0O1xuLXdlYmtpdC10ZXh0LWZpbGwtY29sb3I6YXp1cmU7XG5jb2xvcjphenVyZTtcblxuXG5cbmBcbmV4cG9ydCBjb25zdCBteVJvbGUgPSBzdHlsZWQuZGl2YFxuXG4gIHBhZGRpbmc6IDQwcHg7XG4gIGZvbnQtc2l6ZTogNzVweDtcbiAgZm9udC1mYW1pbHk6ICdNb25vdG9uJywgY3Vyc2l2ZTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICB0ZXh0LXNoYWRvdzogMCAwIDgwcHggcmVkLDAgMCAzMHB4IEZpcmVCcmljaywwIDAgNnB4IERhcmtSZWQ7XG4gIGNvbG9yOiByZWQ7XG5cbmBcblxuXG5cbmV4cG9ydCBjb25zdCBSb3cgPSBzdHlsZWQuZGl2YFxucGFkZGluZy10b3A6NTBweDtcbmZsZXg6MTtcbmRpc3BsYXk6ZmxleDtcbi13ZWJraXQtZmxleC1kaXJlY3Rpb246cm93O1xuZmxleC1kaXJlY3Rpb246cm93O1xuLXdlYmtpdC10ZXh0LWZpbGwtY29sb3I6YXp1cmU7XG5jb2xvcjphenVyZTtcbi13ZWJraXQtZ3JpZC1nYXA6MTBweDtcbmdyaWQtZ2FwOjEwcHg7XG5cblxuXG4gXG5cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6NTAwcHgpe1xuLXdlYmtpdC1mbGV4LWRpcmVjdGlvbjpjb2x1bW47XG5mbGV4LWRpcmVjdGlvbjpjb2x1bW47XG5cbn1cblxuXG5cblxuXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOjkwMHB4KXtcblx0XG5cdGZpZ3VyZXtcblx0XHRtYXJnaW4tdG9wOi01MHB4O1xuXHRcdFxuXHR9XG5cbn1cblxuXG5gXG5cblxuZXhwb3J0IGNvbnN0IGludHJvQ2FyZCA9IHtcblx0YmFja2dyb3VuZENvbG9yOidyZ2JhKDAsMCwwLC41KScsXG5cdFdlYmtpdFRleHRGaWxsQ29sb3I6J2F6dXJlJyxcblx0Y29sb3I6J2F6dXJlJyxcblx0Ym9yZGVyOidkb3VibGUgcmdiYSgyNTAsMjUwLDI1MCwuNSknLFxuIFx0V2Via2l0Qm94U2hhZG93OicycHggMCAxMHB4ICM4ODgnLFxuIFx0Ym94U2hhZG93OicycHggMCAxMHB4ICM4ODgnXG59XG4iXX0=

@@ -4,7 +4,7 @@ exports[`Form renders with out crashing 1`] = `
 <form
   class=""
   data-testid="theForm"
-  style="background-color: rgba(0, 0, 0, 0); color: rgb(255, 255, 255); padding: 0px 10px; width: 320px;"
+  style="background-color: rgba(0, 0, 0, 0.4); color: rgb(255, 255, 255); padding: 0px 10px; width: 320px;"
 >
   <div
     class="form-group"
