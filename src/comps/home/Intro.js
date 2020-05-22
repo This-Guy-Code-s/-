@@ -24,9 +24,9 @@ toggle = () => this.setState({tooltipOpen:!this.state.tooltipOpen});
 		<Row>
 		
 		<Card style={introCard}>
-<div className='alt myRole'>
+<div className='myRole'>
   <p className="error">Full<span>-</span>Stack</p>
-  <p className="code">Web<span>-</span><span>Developer</span></p>
+  <p className="code">Web<span>-</span><span>Dev</span></p>
 </div>
 
 
