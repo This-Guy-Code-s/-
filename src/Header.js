@@ -21,7 +21,7 @@ import {brand,
 } from './util/headerStyles'
 
 
-const soci={width:'100%',WebkitTextFillColor:'azure',color:'azure',fontWeight:'bolder',display:'flex',gridGap:'3px'}
+const soci={width:'100%',WebkitTextFillColor:'azure',color:'azure',fontWeight:'bolder',display:'flex',gridGap:'3px',fontSize:window.innerWidth<=700?'1.2rem':'1.4rem'}
 
 
 class Header extends Component {
@@ -30,7 +30,6 @@ class Header extends Component {
     super(props)
     this.state={
       tooltipOpen:false,
-      currLink:'Projects',
       isOpen:false,
       xOutLight:{marginLeft:'10px',cursor:'pointer',WebkitTextFillColor:'yellow'},
       xOutDark:{marginLeft:'10px',cursor:'pointer',WebkitTextFillColor:'darkgray'}
@@ -66,11 +65,8 @@ class Header extends Component {
         <i className="fab fa-github" style={{cursor:'pointer',WebkitTextFillColor:'#888'}} onClick={()=>window.location.href='https://www.github.com/guytonoriji'}></i>
         <i className="fab fa-twitter" style={{cursor:'pointer',WebkitTextFillColor:'rgb(29, 161, 242)'}} onClick={()=>window.location.href='https://www.twitter.com/iSpam_The_Code'}></i>
         {
-          this.props.mode?(
-        <i className="fas fa-sun" title='Light Mode!' style={this.state.xOutLight} onClick={()=>this.props.DarkMode(false)}></i>
-            ):(
-        <i className="fas fa-moon" title='Dark Mode!' style={this.state.xOutDark} onClick={()=>this.props.DarkMode(true)}></i>
-            )
+        this.props.mode?(<i className="fas fa-sun" title='Light Mode!' style={this.state.xOutLight} onClick={()=>this.props.DarkMode(false)}></i>)
+        :(<i className="fas fa-moon" title='Dark Mode!' style={this.state.xOutDark} onClick={()=>this.props.DarkMode(true)}></i>)
         }
       </Tooltip>
     </div>

@@ -32,7 +32,7 @@ constructor(){
 super()
 this.actionStyle = this.actionStyle.bind(this)
 }
-componentWillMount(prevProps){
+componentDidMount(prevProps){
 this.props.getMyWork()
 }
 

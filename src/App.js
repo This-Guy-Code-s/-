@@ -24,13 +24,10 @@ componentDidMount(){
       <APP_COMP className="App">
       <Header compRendered={this.props.compRendered}/>
       <Container>
-
       {
         this.props.compRendered==='Home'?<Home />:<Projects />
       }
-        
       </Container>
-
        <Div className="waveWrapper waveAnimation">
   <div className="waveWrapperInner bgTop">
     <div className="wave waveTop" style={{backgroundImage:`url(${this.props.wavio})`}}></div>
@@ -42,7 +39,6 @@ componentDidMount(){
     <div className="wave waveBottom" style={{backgroundImage:`url(${this.props.wavio})`}}></div>
   </div>
 </Div>
-      
        </APP_COMP>
 
        
