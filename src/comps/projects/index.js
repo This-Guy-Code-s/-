@@ -49,8 +49,10 @@ return (
 
 <div>
 <figure style={{WebkitTextFillColor:'azure',marginTop:'30px'}}>
-<i className="fas fa-project-diagram"></i>
-<figcaption style={{fontSize:'1.3rem'}}><h1>Projects</h1></figcaption>
+
+
+<figcaption className='myRole'><i className="fas fa-project-diagram"></i><br/><b className="error">P r<span> o </span>j e</b>
+  <b className="code"> c<span> t</span><span> s</span></b></figcaption>
 </figure>
 <Container>
 <Row>

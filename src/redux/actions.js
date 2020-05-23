@@ -1,7 +1,7 @@
 import axios from 'axios'
 import styled from 'styled-components'
 import bg from '../img/bg6.jpg'
-import mbg from '../img/bg6mobile.jpg'
+import bgdm from '../img/bg6dm.jpg'
 
 
 export const LOADING = 'LOADING'
@@ -42,7 +42,7 @@ text-align: center;
 background-color:#0C0032;
 overflow-x:hidden;
 overflow-y:auto;
-background-image:url('');
+background-image:url(${window.innerWidth<=500?bgdm:bgdm});
 background-position:center;
 -moz-background-size:cover;
 -webkit-background-size:cover;
@@ -61,7 +61,7 @@ text-align: center;
 background-color:#0C0032;
 overflow-x:hidden;
 overflow-y:auto;
-background-image:url(${window.innerWidth<=500?bg:mbg});
+background-image:url(${window.innerWidth<=500?bg:bg});
 background-position:center;
 -moz-background-size:cover;
 -webkit-background-size:cover;
@@ -77,7 +77,7 @@ text-align: center;
 background-color:#0C0032;
 overflow-x:hidden;
 overflow-y:auto;
-background-image:url('');
+background-image:url(${window.innerWidth<=500?bgdm:bgdm});
 background-position:center;
 -moz-background-size:cover;
 -webkit-background-size:cover;
@@ -145,7 +145,7 @@ text-align: center;
 background-color:#0C0032;
 overflow-x:hidden;
 overflow-y:auto;
-background-image:url('');
+background-image:url(${window.innerWidth<=500?bgdm:bgdm});
 background-position:center;
 -moz-background-size:cover;
 -webkit-background-size:cover;
@@ -167,7 +167,7 @@ text-align: center;
 background-color:#0C0032;
 overflow-x:hidden;
 overflow-y:auto;
-background-image:url(${window.innerWidth<=500?bg:mbg});
+background-image:url(${window.innerWidth<=500?bg:bg});
 background-position:center;
 -moz-background-size:cover;
 -webkit-background-size:cover;
