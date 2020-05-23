@@ -14,25 +14,25 @@ import {Provider} from 'react-redux'
 
 
 const store = createStore(reducer,applyMiddleware(thunk))
-  
 
 
-	
 
 
-  global.document.createRange = () => ({
-    setStart: () => {},
-    setEnd: () => {},
-    commonAncestorContainer: {
-      nodeName: 'BODY',
-      ownerDocument: document,
-    },
-  });
+
+
+global.document.createRange = () => ({
+setStart: () => {},
+setEnd: () => {},
+commonAncestorContainer: {
+nodeName: 'BODY',
+ownerDocument: document,
+},
+});
 const props = {
-    me:me,
-    wavio:wavio,
-    logo:logo
-  }
+me:me,
+wavio:wavio,
+logo:logo
+}
 
 // beforeEach(() => {
 //   container = document.createElement('div');
@@ -45,7 +45,7 @@ const props = {
 // });
 
 test('renders without crashing', () => {
-  const div = document.createElement('div');
- const {screen,getByTestId,container} = render(<Provider store={store}><App {...props}/></Provider>);
-  
+const div = document.createElement('div');
+const {screen,getByTestId,container} = render(<Provider store={store}><App {...props}/></Provider>);
+
 });

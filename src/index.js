@@ -16,20 +16,18 @@ env.config()
 const store = createStore(reducer,applyMiddleware(thunk))
 
 ReactDOM.render(
-      <Provider store={store}>
-
-	<Router>
-  <App />
+<Provider store={store}>
+<Router>
+<App />
 </Router>
-      </Provider>
-
-  ,
-  document.getElementById('root')
+</Provider>
+,
+document.getElementById('root')
 );
 
 
 
-const preloader = document && document.querySelector('.preloader');
+const preloader = document.querySelector('.preloader');
 
 const fadeAway = setInterval(() => {
  
@@ -43,6 +41,6 @@ const fadeAway = setInterval(() => {
     		preloader.remove()
     	}
   } else {
-    clearInterval(fadeAway);
+   return clearInterval(fadeAway);
   }
 }, 150);

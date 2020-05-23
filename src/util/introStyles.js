@@ -32,12 +32,11 @@ grid-gap:10px;
 
 
 
- 
+
 
 @media screen and (max-width:500px){
 -webkit-flex-direction:column;
 flex-direction:column;
-
 }
 
 
@@ -45,11 +44,10 @@ flex-direction:column;
 
 
 @media screen and (max-width:900px){
-	
-	figure{
-		margin-top:-50px;
-		
-	}
+
+figure{
+margin-top:-50px;
+}
 
 }
 
@@ -57,11 +55,4 @@ flex-direction:column;
 `
 
 
-export const introCard = {
-	backgroundColor:'rgba(0,0,0,.5)',
-	WebkitTextFillColor:'azure',
-	color:'azure',
-	border:'double rgba(250,250,250,.5)',
- 	WebkitBoxShadow:'2px 0 10px #888',
- 	boxShadow:'2px 0 10px #888'
-}
+export const introCard = {backgroundColor:'rgba(0,0,0,.5)',WebkitTextFillColor:'azure',color:'azure',border:'double rgba(250,250,250,.5)',WebkitBoxShadow:'2px 0 10px #888',boxShadow:'2px 0 10px #888'}

@@ -2,28 +2,15 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {getMyWork} from '../../redux/actions'
 import {
-Card, CardImg, CardText, CardBody, CardLink,
+Card, CardImg, CardBody, CardLink,
 CardTitle,Container,Spinner
 } from 'reactstrap';
-
 import styled from 'styled-components'
 
 
-const Row = styled.div`
-display:flex;
-flex-direction:column;
-grid-gap:50px;
-`;
+const Row = styled.div`flex:1;display:flex;flex-direction:column;justify-content:space-around;align-items:center;grid-gap:50px;`;
 
-const cardStylez = {
-backgroundColor:'rgba(0,0,0,.5)',
-WebkitTextFillColor:'azure',
-fontSize:window.innerWidth<=700?'1.15rem':'1.4rem',
-fontWeight:'bolder',
-border:'double #4df7ff',
-boxShadow:'0 0 20px #5539f3'
-
-}
+const cardStylez = {flex:"1",width:'100%',height:'100%',backgroundColor:'rgba(0,0,0,.5)',WebkitTextFillColor:'azure',fontSize:window.innerWidth<=700?'1.15rem':'1.4rem',fontWeight:'bolder',border:'double #4df7ff',boxShadow:'0 0 20px #5539f3'}
 
 
 
@@ -69,7 +56,10 @@ style={cardStylez}
 </CardBody>
 <CardImg width="100%" src={post.image} alt={post.alt} />
 <CardBody>
-<CardText>{post.description}</CardText>
+<details open={window.innerWidth<=700?false:true}>
+<summary></summary>
+<p>{post.description}</p>
+</details>
 <CardLink href={post.link} 
 >
 {post.action==='PLAY'?<i className="fas fa-gamepad"></i>:<i className="fas fa-eye"></i>}

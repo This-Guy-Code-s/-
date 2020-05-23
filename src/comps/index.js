@@ -5,18 +5,11 @@ import Contact from './home/Contact.js'
 import {connect} from 'react-redux'
 import {changeBtnLabel} from '../redux/actions'
 
-const pitchStyle={
-paddingTop:'100px',
-WebkitHeight:'100%',
-height:'100%',
-WebkitTextFillColor:'azure',
-color:'azure',
-fontWeight:'bolder'
-			 	}
+const pitchStyle={paddingTop:'100px',WebkitHeight:'100%',height:'100%',WebkitTextFillColor:'azure',color:'azure',fontWeight:'bolder'}
 
 class Home extends React.Component{
-	constructor(props){
-		super(props)
+constructor(props){
+super(props)
 this.state={
 pitch:`With your own website you can build your brand's credibility,
 showcase your work at all times,
@@ -29,24 +22,24 @@ From custom websites to updates to your websites,
 I can help. Contact Me.`,
 
 }
-	}
+}
 
-	render(){
-		return(
+render(){
+return(
 
-			<div>
-			 <Intro/>
-			 <Skillz/>
-			 <div style={pitchStyle}>
-			 	<p style={{fontSize:window.innerWidth<=700?'1.2rem':'1.6rem'}}>
-			 	{this.state.pitch}
-			 	 </p>
-			 <Contact buttonLabel={this.props.btnL}/>
-			 </div>
-			</div>
+<div>
+<Intro/>
+<Skillz/>
+<div style={pitchStyle}>
+<p style={{fontSize:window.innerWidth<=700?'1.2rem':'1.6rem'}}>
+{this.state.pitch}
+</p>
+<Contact buttonLabel={this.props.btnL}/>
+</div>
+</div>
 
-			)
-	}
+)
+}
 }
 
 
