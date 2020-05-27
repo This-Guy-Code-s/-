@@ -1,0 +1,118 @@
+e9a26bca200edf02d7e1503376745755
+"use strict";
+
+var _interopRequireDefault = require("/home/tgc/Desktop/newSite/-/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactstrap = require("reactstrap");
+
+var _introStyles = require("../../util/introStyles");
+
+var _jsxFileName = "/home/tgc/Desktop/newSite/-/src/comps/home/Intro.js";
+
+class Intro extends _react.default.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = () => this.setState({
+      tooltipOpen: !this.state.tooltipOpen
+    });
+
+    this.state = {
+      tooltipOpen: false
+    };
+  }
+
+  render() {
+    return /*#__PURE__*/_react.default.createElement(_introStyles.Block, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 1
+      }
+    }, /*#__PURE__*/_react.default.createElement(_introStyles.Row, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24,
+        columnNumber: 1
+      }
+    }, /*#__PURE__*/_react.default.createElement(_reactstrap.Card, {
+      style: _introStyles.introCard,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26,
+        columnNumber: 1
+      }
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "myRole",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27,
+        columnNumber: 1
+      }
+    }, /*#__PURE__*/_react.default.createElement("p", {
+      className: "error",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28,
+        columnNumber: 1
+      }
+    }, "Full", /*#__PURE__*/_react.default.createElement("span", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28,
+        columnNumber: 26
+      }
+    }, "-"), "Stack"), /*#__PURE__*/_react.default.createElement("p", {
+      className: "code",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29,
+        columnNumber: 1
+      }
+    }, "Web", /*#__PURE__*/_react.default.createElement("span", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29,
+        columnNumber: 24
+      }
+    }, "-"), /*#__PURE__*/_react.default.createElement("span", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29,
+        columnNumber: 38
+      }
+    }, "Dev"))), /*#__PURE__*/_react.default.createElement("p", {
+      style: {
+        fontSize: window.innerWidth <= 700 ? '1.2rem' : '1.65rem',
+        padding: '0px 1px'
+      },
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33,
+        columnNumber: 1
+      }
+    }, "I am here to help start-ups, small businesses, entrepreneur's, and agencies get better business with good quality websites and satisfying user experience. I believe, to be a sucessful developer one must constantly self improve, have multiple approaches to problems, and stay up to date with technologies."))));
+  }
+
+}
+
+var _default = Intro;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkludHJvLmpzIl0sIm5hbWVzIjpbIkludHJvIiwiUmVhY3QiLCJDb21wb25lbnQiLCJjb25zdHJ1Y3RvciIsInByb3BzIiwidG9nZ2xlIiwic2V0U3RhdGUiLCJ0b29sdGlwT3BlbiIsInN0YXRlIiwicmVuZGVyIiwiaW50cm9DYXJkIiwiZm9udFNpemUiLCJ3aW5kb3ciLCJpbm5lcldpZHRoIiwicGFkZGluZyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7O0FBQ0E7O0FBQ0E7Ozs7QUFRQSxNQUFNQSxLQUFOLFNBQW9CQyxlQUFNQyxTQUExQixDQUFtQztBQUNuQ0MsRUFBQUEsV0FBVyxDQUFDQyxLQUFELEVBQU87QUFDbEIsVUFBTUEsS0FBTjs7QUFEa0IsU0FNbEJDLE1BTmtCLEdBTVQsTUFBTSxLQUFLQyxRQUFMLENBQWM7QUFBQ0MsTUFBQUEsV0FBVyxFQUFDLENBQUMsS0FBS0MsS0FBTCxDQUFXRDtBQUF6QixLQUFkLENBTkc7O0FBRWxCLFNBQUtDLEtBQUwsR0FBVztBQUNYRCxNQUFBQSxXQUFXLEVBQUM7QUFERCxLQUFYO0FBR0M7O0FBR0RFLEVBQUFBLE1BQU0sR0FBRTtBQUNSLHdCQUNBLDZCQUFDLGtCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsb0JBRUEsNkJBQUMsZ0JBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxvQkFFQSw2QkFBQyxnQkFBRDtBQUFNLE1BQUEsS0FBSyxFQUFFQyxzQkFBYjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLG9CQUNBO0FBQUssTUFBQSxTQUFTLEVBQUMsUUFBZjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLG9CQUNBO0FBQUcsTUFBQSxTQUFTLEVBQUMsT0FBYjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLDRCQUF5QjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQXpCLFVBREEsZUFFQTtBQUFHLE1BQUEsU0FBUyxFQUFDLE1BQWI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSwyQkFBdUI7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUF2QixlQUFxQztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQXJDLENBRkEsQ0FEQSxlQU9BO0FBQUcsTUFBQSxLQUFLLEVBQUU7QUFBQ0MsUUFBQUEsUUFBUSxFQUFDQyxNQUFNLENBQUNDLFVBQVAsSUFBbUIsR0FBbkIsR0FBdUIsUUFBdkIsR0FBZ0MsU0FBMUM7QUFBb0RDLFFBQUFBLE9BQU8sRUFBQztBQUE1RCxPQUFWO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsMFRBUEEsQ0FGQSxDQUZBLENBREE7QUFtQkM7O0FBN0JrQzs7ZUFrQ3BCZCxLIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0J1xuaW1wb3J0IHtDYXJkfSBmcm9tICdyZWFjdHN0cmFwJ1xuaW1wb3J0IHtcbkJsb2NrLFxuUm93LFxuaW50cm9DYXJkXG59IGZyb20gJy4uLy4uL3V0aWwvaW50cm9TdHlsZXMnXG5cblxuXG5jbGFzcyBJbnRybyBleHRlbmRzIFJlYWN0LkNvbXBvbmVudHtcbmNvbnN0cnVjdG9yKHByb3BzKXtcbnN1cGVyKHByb3BzKVxudGhpcy5zdGF0ZT17XG50b29sdGlwT3BlbjpmYWxzZSxcbn1cbn1cbnRvZ2dsZSA9ICgpID0+IHRoaXMuc2V0U3RhdGUoe3Rvb2x0aXBPcGVuOiF0aGlzLnN0YXRlLnRvb2x0aXBPcGVufSk7XG5cbnJlbmRlcigpe1xucmV0dXJuKFxuPEJsb2NrPlxuXG48Um93PlxuXG48Q2FyZCBzdHlsZT17aW50cm9DYXJkfT5cbjxkaXYgY2xhc3NOYW1lPSdteVJvbGUnPlxuPHAgY2xhc3NOYW1lPVwiZXJyb3JcIj5GdWxsPHNwYW4+LTwvc3Bhbj5TdGFjazwvcD5cbjxwIGNsYXNzTmFtZT1cImNvZGVcIj5XZWI8c3Bhbj4tPC9zcGFuPjxzcGFuPkRldjwvc3Bhbj48L3A+XG48L2Rpdj5cblxuXG48cCBzdHlsZT17e2ZvbnRTaXplOndpbmRvdy5pbm5lcldpZHRoPD03MDA/JzEuMnJlbSc6JzEuNjVyZW0nLHBhZGRpbmc6JzBweCAxcHgnfX0+SSBhbSBoZXJlIHRvIGhlbHAgc3RhcnQtdXBzLCBzbWFsbCBidXNpbmVzc2VzLCBlbnRyZXByZW5ldXIncywgYW5kIGFnZW5jaWVzIGdldCBiZXR0ZXIgYnVzaW5lc3Mgd2l0aCBnb29kIHF1YWxpdHkgd2Vic2l0ZXMgYW5kIHNhdGlzZnlpbmcgdXNlciBleHBlcmllbmNlLiBJIGJlbGlldmUsIHRvIGJlIGEgc3VjZXNzZnVsIGRldmVsb3BlciBvbmUgbXVzdCBjb25zdGFudGx5IHNlbGYgaW1wcm92ZSwgaGF2ZSBtdWx0aXBsZSBhcHByb2FjaGVzIHRvIHByb2JsZW1zLCBhbmQgc3RheSB1cCB0byBkYXRlIHdpdGggdGVjaG5vbG9naWVzLjwvcD5cbjwvQ2FyZD5cbjwvUm93PlxuXG48L0Jsb2NrPlxuKVxuXG59XG59XG5cblxuXG5leHBvcnQgZGVmYXVsdCBJbnRybyJdfQ==

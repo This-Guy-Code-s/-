@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import bg from '../img/bg6.jpg'
 import bgdm from '../img/bg6dm.jpg'
 
-
 export let APP_COMP = styled.div`
 flex:1;
 -webkit-text-align: center;
@@ -108,6 +107,17 @@ return dispatch({type:SUCCESS,payload:res.data.work})
 return dispatch({type:ERR,payload:err})
 
 })
+}
+
+
+//=============================================================================/
+//no dispatch throwing needed , but can be store here for good use of redux aysnc control
+export const tog_description = (id) => dispatch =>{
+const target = document.querySelector(`#${id}`);
+//--------------------------------------------
+(/off/i).test(target.getAttribute('class'))?
+target.setAttribute('class','fas fa-toggle-on')
+:target.setAttribute('class','fas fa-toggle-off');	
 }
 
 //=============================================================================/

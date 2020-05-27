@@ -12,7 +12,7 @@ exports[`Form renders with out crashing 1`] = `
     <label
       class=""
       for="name"
-      style="font-weight: bolderd;"
+      style="font-weight: bolder;"
     >
       Name:
     </label>
@@ -37,7 +37,7 @@ exports[`Form renders with out crashing 1`] = `
     <label
       class=""
       for="email"
-      style="font-weight: bolderd;"
+      style="font-weight: bolder;"
     >
       Email:
     </label>
@@ -62,7 +62,7 @@ exports[`Form renders with out crashing 1`] = `
     <label
       class=""
       for="message"
-      style="font-weight: bolderd;"
+      style="font-weight: bolder;"
     >
       Message:
     </label>

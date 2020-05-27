@@ -307,3 +307,18 @@ html{
 }
 
 }
+
+
+
+
+/*HIDE DESCRIPTION ARROWS IN SUMMARY TAGZ*/
+
+/*Some rare devices*/
+.deets summary::-webkit-details-marker {
+  display:none;
+}
+
+/*should catch the rest of devices*/
+.deets > summary:first-of-type {
+    list-style-type: none;
+}

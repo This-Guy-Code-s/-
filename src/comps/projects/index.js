@@ -1,16 +1,14 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {getMyWork} from '../../redux/actions'
+import {getMyWork,tog_description} from '../../redux/actions'
 import {
 Card, CardImg, CardBody, CardLink,
 CardTitle,Container,Spinner
 } from 'reactstrap';
-import styled from 'styled-components'
+import { Row, cardStylez, card_desc} from '../../util/projStyles'
+import {myUids} from './extra.js'
 
 
-const Row = styled.div`flex:1;display:flex;flex-direction:column;justify-content:space-around;align-items:center;grid-gap:50px;`;
-
-const cardStylez = {width:'100%',height:'auto',backgroundColor:'rgba(0,0,0,.5)',WebkitTextFillColor:'azure',fontSize:window.innerWidth<=700?'1.15rem':'1.4rem',fontWeight:'bolder',border:'double #4df7ff',boxShadow:'0 0 20px #5539f3'}
 
 
 
@@ -18,9 +16,10 @@ class Projects extends React.Component{
 constructor(){
 super()
 this.actionStyle = this.actionStyle.bind(this)
+this.$etId = this.$etId.bind(this)
 }
 componentDidMount(prevProps){
-this.props.getMyWork()
+this.props.getMyWork();
 }
 
 actionStyle(act){
@@ -31,7 +30,20 @@ return {WebkitTextFillColor:'#03fc13'}
 }
 }
 
+
+$etId(){
+				const newID = []
+			myUids.forEach((char,i)=>{
+if((Math.floor(Math.random() * i) % 2) === Math.floor(Math.random() * 2 + 1))
+{newID.push(char+myUids[Math.floor(Math.random() * 52)])}})
+	
+	return newID.join('')
+	}
+
 render(){
+
+	
+	
 return (
 
 <div>
@@ -45,6 +57,8 @@ return (
 <Row>
 {
 this.props.work?this.props.work.map(post=>{
+	let boost = this.$etId();
+
 return	(
 
 <div key={post.id}>
@@ -57,14 +71,17 @@ style={cardStylez}
 </CardBody>
 <CardImg width="100%" src={post.image} alt={post.alt} />
 <CardBody>
-<details open={window.innerWidth<=700?false:true}>
-<summary></summary>
+<details open={window.innerWidth<=700?false:true} className='deets'>
+<summary onClick={()=>this.props.tog_description(boost)} style={card_desc}>
+<i className='fas fa-toggle-off' id={boost}></i>
+Description
+</summary>
 <p>{post.description}</p>
 </details>
-<CardLink href={post.link} 
+<hr />
+<CardLink href={post.link}  style={{display:'flex',flexDirection:'column'}}
 >
 {post.action==='PLAY'?<i className="fas fa-gamepad"></i>:<i className="fas fa-eye"></i>}
-<br />
 <span
 style={this.actionStyle(post.action)}
 >{post.action}</span>
@@ -102,5 +119,5 @@ return {
 
 export default connect(
 mapStateToProps,
-{getMyWork}
+{getMyWork,tog_description}
 )(Projects)
