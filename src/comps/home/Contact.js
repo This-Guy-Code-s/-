@@ -1,7 +1,7 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React  from 'react';
 import { pulse,conBtn,conLink,middle,formToats,formToatsHeader,formBoxh} from '../../util/contactStyles'
-import {Toast, ToastBody, ToastHeader, Button,Spinner  } from 'reactstrap';
+import {Toast, ToastBody, ToastHeader, Button  } from 'reactstrap';
 import {connect} from 'react-redux'
 import {changeBtnLabel,showOrNot} from '../../redux/actions'
 import Form from './Form'
@@ -46,10 +46,7 @@ return (
 
       <Toast isOpen={this.props.show} style={formToats}>
       <ToastHeader style={formToatsHeader}>
-        <span style={pulse}>
-     <Spinner type="grow" color="primary" />
-      <small><a href='tel:2402737952' ><i className="fas fa-phone phone_"></i> Call Instead? </a>2402737952</small>
-      </span>
+        <a style={pulse} href='tel:2402737952' ><i className="fas fa-phone phone_"></i> Call Instead? </a><b style={{WebkitTextFillColor:'#000'}}>2402737952</b>
       
       </ToastHeader>
       <ToastBody style={formBoxh}>

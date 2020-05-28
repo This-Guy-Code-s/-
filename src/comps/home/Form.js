@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { Err,Pass,formBtn,formio} from '../../util/contactStyles'
+import { Err,Pass,formBtn,formio,inputVise} from '../../util/contactStyles'
 import {Form,FormGroup,Input,Label, Button , FormText } from 'reactstrap';
 import {name_,email_,msg_} from '../../util/contactValidations'
 
@@ -69,18 +69,18 @@ return(
 
 <Form style={formio}  onSubmit={this.send} data-testid="theForm">
 <FormGroup>
-<Label htmlFor="name" style={labe}>Name:</Label>
-<Input className={this.state.valOrNah1} type="text" name="name" id="name" value={this.state.msg.name} onChange={(e)=>{this.setState({msg:{...this.state.msg,name:e.target.value}})}} placeholder="Name..."  style={{WebkitTextFillColor:'#000'}} required/>
+<Label htmlFor="name" style={labe}></Label>
+<Input className={this.state.valOrNah1} type="text" name="name" id="name" value={this.state.msg.name} onChange={(e)=>{this.setState({msg:{...this.state.msg,name:e.target.value}})}} placeholder="Name..."  style={inputVise} required/>
 <FormText>What name can I refer to you as?</FormText>
 </FormGroup>
 <FormGroup>
-<Label htmlFor="email" style={labe}>Email:</Label>
-<Input className={this.state.valOrNah2}  type="email" name="email" id="email" value={this.state.msg.email} onChange={(e)=>{this.setState({msg:{...this.state.msg,email:e.target.value}})}} placeholder="Email..." style={{WebkitTextFillColor:'#000'}} required/>
+<Label htmlFor="email" style={labe}></Label>
+<Input className={this.state.valOrNah2}  type="email" name="email" id="email" value={this.state.msg.email} onChange={(e)=>{this.setState({msg:{...this.state.msg,email:e.target.value}})}} placeholder="Email..." style={inputVise} required/>
 <FormText>You will not recieve any spam or emails period.</FormText>
 </FormGroup>
 <FormGroup>
-<Label htmlFor="message" style={labe}>Message:</Label>
-<Input className={this.state.valOrNah3} type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..." style={{WebkitTextFillColor:'#000'}} required/>
+<Label htmlFor="message" style={labe}></Label>
+<Input className={this.state.valOrNah3} type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..." style={inputVise} required/>
 <FormText><Err>{this.state.errMsg}</Err>
 <Pass>{this.state.passMsg}</Pass></FormText>
 </FormGroup>

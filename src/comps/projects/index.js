@@ -73,8 +73,8 @@ style={cardStylez}
 <CardBody>
 <details open={window.innerWidth<=700?false:true} className='deets'>
 <summary onClick={()=>this.props.tog_description(boost)} style={card_desc}>
-<i className='fas fa-toggle-off' id={boost}></i>
-Description
+<span ><i className='fas fa-toggle-off' id={boost}></i>
+Description</span>
 </summary>
 <p>{post.description}</p>
 </details>
