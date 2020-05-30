@@ -5,7 +5,7 @@ import {
 Card, CardImg, CardBody, CardLink,
 CardTitle,Container,Spinner
 } from 'reactstrap';
-import { Row, cardStylez, card_desc} from '../../util/projStyles'
+import { Row, cardStylez,cardSDiv, card_desc} from '../../util/projStyles'
 import {myUids} from './extra.js'
 
 
@@ -61,7 +61,7 @@ this.props.work?this.props.work.map(post=>{
 
 return	(
 
-<div key={post.id}>
+<div key={post.id} style={cardSDiv}>
 <Card  
 style={cardStylez}
 >
