@@ -55,4 +55,4 @@ margin-top:-50px;
 `
 
 
-export const introCard = {backgroundColor:'rgba(0,0,0,.5)',WebkitTextFillColor:'azure',color:'azure',border:'double rgba(250,250,250,.5)',WebkitBoxShadow:'2px 0 10px #888',boxShadow:'2px 0 10px #888'}
+export const introCard = {backgroundColor:'rgba(0,0,0,.5)',WebkitTextFillColor:'azure',color:'azure',border:'double rgba(250,250,250,.5)',WebkitBoxShadow:'2px 0 10px #888',boxShadow:'2px 0 10px #888',padding:'.5%'}

@@ -14,7 +14,7 @@ import {connect} from 'react-redux'
 import {navBar,DarkMode} from './redux/actions'
 
 import {brand,
-parenthStyles,
+orijiStyles,
 guyStyles,
 dropdowStyles,
 me,
@@ -64,7 +64,7 @@ return (
 <div>
 <span className='navbar-brand' id="me"><span style={brand} ><figure>
 <img src={this.props.me} style={me} alt='me' width='50' height='50'/>
-</figure><b style={guyStyles}>Guyton</b> {"  "} <b style={parenthStyles}>Oriji</b></span></span>
+</figure><h2 style={guyStyles}>Guyton</h2> {"  "} <h2 style={orijiStyles}>Oriji</h2></span></span>
 <Tooltip style={soci} placement="bottom" isOpen={this.state.tooltipOpen} autohide={false} target="me" >
 <i className="fab fa-youtube" style={yt} onClick={()=>alert('Youtube Channel comming soon...')}></i>
 <i className="fab fa-github" style={gh} onClick={()=>window.location.href='https://www.github.com/guytonoriji'}></i>
@@ -85,7 +85,7 @@ this.props.mode?(<i className="fas fa-sun" title='Light Mode!' style={xOutLight}
 
 <UncontrolledDropdown nav inNavbar>
 <DropdownToggle nav caret >
-<b style={navBtnStyle}>Games</b>
+<h2 style={navBtnStyle}>Games</h2>
 </DropdownToggle>
 <DropdownMenu
 style={dropdowStyles} left='true'>
@@ -104,8 +104,8 @@ return wrk.action==='PLAY'?(
 </UncontrolledDropdown>
 </Nav>
 {
-this.props.compRendered==='Home'?<span onClick={()=>this.props.navBar('Projects')} style={navBtnStyle}><b>Projects</b></span>
-:<span onClick={()=>this.props.navBar('Home')} style={navBtnStyle}><b>Home</b></span>
+this.props.compRendered==='Home'?<span onClick={()=>this.props.navBar('Projects')} style={navBtnStyle}><h3>Projects</h3></span>
+:<span onClick={()=>this.props.navBar('Home')} style={navBtnStyle}><h3>Home</h3></span>
 }
 
 </Collapse>

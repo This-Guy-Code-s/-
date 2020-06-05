@@ -50,8 +50,8 @@ return (
 <figure style={{WebkitTextFillColor:'azure',marginTop:'30px'}}>
 
 
-<figcaption className='myRole'><i className="fas fa-project-diagram"></i><br/><b className="error">P r<span> o </span>j e</b>
-  <b className="code"> c<span> t</span><span> s</span></b></figcaption>
+<figcaption className='myProjectRole'><i className="fas fa-project-diagram"></i><h1 className="error">P r<span> o </span>j e</h1>
+  <h1 className="code"> c<span> t</span><span> s</span></h1><i className="fas fa-project-diagram" style={{transform:'rotate(180deg) rotateX(180deg)'}}></i></figcaption>
 </figure>
 <Container>
 <Row>
@@ -66,15 +66,15 @@ return	(
 style={cardStylez}
 >
 <CardBody>
-<CardTitle>{post.title}</CardTitle>
-<CardTitle style={{WebkitTextFillColor:"#fc5203"}}><a href={post.github}><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a></CardTitle>
+<CardTitle><h3>{post.title}</h3></CardTitle>
+<CardTitle style={{WebkitTextFillColor:"#fc5203"}}><h4><a href={post.github}><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a></h4></CardTitle>
 </CardBody>
 <CardImg width="100%" src={post.image} alt={post.alt} />
 <CardBody>
 <details open={window.innerWidth<=700?false:true} className='deets'>
 <summary onClick={()=>this.props.tog_description(boost)} style={card_desc}>
 <span ><i className='fas fa-toggle-off' id={boost}></i>
-Description</span>
+<h5 style={{fontWeight:'bolder'}}>Description</h5></span>
 </summary>
 <p>{post.description}</p>
 </details>

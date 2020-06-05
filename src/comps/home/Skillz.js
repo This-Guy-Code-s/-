@@ -19,7 +19,7 @@ return(
 <Blockk><figure>
 <i className="fas fa-layer-group "
 style={{fontSize:window.innerWidth<=700?'3rem':'4rem'}}></i>
-<figcaption style={{fontSize:window.innerWidth<=700?'1.8rem':'2.7rem',fontFamily:"Permanent Marker, cursive"}}>My Stack</figcaption>
+<figcaption><h2 style={{fontSize:window.innerWidth<=700?'1.8rem':'3rem',textShadow:'0 0 10px #000',fontFamily:"Permanent Marker, cursive"}}>My Stack</h2></figcaption>
 </figure></Blockk>
 <Block>
 
@@ -30,7 +30,7 @@ style={{fontSize:window.innerWidth<=700?'3rem':'4rem'}}></i>
 <figure>
 <i className="fab fa-html5"></i>
 <figcaption>
-HTML5
+<h6>HTML5</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -40,7 +40,7 @@ HTML5
 <figure>
 <i className="fab fa-css3-alt" ></i>
 <figcaption>
-CSS3
+<h6>CSS3</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -50,7 +50,7 @@ CSS3
 <figure>
 <i className="fab fa-bootstrap" ></i>
 <figcaption>
-Bootstrap
+<h6>Bootstrap</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -59,7 +59,7 @@ Bootstrap
 <figure>
 <i className="fab fa-less" ></i>
 <figcaption>
-CSS Compiler
+<h6>CSS Compiler</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -74,7 +74,7 @@ CSS Compiler
 <figure>
 <i className="fab fa-js-square" ></i>
 <figcaption>
-Javascript
+<h6>Javascript</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -85,7 +85,7 @@ Javascript
 <figure>
 <i className="fab fa-react" ></i>
 <figcaption>
-React.js
+<h6>React.js</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -95,7 +95,7 @@ React.js
 <figure>
 <i className="fas fa-atom" ></i>
 <figcaption>
-React-Redux
+<h6>React-Redux</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -105,7 +105,7 @@ React-Redux
 <figure>
 <i className="fab fa-node-js" ></i>
 <figcaption>
-Express.js
+<h6>Express.js</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -118,7 +118,7 @@ Express.js
 <figure>
 <i className="fab fa-node" ></i>
 <figcaption>
-Node.js
+<h6>Node.js</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -128,7 +128,7 @@ Node.js
 <figure>
 <i className="fas fa-table"></i>
 <figcaption>
-DB Design
+<h6>DB Design</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -138,7 +138,7 @@ DB Design
 <figure>
 <i className="fas fa-database" ></i>
 <figcaption>
-Knex(Sqlite3)
+<h6>Knex(Sqlite3)</h6>
 </figcaption>
 </figure>
 </SkillzCard>
@@ -150,7 +150,7 @@ Knex(Sqlite3)
 <figure>
 <i className="fas fa-database" ></i>
 <figcaption>
-postgresql
+<h6>postgresql</h6>
 </figcaption>
 </figure>
 </SkillzCard>

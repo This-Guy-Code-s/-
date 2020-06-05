@@ -20,8 +20,8 @@ export const formio = {backgroundColor:'rgba(0,0,0,0.75)',WebkitTextFillColor:'#
 export const formToats = {backgroundColor:'rgba(0,0,0,0)'}
 export const formToatsHeader = {backgroundColor:'rgba(250,250,250,.8)',fontSize:'1rem',fontWeight:'bolder',borderLeft:'double #000',borderRadius:"0%",width:'100%',textAlign:'center',display:'block'}
 export const formBtn = {backgroundColor:"rgba(0,0,0,.2)",border:'double rgba(0, 78, 204,.7)',fontSize:'1.3rem',cursor: "pointer",marginBottom:"15px",boxShadow:'-3px 3px 5px #000'}
-export const conBtn = {backgroundColor:"rgba(0,0,0,.5)",border:'double azure',fontSize:window.innerWidth<=500?'1.5rem':'1.8rem',cursor: "pointer",marginBottom:"20px"}
-export const conLink = {WebkitTextFillColor:'#fff',color:'#fff',textShadow:'0 0 3px #333 '}
+export const conBtn = {backgroundColor:"rgba(0,0,0,.5)",border:'double azure',cursor: "pointer",marginBottom:"20px"}
+export const conLink = {WebkitTextFillColor:'#fff',color:'#fff',textShadow:'0 0 3px #333 ',display:'flex',alignItems:'center',justifyContent:'center',gridGap:'3px',fontSize:window.innerWidth<=500?'1.5rem':'1.8rem',margin:'0'}
 export const inputVise = {WebkitTextFillColor:'#fff',color:'#fff',backgroundColor:'rgba(0,0,0,0)',border:'none',borderLeft:'solid rgba(0, 78, 204,.7)',borderTop:'solid .5px rgba(0,78,204,.7)',borderBottom:'solid rgba(0, 78, 204,.7)',fontWeight:'bolder',boxShadow:'-3px 3px 5px #000'}
 
 

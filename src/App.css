@@ -134,9 +134,15 @@ html{
     }
 }
 
-.myRole{
+
+
+
+.myProjectRole{
+    margin-top:50px;
    padding: 40px;
-  font-size: 75px;
+   display:flex;
+   justify-content:center;
+   align-items:center;
   font-family: 'Monoton', cursive;
   text-align: center;
   text-transform: uppercase;
@@ -144,7 +150,19 @@ html{
   color: red;
 }
 
-.myRole p { margin:0; }
+.myProjectRole h1 { margin:0;font-size: 75px; }
+
+
+.myRole{
+   padding: 40px;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+  color: red;
+}
+
+.myRole h1 { margin:0;font-size: 75px; }
 .error:hover { text-shadow: 0 0 200px #ffffff,0 0 80px #008000,0 0 6px #0000ff; }
 .code:hover { text-shadow: 0 0 100px red,0 0 40px FireBrick,0 0 8px DarkRed; }
 .error {
@@ -196,8 +214,20 @@ html{
 }
 .myRole{
    padding: 0;
+   font-weight:bolder;
+}
+.myRole h1{
   font-size: 1.60rem;
 }
+
+.myProjectRole{
+   padding: 0;
+   font-weight:bolder;
+}
+.myProjectRole h1{
+  font-size: 1.60rem;
+}
+
 .skillzAnime{
   max-width:105px;
   font-size:.85rem;
@@ -221,7 +251,17 @@ html{
 
 .myRole{
    padding: 10px;
-  font-size: 1.60rem;
+}
+.myRole h1{
+  font-size: 2rem;
+}
+
+.myProjectRole{
+   padding: 10px;
+   font-weight:bolder;
+}
+.myProjectRole h1{
+  font-size: 2.2rem;
 }
 
 .waveWrapperInner {
@@ -247,9 +287,20 @@ html{
 
 .myRole{
    padding: 20px;
-  font-size: 2rem;
 }
 
+.myRole h1{
+  font-size: 57px;
+}
+
+
+.myProjectRole{
+   padding: 20px;
+   font-weight:bolder;
+}
+.myProjectRole h1{
+  font-size: 57px;
+}
 
 .toatsBlock{
   -webkit-height:300px;
@@ -266,7 +317,7 @@ html{
 
 /*pad tilting to the side*/
 @media screen and (max-width:1380px) and (max-height:1200px)
- and (min-width:1380px) and (min-height:700px){
+ and (min-width:1000px) and (min-height:700px){
    .servicesFlow{
   display:flex;
   flex-direction:row;
@@ -276,7 +327,13 @@ html{
 }
 
 
+.myRole h1{
+  font-size: 57px;
+}
 
+.myProjectRole h1{
+  font-size: 57px;
+}
 .toatsBlock{
   height:300px;
   width:100%

@@ -41,7 +41,7 @@ return (
 
    <div style={middle}>
       <br />
-      <Button style={conBtn} onClick={this.toggle}><span style={conLink}><i className="fas fa-envelope"></i> {this.props.buttonLabel} <i className="fas fa-envelope"></i></span></Button>
+      <Button style={conBtn} onClick={this.toggle}><span><h1 style={conLink}><i className="fas fa-envelope"></i> {this.props.buttonLabel} <i className="fas fa-envelope"></i></h1></span></Button>
       <br />
 
       <Toast isOpen={this.props.show} style={formToats}>
