@@ -30,7 +30,7 @@ return(
 </div>
 
 
-<p style={{fontSize:window.innerWidth<=700?'1.2rem':'1.65rem',padding:'0px 1px'}}>I am here to help start-ups, small businesses, entrepreneur's, and agencies get better business with good quality websites and satisfying user experience. I believe, to be a sucessful developer one must constantly self improve, have multiple approaches to problems, and stay up to date with technologies.</p>
+<p style={{fontSize:window.innerWidth<=700?'1.2rem':'1.65rem',padding:'0px 1px'}}>I am here to help start-ups, small businesses, entrepreneur's, and agencies get better business with good quality websites and satisfying user experience. I believe, to be a sucessful developer one must constantly self improve, have multiple approaches to problems, and stay up to date with technology.</p>
 </Card>
 </Row>
 

@@ -1,8 +1,7 @@
 .form-card{
-height: 100%;
+	flex:1;
 margin-top: auto;
 margin-bottom: auto;
-width: 400px;
 
 }
 
@@ -11,6 +10,7 @@ font-size: 60px;
 margin-left: 10px;
 -webkit-text-fill-color: #66fcf1;
 color: #66fcf1;
+text-shadow:0 0 10px #444;
 }
 
 .form-card .form-card-header .social_icon .xxx:hover{
@@ -32,7 +32,6 @@ top: -45px;
 .form-input-group-prepend span{
 width: 50px;
 background-color: #3500d3;
-color: azure;
 border:0 !important;
 }
 

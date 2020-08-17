@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {inputVise,Pass,Err,} from '../../util/contactStyles'
-import {FormText,FormGroup} from 'reactstrap'
+import {FormText,FormGroup,Form,Card} from 'reactstrap'
 import {name_,email_,msg_} from '../../util/contactValidations'
 import {changeBtnLabel,showOrNot} from '../../redux/actions'
 import {connect} from 'react-redux'
@@ -94,12 +94,12 @@ return(
 
 
 <div className="d-flex justify-content-center h-100" >
-		<div className="card form-card" style={{backgroundColor:this.props.mode?"rgba(0,0,0,.8)":"rgba(250,250,250,.8)"}}>
+		<Card className="form-card" style={{backgroundColor:this.props.mode?"rgba(0,0,0,.8)":"rgba(250,250,250,.8)"}}>
 			<div className="card-header form-card-header">
 				<div className="d-flex justify-content-end social_icon">
-					<span><i className="fas fa-phone-volume xxx"></i></span>
-					<span><i className="fab fa-google-plus-square xxx"></i></span>
-					<span><i className="fab fa-linkedin xxx"></i></span>
+					<span><a href='tel:+12402737952'><i className="fas fa-mobile-alt xxx"></i></a></span>
+					<span><a href='mailto:thisguycodez@gmail.com'><i className="fab fa-google-plus-square xxx"></i></a></span>
+					<span><a href='https://www.linkedin.com/in/guytonoriji'><i className="fab fa-linkedin xxx"></i></a></span>
 				</div>
 			</div>
 			<div className="card-body">
@@ -107,33 +107,33 @@ return(
 				<FormGroup>
 					<div className="form-input-group form-group">
 						<div className="form-input-group-prepend">
-							<span className="input-group-text"><i className="fas fa-pen-square"></i></span>
+							<span className="input-group-text"><i className="fas fa-pen-square" ></i></span>
 						</div>
-						<input className={`form-control ${this.state.valOrNah1}`} type="text" name="name" id="name" value={this.state.msg.name} onChange={(e)=>{this.setState({msg:{...this.state.msg,name:e.target.value}})}} placeholder="Name..."  style={{...inputVise,color:this.props.mode?'azure':'#000'}} required/>
+						<input className={`form-control ${this.state.valOrNah1}`} type="text" name="name" id="name" value={this.state.msg.name} onChange={(e)=>{this.setState({msg:{...this.state.msg,name:e.target.value}})}} placeholder="Name..."  style={{...inputVise,WebkitTextFillColor:this.props.mode?'azure':'#000',color:this.props.mode?'azure':'#000'}} required/>
 						
 					</div>
 
 					<div className="form-input-group form-group">
 						<div className="form-input-group-prepend">
-							<span className="input-group-text"><i className="fas fa-pen-square"></i></span>
+							<span className="input-group-text"><i className="fas fa-pen-square" ></i></span>
 						</div>
-						<input className={`form-control ${this.state.valOrNah2}`}  type="email" name="email" id="email" value={this.state.msg.email} onChange={(e)=>{this.setState({msg:{...this.state.msg,email:e.target.value}})}} placeholder="Email..." style={{...inputVise,color:this.props.mode?'azure':'#000'}} required/>
+						<input className={`form-control ${this.state.valOrNah2}`}  type="email" name="email" id="email" value={this.state.msg.email} onChange={(e)=>{this.setState({msg:{...this.state.msg,email:e.target.value}})}} placeholder="Email..." style={{...inputVise,WebkitTextFillColor:this.props.mode?'azure':'#000',color:this.props.mode?'azure':'#000'}} required/>
 						
 					</div>
 
 
 					<div className="form-input-group form-group">
 						<div className="form-input-group-prepend">
-							<span className="input-group-text"><i className="fas fa-comment-dots"></i></span>
+							<span className="input-group-text"><i className="fas fa-comment-dots" ></i></span>
 						</div>
-						<textarea className={`form-control ${this.state.valOrNah3}`} type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..." style={{...inputVise,color:this.props.mode?'azure':'#000'}} required></textarea>
+						<textarea className={`form-control ${this.state.valOrNah3}`} type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..." style={{...inputVise,WebkitTextFillColor:this.props.mode?'azure':'#000',color:this.props.mode?'azure':'#000'}} required></textarea>
 					</div>
 					
 					<div className="form-group">
 						<input type="submit" value="Send" className="btn float-right login_btn form-login_btn"/>
 					</div>
 					<div className="form-group">
-					<span onClick={this.toggle}><i className="fas fa-eye-slash" title='hide this' style={{color:'azure',cursor:'pointer'}}></i></span>
+					<span onClick={this.toggle}><i className="fas fa-eye-slash" title='hide this' style={{WebkitTextFillColor:this.props.mode?'azure':'#000',color:this.props.mode?'azure':'#000',cursor:'pointer'}}></i></span>
 					</div>
 					</FormGroup>
 				</form>
@@ -146,7 +146,7 @@ return(
 					</FormText>
 				</div>
 			</div>
-		</div>
+		</Card>
 	</div>
 )
 }

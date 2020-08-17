@@ -74,7 +74,7 @@ return	(
             <h4 className="card-title">{post.title}</h4>
             <p className="card-text ">{post.description}</p>
           </div>
-          <div className="card-footer card-custom-footer" style={{color:this.props.mode?'azure':'#000',background:this.props.mode?'#05386b':'#edf5e1',backgroundColor:this.props.mode?'#05386b':'#edf5e1'}}>
+          <div className="card-footer card-custom-footer" style={{border:`${this.props.mode?'solid #05386b':'solid #edf5e1'}`,borderBottomRightRadius:'25px',color:this.props.mode?'azure':'#000',background:this.props.mode?'#05386b':'#edf5e1',backgroundColor:this.props.mode?'#05386b':'#edf5e1'}}>
             <a href={post.link} className="btn btn-primary">{post.action==='PLAY'?<i className="fas fa-gamepad"></i>:<i className="fas fa-eye"></i>}</a>
             <a href={post.github} className="btn btn-outline-primary"><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a>
           </div>
@@ -111,40 +111,3 @@ export default connect(
 mapStateToProps,
 {getMyWork,tog_description}
 )(Projects)
-
-
-
-
-// <div key={post.id} style={cardSDiv}>
-// <Card  
-// style={cardStylez}
-// >
-// <CardBody>
-// <CardTitle><h3>{post.title}</h3></CardTitle>
-// <CardTitle style={{WebkitTextFillColor:"#fc5203"}}><h4><a href={post.github}><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a></h4></CardTitle>
-// </CardBody>
-// <CardImg width="100%" src={post.image} alt={post.alt} />
-// <CardBody>
-// <details open={window.innerWidth<=700?false:true} className='deets'>
-// <summary onClick={()=>this.props.tog_description(boost)} style={card_desc}>
-// <span ><i className='fas fa-toggle-off' id={boost}></i>
-// <h5 style={{fontWeight:'bolder'}}>Description</h5></span>
-// </summary>
-// <p>{post.description}</p>
-// </details>
-// <hr />
-// <CardLink href={post.link}  style={{display:'flex',flexDirection:'column'}}
-// >
-// {post.action==='PLAY'?<i className="fas fa-gamepad"></i>:<i className="fas fa-eye"></i>}
-// <span
-// style={this.actionStyle(post.action)}
-// >{post.action}</span>
-// </CardLink>
-// </CardBody>
-// </Card>
-// <hr />
-// </div>
-
-
-
-
