@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {Container} from 'reactstrap'
 
 import Header from './Header'
@@ -7,28 +6,60 @@ import Home from './comps/'
 import Projects from './comps/projects/'
 
 import {connect} from 'react-redux'
-import {getMyWork,APP_COMP} from './redux/actions'
+import {getMyWork} from './redux/actions'
 
 import {Div} from './util/cloudWaveAnimation'
 
+import bg from './img/bg6.jpg'
+import bgdm from './img/bg6dm.jpg'
+import styled from 'styled-components'
+
+
+
+
+
+let AppContainer = styled.div`
+flex:1;
+-webkit-text-align: center;
+text-align: center;
+background-color:#0C0032;
+overflow-x:hidden;
+overflow-y:auto;
+background-repeat:no-repeat;
+background-position:top;
+-moz-background-size:cover;
+-webkit-background-size:cover;
+background-size:cover;
+
+`
 
 
 class App extends React.Component{
 constructor(props){
 super(props)
 this.state={
-wavy:{backgroundImage:`url(${this.props.wavio})`}
+wavy:{backgroundImage:`url(${this.props.wavio})`},
+bgs:'cover',
+bgp:'center'
 }
+
+
 }
 
 componentDidMount(){
 this.props.getMyWork() 
 }
 
+
+
+componentDidUpdate(){
+
+}
+
 render(){ 
 return (
 
-<APP_COMP className="App">
+<AppContainer className="App" style={{backgroundImage:`url(${this.props.mode?bgdm:bg})`,backgroundSize:this.state.bgs,backgroundPosition:this.state.bgp}}>
 <Header compRendered={this.props.compRendered}/>
 <Container>
 {
@@ -46,7 +77,7 @@ this.props.compRendered==='Home'?<Home />:<Projects />
 <div className="wave waveBottom" style={this.state.wavy}></div>
 </div>
 </Div>
-</APP_COMP>
+</AppContainer>
 
 
 

@@ -5,6 +5,26 @@ html{
 }
 
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.App{
+  flex:1;
+-webkit-text-align: center;
+text-align: center;
+background-color:#0C0032;
+overflow-x:hidden;
+overflow-y:auto;
+background-repeat:no-repeat;
+background-position:top;
+-moz-background-size:cover;
+-webkit-background-size:cover;
+background-size:cover;
+}
+
 .preloader {
   align-items: center;
   background: rgba(4, 10, 37,.9);
@@ -162,7 +182,7 @@ html{
   color: red;
 }
 
-.myRole h1 { margin:0;font-size: 75px; }
+.myRole h1 { margin:0;font-size: 3rem; }
 .error:hover { text-shadow: 0 0 200px #ffffff,0 0 80px #008000,0 0 6px #0000ff; }
 .code:hover { text-shadow: 0 0 100px red,0 0 40px FireBrick,0 0 8px DarkRed; }
 .error {
@@ -380,3 +400,7 @@ html{
     list-style-type: none;
 }
 
+.modalzzzz .modal-content{
+  background:rgba(0,0,0,0);
+  border:none;
+}

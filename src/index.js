@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import './index.css';
 import {BrowserRouter as Router} from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {createStore,applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
