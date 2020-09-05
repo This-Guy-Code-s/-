@@ -10,7 +10,7 @@ const initialState = {
 compRendered:sessionStorage.getItem('nav') || 'Home',
 work:'',
 error:'',
-mode:sessionStorage.getItem('toggleDarkMode') && sessionStorage.getItem('toggleDarkMode') === 'true'? true:false,
+mode:!window.sessionStorage.getItem('toggleDarkMode')?true:JSON.parse(window.sessionStorage.getItem('toggleDarkMode')),
 show:false,
 me:me,
 logo:logo,

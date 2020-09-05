@@ -14,7 +14,6 @@ import {connect} from 'react-redux'
 import {navBar,DarkMode} from './redux/actions'
 
 import {brand,
-orijiStyles,
 guyStyles,
 dropdowStyles,
 me,
@@ -57,14 +56,14 @@ tooltipOpen:!this.state.tooltipOpen,
 
 render() {
 return (
-<div>
+<div style={{flex:1}}>
 <Navbar expand="md" style={NavbarStyle}>
 
 {/*ME AS MY OWN LOGO AND SOCIAL LINKS TOO*/}
 <div>
 <span className='navbar-brand' id="me"><span style={brand} ><figure>
 <img src={this.props.me} style={me} alt='me' width='50' height='50'/>
-</figure><h2 style={guyStyles}>Guyton</h2> {"  "} <h2 style={orijiStyles}>Oriji</h2></span></span>
+</figure><h2 style={guyStyles}>Guy</h2> {" .M O"}</span></span>
 <Tooltip style={soci} placement="bottom" isOpen={this.state.tooltipOpen} autohide={false} target="me" >
 <i className="fab fa-youtube" style={yt} onClick={()=>alert('Youtube Channel comming soon...')}></i>
 <i className="fab fa-github" style={gh} onClick={()=>window.location.href='https://www.github.com/guytonoriji'}></i>

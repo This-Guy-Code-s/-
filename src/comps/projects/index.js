@@ -4,9 +4,8 @@ import {getMyWork,tog_description} from '../../redux/actions'
 import {
 Container,Spinner
 } from 'reactstrap';
-import { Row} from '../../util/projStyles'
 import {myUids} from './extra.js'
-import './proj.css'
+import './proj.scss'
 import jsImg from '../../img/js.png'
 import reactImg from '../../img/react.png'
 
@@ -50,36 +49,33 @@ return (
 <figure style={{WebkitTextFillColor:'azure',marginTop:'30px'}}>
 
 
-<figcaption className='myProjectRole'><i className="fas fa-project-diagram"></i><h1 className="error">P r<span> o </span>j e</h1>
-  <h1 className="code"> c<span> t</span><span> s</span></h1><i className="fas fa-project-diagram" style={{transform:'rotate(180deg) rotateX(180deg)'}}></i></figcaption>
+<figcaption className='myProjectRole'><i className="fas fa-project-diagram"></i><h3 className="error">P r<span> o </span>j e</h3>
+  <h3 className="code"> c<span> t</span><span> s</span></h3><i className="fas fa-project-diagram" style={{transform:'rotate(180deg) rotateX(180deg)'}}></i></figcaption>
 </figure>
 <Container>
-<Row>
+<div id="movie-card-list" className='movie-card-holder'>
 {
 this.props.work?this.props.work.map(post=>{
 
 return	(
 
 
+  <div class="movie-card"  style={{backgroundImage:`url(${post.image})`}}  key={post.id}>
+    <div class="movie-card__overlay"></div>
+    
+    <div class="movie-card__content">
+      <div class="movie-card__header">
+        <h3 class="movie-card__title">{post.title}</h3>
+        <h4 class="movie-card__info">{post.description}</h4>
+      </div>
+      <p class="movie-card__desc"><div className="card-custom-avatar">
+            <img className="img-fluid" src={/react/gi.test(post.description)?reactImg:jsImg} alt="project preview" width='30' height='30'/>
+          </div></p>
+      <a href={post.link} className="btn btn-primary">{post.action==='PLAY'?<i className="fas fa-gamepad"></i>:<i className="fas fa-eye"></i>}</a>
+      <a href={post.github} className="btn btn-outline-primary"><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a>
+    </div>
+  </div>
 
-
- <div className="col-md-8 col-lg-8 pb-3 card-custom-holder" key={post.id}  style={{display:'flex',borderTopLeftRadius:'25px',borderBottomRightRadius:'25px'}}>
-
-        <div className="card card-custom border-0"  style={{boxShadow:'0 0 10px #000',border:'solid #000',borderTopLeftRadius:'25px',borderBottomRightRadius:'25px'}}>
-          <div className="card-custom-img" style={{backgroundImage:`url(${post.image})`}}></div>
-          <div className="card-custom-avatar">
-            <img className="img-fluid" src={/react/gi.test(post.description)?reactImg:jsImg} alt="project preview" />
-          </div>
-          <div className="card-body card-custom-bg-body" style={{color:this.props.mode?'azure':'#000',background:this.props.mode?'#242582':'#cafafe',backgroundColor:this.props.mode?'#242582':'#cafafe',overflowY:"auto"}}>
-            <h4 className="card-title">{post.title}</h4>
-            <p className="card-text ">{post.description}</p>
-          </div>
-          <div className="card-footer card-custom-footer" style={{border:`${this.props.mode?'solid #05386b':'solid #edf5e1'}`,borderBottomRightRadius:'25px',color:this.props.mode?'azure':'#000',background:this.props.mode?'#05386b':'#edf5e1',backgroundColor:this.props.mode?'#05386b':'#edf5e1'}}>
-            <a href={post.link} className="btn btn-primary">{post.action==='PLAY'?<i className="fas fa-gamepad"></i>:<i className="fas fa-eye"></i>}</a>
-            <a href={post.github} className="btn btn-outline-primary"><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a>
-          </div>
-        </div>
-        </div>
 )
 }):(	
 <div>
@@ -89,7 +85,7 @@ return	(
 )
 
 }
-</Row>
+</div>
 </Container>
 </div>
 
@@ -111,3 +107,12 @@ export default connect(
 mapStateToProps,
 {getMyWork,tog_description}
 )(Projects)
+
+
+
+//SET UP DB FOR LIKE COMMENT AND SHARE FEATURES AFTER HERBI IS COMPLETE, NEEED MORE PROJECTS 1ST
+// <div class="movie-card__share">
+//       <button class="movie-card__icon"><i class="material-icons">&#xe87d</i></button>
+//       <button class="movie-card__icon"><i class="material-icons">&#xe253</i></button>
+//       <button class="movie-card__icon"><i class="material-icons">&#xe80d</i></button>
+//     </div>

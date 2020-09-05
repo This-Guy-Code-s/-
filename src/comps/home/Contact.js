@@ -1,15 +1,12 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React  from 'react';
-import { conBtn,conLink,formToats, pulse,middle,formToatsHeader,formBoxh} from '../../util/contactStyles'
-import { Button ,Toast, ToastBody, ToastHeader, Modal,FormText,FormGroup,Card } from 'reactstrap';
+import { conBtn,conLink,formToats,middle,formBoxh} from '../../util/contactStyles'
+import { Button ,Toast, ToastBody } from 'reactstrap';
 import {connect} from 'react-redux'
 import {changeBtnLabel,showOrNot} from '../../redux/actions'
 import Form from './Form'
-import {inputVise,Pass,Err} from '../../util/contactStyles'
-import {name_,email_,msg_} from '../../util/contactValidations'
 import './form.css'
 
-import axios from 'axios'
 
 
 class Contact extends React.Component {

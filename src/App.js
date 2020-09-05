@@ -1,14 +1,13 @@
 import React from 'react';
 import {Container} from 'reactstrap'
 
-import Header from './Header'
+import Header from './comps/Header'
 import Home from './comps/'
 import Projects from './comps/projects/'
 
 import {connect} from 'react-redux'
 import {getMyWork} from './redux/actions'
 
-import {Div} from './util/cloudWaveAnimation'
 
 import bg from './img/bg6.jpg'
 import bgdm from './img/bg6dm.jpg'
@@ -38,7 +37,6 @@ class App extends React.Component{
 constructor(props){
 super(props)
 this.state={
-wavy:{backgroundImage:`url(${this.props.wavio})`},
 bgs:'cover',
 bgp:'center'
 }
@@ -60,23 +58,14 @@ render(){
 return (
 
 <AppContainer className="App" style={{backgroundImage:`url(${this.props.mode?bgdm:bg})`,backgroundSize:this.state.bgs,backgroundPosition:this.state.bgp}}>
-<Header compRendered={this.props.compRendered}/>
+
+      <Header/>
 <Container>
 {
 this.props.compRendered==='Home'?<Home />:<Projects />
 }
 </Container>
-<Div className="waveWrapper waveAnimation">
-<div className="waveWrapperInner bgTop">
-<div className="wave waveTop" style={this.state.wavy}></div>
-</div>
-<div className="waveWrapperInner bgMiddle">
-<div className="wave waveMiddle" style={this.state.wavy}></div>
-</div>
-<div className="waveWrapperInner bgBottom">
-<div className="wave waveBottom" style={this.state.wavy}></div>
-</div>
-</Div>
+
 </AppContainer>
 
 
