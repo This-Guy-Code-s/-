@@ -8,6 +8,9 @@ import {myUids} from './extra.js'
 import './proj.scss'
 import jsImg from '../../img/js.png'
 import reactImg from '../../img/react.png'
+import nodeImg from '../../img/node.png'
+import fbImg from '../../img/fb.png'
+import pythonImg from '../../img/pythonImg.png'
 
 
 
@@ -61,15 +64,42 @@ return	(
 
 
   <div class="movie-card"  style={{backgroundImage:`url(${post.image})`}}  key={post.id}>
-    <div class="movie-card__overlay"></div>
+    <div class="movie-card__overlay" style={{background:this.props.mode?
+      `linear-gradient(to ${window.innerWidth<=700?'bottom':'right'}, rgba(42,159,255,.2) 0%,rgba(33,33,32,1) ${window.innerWidth<=700?'80%':'60%'},rgba(33,33,32,1) 100%)`
+      :`linear-gradient(to ${window.innerWidth<=700?'bottom':'right'}, rgba(245,245,245,.01) 0%,rgba(245,245,245,1) ${window.innerWidth<=700?'80%':'60%'},rgba(245,245,245,1) 100%)`}}></div>
     
     <div class="movie-card__content">
       <div class="movie-card__header">
-        <h3 class="movie-card__title">{post.title}</h3>
-        <h4 class="movie-card__info">{post.description}</h4>
+        <h3 class="movie-card__title" style={{WebkitTextFillColor:this.props.mode?'azure':'#000'}}>{post.title}</h3>
+        <h4 class="movie-card__info" style={{WebkitTextFillColor:this.props.mode?'#2a9fff':'#000'}}>{post.description}</h4>
       </div>
       <p class="movie-card__desc"><div className="card-custom-avatar">
-            <img className="img-fluid" src={/react/gi.test(post.description)?reactImg:jsImg} alt="project preview" width='30' height='30'/>
+            
+            {/pure/gi.test(post.description) || /plain/gi.test(post.description)?
+              (
+                <img className="img-fluid" src={jsImg} alt="project code language used" width='30' height='30'/>
+            ):true}
+
+            {/react/gi.test(post.description)?
+              (
+                <img className="img-fluid" src={reactImg} alt="project code language used" width='30' height='30'/>
+            ):true}
+
+              {/node/gi.test(post.description)?
+              (
+                <img className="img-fluid" src={nodeImg} alt="project code language used" width='30' height='30'/>
+            ):true}
+
+              {/firebase/gi.test(post.description)?
+              (
+                <img className="img-fluid" src={fbImg} alt="project code language used" width='30' height='30'/>
+            ):true}
+              {
+              /python/gi.test(post.description)?
+              (
+                <img className="img-fluid" src={pythonImg} alt="project code language used" width='30' height='30'/>
+            ):true}
+
           </div></p>
       <a href={post.link} className="btn btn-primary">{post.action==='PLAY'?<i className="fas fa-gamepad"></i>:<i className="fas fa-eye"></i>}</a>
       <a href={post.github} className="btn btn-outline-primary"><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a>

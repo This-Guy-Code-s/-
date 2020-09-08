@@ -94,7 +94,7 @@ return(
 
 
 <div className="d-flex justify-content-center h-100" >
-		<Card className="form-card" style={{backgroundColor:"rgba(0,0,0,.8)"}}>
+		<Card className="form-card" style={{background:this.props.mode?' rgba(0,0,0,.8)':'rgba(250,250,250,.8)'}}>
 			<div className="card-header form-card-header">
 				<div className="d-flex justify-content-end social_icon">
 					<span><a href='tel:+12402737952'><i className="fas fa-mobile-alt xxx"></i></a></span>
@@ -107,33 +107,33 @@ return(
 				<FormGroup>
 					<div className="form-input-group form-group">
 						<div className="form-input-group-prepend">
-							<span className="input-group-text"><i className="fas fa-pen-square" ></i></span>
+							<span className="input-group-text" style={{WebkitTextFillColor:this.props.mode?'azure':'#000',background:this.props.mode?' rgba(0,0,0,.8)':'rgba(250,250,250,0)'}}><i className="fas fa-pen-square" ></i></span>
 						</div>
-						<input className={`form-control ${this.state.valOrNah1}`} type="text" name="name" id="name" value={this.state.msg.name} onChange={(e)=>{this.setState({msg:{...this.state.msg,name:e.target.value}})}} placeholder="Name..."  style={{...inputVise,WebkitTextFillColor:'azure',color:'azure'}} required/>
+						<input className={`form-control ${this.state.valOrNah1}`} type="text" name="name" id="name" value={this.state.msg.name} onChange={(e)=>{this.setState({msg:{...this.state.msg,name:e.target.value}})}} placeholder="Name..."  style={{...inputVise,WebkitTextFillColor:this.props.mode?'azure':'#000'}} required/>
 						
 					</div>
 
 					<div className="form-input-group form-group">
 						<div className="form-input-group-prepend">
-							<span className="input-group-text"><i className="fas fa-pen-square" ></i></span>
+							<span className="input-group-text" style={{WebkitTextFillColor:this.props.mode?'azure':'#000',background:this.props.mode?' rgba(0,0,0,.8)':'rgba(250,250,250,0)'}}><i className="fas fa-pen-square" ></i></span>
 						</div>
-						<input className={`form-control ${this.state.valOrNah2}`}  type="email" name="email" id="email" value={this.state.msg.email} onChange={(e)=>{this.setState({msg:{...this.state.msg,email:e.target.value}})}} placeholder="Email..." style={{...inputVise,WebkitTextFillColor:'azure',color:'azure'}} required/>
+						<input className={`form-control ${this.state.valOrNah2}`}  type="email" name="email" id="email" value={this.state.msg.email} onChange={(e)=>{this.setState({msg:{...this.state.msg,email:e.target.value}})}} placeholder="Email..." style={{...inputVise,WebkitTextFillColor:this.props.mode?'azure':'#000'}} required/>
 						
 					</div>
 
 
 					<div className="form-input-group form-group">
 						<div className="form-input-group-prepend">
-							<span className="input-group-text"><i className="fas fa-comment-dots" ></i></span>
+							<span className="input-group-text" style={{WebkitTextFillColor:this.props.mode?'azure':'#000',background:this.props.mode?' rgba(0,0,0,.8)':'rgba(250,250,250,0)'}}><i className="fas fa-comment-dots" ></i></span>
 						</div>
-						<textarea className={`form-control ${this.state.valOrNah3}`} type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..." style={{...inputVise,WebkitTextFillColor:'azure',color:'azure'}} required></textarea>
+						<textarea className={`form-control ${this.state.valOrNah3}`} type="textarea" name="message" id="message" value={this.state.msg.message} onChange={(e)=>{this.setState({msg:{...this.state.msg,message:e.target.value}})}} placeholder="Message..." style={{...inputVise,WebkitTextFillColor:this.props.mode?'azure':'#000'}} required></textarea>
 					</div>
 					
 					<div className="form-group">
-						<input type="submit" value="Send" className="btn float-right login_btn form-login_btn"/>
+						<input type="submit" value="Send" className="btn float-right login_btn form-login_btn" style={{WebkitTextFillColor:this.props.mode?'azure':'#000',background:this.props.mode?' rgba(0,0,0,.8)':'rgba(250,250,250,0)'}}/>
 					</div>
 					<div className="form-group">
-					<span onClick={this.toggle}><i className="fas fa-eye-slash" title='hide this' style={{WebkitTextFillColor:'azure',color:'azure',cursor:'pointer'}}></i></span>
+					<span onClick={this.toggle}><i className="fas fa-eye-slash" title='hide this' style={{WebkitTextFillColor:this.props.mode?'azure':'#000',cursor:'pointer'}}></i></span>
 					</div>
 					</FormGroup>
 				</form>

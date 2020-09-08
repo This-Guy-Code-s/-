@@ -57,9 +57,9 @@ style={{fontSize:window.innerWidth<=700?'3rem':'4rem'}}></i>
 
 <SkillzCard className='skillzAnime'>
 <figure>
-<i className="fab fa-less" ></i>
+<i className="fab fa-python"></i>
 <figcaption>
-<h6>CSS Compiler</h6>
+<h6>Python</h6>
 </figcaption>
 </figure>
 </SkillzCard>
