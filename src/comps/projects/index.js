@@ -101,8 +101,8 @@ return	(
             ):true}
 
           </div></p>
-      <a href={post.link} className="btn btn-primary">{post.action==='PLAY'?<i className="fas fa-gamepad"></i>:<i className="fas fa-eye"></i>}</a>
-      <a href={post.github} className="btn btn-outline-primary"><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a>
+      <a href={post.link} className="see-link" style={{borderRadius:'100%',WebkitTextFillColor:this.props.mode?'azure':'#000'}}>{post.action==='PLAY'?<i className="fas fa-gamepad"></i>:<i className="fas fa-eye"></i>} <small><code>{post.action==='PLAY'?'play':'view'}</code></small></a>
+      <a href={post.github} className="btn btn-outline-primary" style={{WebkitTextFillColor:this.props.mode?'azure':'#000'}}><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a>
     </div>
   </div>
 
