@@ -59,6 +59,7 @@ return (
 <div style={{flex:1}}>
 <Navbar expand="md" style={NavbarStyle}>
 
+
 {/*ME AS MY OWN LOGO AND SOCIAL LINKS TOO*/}
 <div>
 <span className='navbar-brand' id="me"><span style={brand} ><figure>

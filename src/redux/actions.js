@@ -61,10 +61,20 @@ export const navBar = whereTo => dispatch =>{
 switch(whereTo){
 case 'Home':
 window.sessionStorage.setItem('nav',whereTo)
+setTimeout(()=>{
+
+	let view = '#intro'
+	document.querySelector(view).scrollIntoView()
+},500)
 return dispatch({type:NAVIGATION,payload:whereTo})
 
 case 'Projects':
 window.sessionStorage.setItem('nav',whereTo)
+setTimeout(()=>{
+
+	let view = '#movie-card-list'
+	document.querySelector(view).scrollIntoView()
+},500)
 return dispatch({type:NAVIGATION,payload:whereTo})
 
 default:
