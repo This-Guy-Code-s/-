@@ -66,7 +66,7 @@ return (
           <Form />
         </ModalBody>
         <ModalFooter>
-          <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+          <Button style={{background:'#5791ff',backgroundColor:'#5791ff',WebkitTextFillColor:'azure',color:'azure'}} onClick={this.toggle}>Cancel</Button>
         </ModalFooter>
       </Modal>
     </div>
