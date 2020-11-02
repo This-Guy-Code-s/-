@@ -9,16 +9,16 @@ class Header extends React.Component{
 	render(){
   return (
     <div className="Header">
-      <section class="hero">
-  <header id="header">
+      <section className="hero">
+  <div id="header">
   <Nav/>
-  </header>
-  <header class="hero-header">
-    <h1 class="hero-title">Need A Web App?</h1>
-  </header>
-  <footer class="hero-footer">
-    <a class="button button-primary" href='tel:+12402737952'>Call</a>
-    <a class="button " href='mailto:thisguycodez@gmail.com'>Email</a>
+  </div>
+  <div className="hero-header">
+    <h1 className="hero-title">Need A Web App?</h1>
+  </div>
+  <footer className="hero-footer">
+    <a className="button button-primary" href='tel:+12402737952'>Call</a>
+    <a className="button " href='mailto:thisguycodez@gmail.com'>Email</a>
   </footer>
 </section>
 

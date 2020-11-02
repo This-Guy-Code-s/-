@@ -63,17 +63,17 @@ this.props.work?this.props.work.map(post=>{
 return	(
 
 
-  <div class="movie-card"  style={{backgroundImage:`url(${post.image})`}}  key={post.id}>
-    <div class="movie-card__overlay" style={{background:this.props.mode?
+  <div className="movie-card"  style={{backgroundImage:`url(${post.image})`}}  key={post.id}>
+    <div className="movie-card__overlay" style={{background:this.props.mode?
       `linear-gradient(to ${window.innerWidth<=700?'bottom':'right'}, rgba(42,159,255,.2) 0%,rgba(33,33,32,1) ${window.innerWidth<=700?'80%':'60%'},rgba(33,33,32,1) 100%)`
-      :`linear-gradient(to ${window.innerWidth<=700?'bottom':'right'}, rgba(245,245,245,.01) 0%,rgba(245,245,245,1) ${window.innerWidth<=700?'80%':'60%'},rgba(245,245,245,1) 100%)`}}></div>
+      :`linear-gradient(to ${window.innerWidth<=700?'bottom':'right'}, rgba(245,245,245,.4) 4%,#999 ${window.innerWidth<=700?'96%':'60%'},rgba(245,245,245,1) 100%)`}}></div>
     
-    <div class="movie-card__content">
-      <div class="movie-card__header">
-        <h3 class="movie-card__title" style={{WebkitTextFillColor:this.props.mode?'azure':'#000'}}>{post.title}</h3>
-        <h4 class="movie-card__info" style={{WebkitTextFillColor:this.props.mode?'#2a9fff':'#000'}}>{post.description}</h4>
+    <div className="movie-card__content">
+      <div className="movie-card__header">
+        <h3 className="movie-card__title" style={{WebkitTextFillColor:this.props.mode?'azure':'#000'}}>{post.title}</h3>
+        <h4 className="movie-card__info" style={{WebkitTextFillColor:this.props.mode?'#2a9fff':'#000'}}>{post.description}</h4>
       </div>
-      <p class="movie-card__desc"><div className="card-custom-avatar">
+      <div className="movie-card__desc"><div className="card-custom-avatar">
             
             {/pure/gi.test(post.description) || /plain/gi.test(post.description)?
               (
@@ -100,7 +100,7 @@ return	(
                 <img className="img-fluid" src={pythonImg} alt="project code language used" width='30' height='30'/>
             ):true}
 
-          </div></p>
+          </div></div>
       <a href={post.link} className="see-link" style={{borderRadius:'100%',WebkitTextFillColor:this.props.mode?'azure':'#000'}}>{post.action==='PLAY'?<i className="fas fa-gamepad"></i>:<i className="fas fa-eye"></i>} <small><code>{post.action==='PLAY'?'play':'view'}</code></small></a>
       <a href={post.github} className="btn btn-outline-primary" style={{WebkitTextFillColor:this.props.mode?'azure':'#000'}}><i className="fas fa-laptop-code"></i> see the code <i className="fas fa-laptop-code"></i></a>
     </div>
@@ -141,8 +141,8 @@ mapStateToProps,
 
 
 //SET UP DB FOR LIKE COMMENT AND SHARE FEATURES AFTER HERBI IS COMPLETE, NEEED MORE PROJECTS 1ST
-// <div class="movie-card__share">
-//       <button class="movie-card__icon"><i class="material-icons">&#xe87d</i></button>
-//       <button class="movie-card__icon"><i class="material-icons">&#xe253</i></button>
-//       <button class="movie-card__icon"><i class="material-icons">&#xe80d</i></button>
+// <div className="movie-card__share">
+//       <button className="movie-card__icon"><i className="material-icons">&#xe87d</i></button>
+//       <button className="movie-card__icon"><i className="material-icons">&#xe253</i></button>
+//       <button className="movie-card__icon"><i className="material-icons">&#xe80d</i></button>
 //     </div>

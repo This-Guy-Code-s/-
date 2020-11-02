@@ -1,11 +1,18 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React  from 'react';
-import { conBtn,conLink,formToats,middle,formBoxh} from '../../util/contactStyles'
-import { Button ,Toast, ToastBody } from 'reactstrap';
+import { conBtn,conLink} from '../../util/contactStyles'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import {connect} from 'react-redux'
 import {changeBtnLabel,showOrNot} from '../../redux/actions'
 import Form from './Form'
 import './form.css'
+
+
+
+
+
+
+
 
 
 
@@ -50,22 +57,19 @@ componentDidMount(){
 render(){
 
 return (
- <div style={middle}>
-      <br />
+
+    <div>
       <Button style={conBtn} onClick={this.toggle}><span><h1 style={conLink}><i className="fas fa-envelope"></i> {this.props.buttonLabel} <i className="fas fa-envelope"></i></h1></span></Button>
-      <br />
-
-      <Toast isOpen={this.props.show?true:false} style={formToats}>
-     
-      <ToastBody style={formBoxh}>
-         {/*FORM*/}
+      <Modal isOpen={this.props.show?true:false} toggle={this.toggle} className={this.props.className}>
+        <ModalHeader toggle={this.toggle} className='con-head' ><small><span>Contact Me Via Email</span><sup><code>-ThisGuyCodez</code>&copy;</sup></small></ModalHeader>
+        <ModalBody>
           <Form />
-        {/*FORM*/}
-        </ToastBody>
-      </Toast>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+        </ModalFooter>
+      </Modal>
     </div>
-
-  
 
   );
 
@@ -85,20 +89,5 @@ mapStateToProps,
 {changeBtnLabel,showOrNot}
 )(Contact)
 
-
-
-
-   // <div style={middle} >
-   //    <br />
-   //    <Button style={conBtn} onClick={this.toggle}><span><h1 style={conLink}><i className="fas fa-envelope"></i> {this.props.buttonLabel} <i className="fas fa-envelope"></i></h1></span></Button>
-   //    <br />
-
-   //    <Toast isOpen={this.props.show} style={{...formToats,marginTop:'100px'}}>
-     
-   //       {/*FORM*/}
-   //       <Form toggle={()=>{return this.toggle()}}/>
-   //      {/*FORM*/}
-   //    </Toast>
-   //  </div>
 
 

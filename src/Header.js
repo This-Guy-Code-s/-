@@ -89,14 +89,15 @@ this.props.mode?(<i className="fas fa-sun" title='Light Mode!' style={xOutLight}
 <DropdownMenu
 style={dropdowStyles} left='true'>
 {
-this.props.work?this.props.work.map(wrk=>{
+this.props.work && this.props.work.length>1?this.props.work.map(wrk=>{
 
 return wrk.action==='PLAY'?(
 <DropdownItem style={dropdowStyles} href={wrk.link} key={wrk.id}>
 {wrk.title}
-</DropdownItem>):false
+</DropdownItem>)
+:false
 }):(
-<Spinner size="sm" color="info" />
+<Spinner size="sm" color="info" key={Math.floor(Math.random() * 1000)}/>
 )
 }  
 </DropdownMenu>

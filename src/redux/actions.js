@@ -25,10 +25,12 @@ export const getMyWork = () => dispatch => {
 dispatch({type:LOADING})
 axios.get(process.env.REACT_APP_mywork)
 .then(res=>{
-return dispatch({type:SUCCESS,payload:res.data.work})
+	console.log(res)
+return dispatch({type:SUCCESS,payload:res.data})
 
 })
 .catch(err=>{
+	console.log(err)
 return dispatch({type:ERR,payload:err})
 
 })
