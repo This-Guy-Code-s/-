@@ -400,7 +400,18 @@ background-size:cover;
     list-style-type: none;
 }
 
-.modalzzzz .modal-content{
-  background:rgba(0,0,0,0);
-  border:none;
+
+
+.cdh{
+  background-color:rgba(0,0,0,0)
+}
+
+form input,form textarea,form label,form i,.registration-form a i{
+  -webkit-text-fill-color:#000;
+}
+
+form input:nth-child(1){
+  -webkit-text-fill-color:azure;
+  color:azure;
+
 }

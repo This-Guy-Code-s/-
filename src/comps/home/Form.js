@@ -32,7 +32,7 @@ this.toggle = this.toggle.bind(this)
 
 		if(name_(this.state.msg.name) && email_(this.state.msg.email) && msg_(this.state.msg.message)){
 			this.setState({//check name
-passMsg:`Thank You ${this.state.name} Your Message Was Sent.`,
+passMsg:`Thank You ${this.state.msg.name} Your Message Was Sent.`,
 errMsg:"",
 valOrNah1:"is-valid",
 valOrNah2:"is-valid",
@@ -73,7 +73,6 @@ console.log(res)
 setTimeout(()=>{console.log(res)},2000)
 //reset entire form and state
 
-
 }).catch(err=>{this.setState({errMsg:"server overwhelmed please wait or try again",passMsg:""})})
 
 
@@ -81,9 +80,24 @@ setTimeout(()=>{console.log(res)},2000)
 	}
 
 
-  toggle(){
+  toggle(e){
+  let time = 0
+  
+ if(window.innerWidth<700){
+ 	time = 5000
+ }
+
+ setTimeout(()=>{ this.setState({
+valOrNah1:'',valOrNah2:'',valOrNah3:'',
+msg:{name:'',email:'',message:''},
+errMsg:'',passMsg:''
+})},time)
+
   this.props.showOrNot(this.props.show)
    this.props.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');
+
+   if(document.querySelector('#toggler'))
+document.querySelector('#toggler').click()
 }
 
 
@@ -94,7 +108,7 @@ return(
 
 
 	    <div className="registration-form">
-        <form  onSubmit={(e)=>{e.preventDefault();this.toInbox();if(name_(this.state.msg.name) && email_(this.state.msg.email) && msg_(this.state.msg.message)){this.toggle()}}} data-testid="theForm">
+        <form  onSubmit={(e)=>{e.preventDefault();this.toInbox();if(name_(this.state.msg.name) && email_(this.state.msg.email) && msg_(this.state.msg.message)){this.toggle(e)}}} data-testid="theForm">
             <div className="me-icon">
                 <span><img src={this.props.me} width='100%' height='100%' alt='small me'/></span>
             </div>

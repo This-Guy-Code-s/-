@@ -1,7 +1,8 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React  from 'react';
 import { conBtn,conLink} from '../../util/contactStyles'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+// import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import {connect} from 'react-redux'
 import {changeBtnLabel,showOrNot} from '../../redux/actions'
 import Form from './Form'
@@ -50,6 +51,7 @@ componentDidMount(){
 
   this.props.showOrNot(this.props.show)
    this.props.show?this.props.changeBtnLabel('Hide..'):this.props.changeBtnLabel('Contact Me');
+   setTimeout(()=>{document.querySelector('.App').scrollBy(0,3000)},500)
 }
   
 
@@ -58,19 +60,32 @@ render(){
 
 return (
 
-    <div>
-      <Button style={conBtn} onClick={this.toggle}><span><h1 style={conLink}><i className="fas fa-envelope"></i> {this.props.buttonLabel} <i className="fas fa-envelope"></i></h1></span></Button>
-      <Modal isOpen={this.props.show?true:false} toggle={this.toggle} className={this.props.className}>
-        <ModalHeader toggle={this.toggle} className='con-head' ><small><span>Contact Me Via Email</span><sup><code>-ThisGuyCodez</code>&copy;</sup></small></ModalHeader>
-        <ModalBody>
-          <Form />
-        </ModalBody>
-        <ModalFooter>
-          <Button style={{background:'#5791ff',backgroundColor:'#5791ff',WebkitTextFillColor:'azure',color:'azure'}} onClick={this.toggle}>Cancel</Button>
-        </ModalFooter>
-      </Modal>
-    </div>
+   
 
+  <>
+  {
+    window.innerWidth<700?(
+          <Form/>
+      )
+    :
+    (
+
+ <div>
+      <Button style={conBtn} id="toggler" onClick={this.toggle}><span><h1 style={{...conLink, marginBottom: '1rem' }}><i className="fas fa-envelope"></i> {this.props.btnL} <i className="fas fa-envelope"></i></h1></span></Button>
+    <UncontrolledCollapse toggler="#toggler" className={this.props.className}>
+      <Card className='cdh'>
+      <small><span>Contact Me Via Email</span><sup><code>-ThisGuyCodez</code>&copy;</sup></small>
+      <br />
+        <CardBody>
+          <Form/>
+        </CardBody>
+      </Card>
+    </UncontrolledCollapse>
+  </div>
+      )
+  }
+  </>
+ 
   );
 
 
