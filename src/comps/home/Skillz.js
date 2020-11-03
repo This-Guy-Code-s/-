@@ -138,7 +138,7 @@ style={{fontSize:window.innerWidth<=700?'3rem':'4rem'}}></i>
 <figure>
 <i className="fas fa-database" ></i>
 <figcaption>
-<h6>Knex(Sqlite3)</h6>
+<h6>Knex(JS-SQL)</h6>
 </figcaption>
 </figure>
 </SkillzCard>
