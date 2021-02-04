@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import {Pass,Err,} from '../../util/contactStyles'
+import {Pass,Err,xxx} from '../../util/contactStyles'
 import {FormText,FormGroup} from 'reactstrap'
 import {name_,email_,msg_} from '../../util/contactValidations'
 import {changeBtnLabel,showOrNot} from '../../redux/actions'
@@ -158,9 +158,9 @@ return(
             <h5>Other Options</h5>
         
 				<div className="d-flex justify-content-end social-icons social_icon">
-					<a href='tel:+12402737952'><i className="fas fa-mobile-alt xxx"></i></a>
-					<a href='mailto:thisguycodez@gmail.com'><i className="fab fa-google-plus-square xxx"></i></a>
-					<a href='https://www.linkedin.com/in/guytonoriji'><i className="fab fa-linkedin xxx"></i></a>
+					<a href='tel:+12402737952' ><i className="fas fa-mobile-alt xxx" style={xxx}></i></a>
+					<a href='mailto:thisguycodez@gmail.com' ><i className="fab fa-google-plus-square xxx" style={xxx}></i></a>
+					<a href='https://www.linkedin.com/in/guytonoriji' ><i className="fab fa-linkedin xxx" style={xxx}></i></a>
 				</div>
 
         </div>

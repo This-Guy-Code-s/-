@@ -1,6 +1,13 @@
-.registration-form{
-	padding: 50px 0;
+.registration-holder div{
+    border:none;
 }
+
+.registration-form{
+    padding: 50px 0;
+    border:none;
+}
+
+
 
 .registration-form form{
     background-color: #fff;
@@ -9,7 +16,7 @@
     padding: 50px 70px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.375);
 }
 
 .registration-form .me-icon{
@@ -39,6 +46,14 @@
     border: none;
     color: white;
     margin-top: 20px;
+    box-shadow:0 1.5px 10px #50999f;
+    transition:.5s ease-in-out;
+
+}
+
+.registration-form .send2me:hover{
+    box-shadow:0 0 1px #000;
+
 }
 
 .registration-form .social-media{
@@ -55,14 +70,12 @@
 }
 
 .registration-form .social-icons{
-    margin-top: 30px;
-    margin-bottom: 16px;
+    margin-top: 8px 0px;
 }
 
 .registration-form .social-icons a{
-    font-size: 23px;
-    margin: 0 3px;
-    color: #5691ff;
+    font-size: 25px;
+    margin: 0 10px;
     border: 1px solid;
     border-radius: 50%;
     width: 45px;
@@ -71,6 +84,7 @@
     text-align: center;
     background-color: #fff;
     line-height: 45px;
+    box-shadow:0 0 6px #50999f;
 }
 
 .registration-form .social-icons a:hover{

@@ -34,7 +34,7 @@ return(
 <p style={{fontSize:window.innerWidth<=700?'1.2rem':'1.6rem'}}>
 {this.state.pitch}
 </p>
-<Contact buttonLabel={this.props.btnL}/>
+<Contact buttonLabel={this.props.btnL} className="registration-holder"/>
 </div>
 </div>
 

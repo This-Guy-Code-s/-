@@ -175,11 +175,14 @@ background-size:cover;
 
 .myRole{
    padding: 40px;
-  font-family: 'Monoton', cursive;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
   color: red;
+}
+
+.myRole,.myRole span,.myRole h1, .myRole h3{
+  font-family: 'Monoton', cursive;
 }
 
 .myRole h1 { margin:0;font-size: 3rem; }
