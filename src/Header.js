@@ -66,7 +66,7 @@ return (
 <img src={this.props.me} style={me} alt='me' width='50' height='50'/>
 </figure><h2 style={guyStyles}>Guy</h2> {" .M O"}</span></span>
 <Tooltip style={soci} placement="bottom" isOpen={this.state.tooltipOpen} autohide={false} target="me" >
-<i className="fab fa-youtube" style={yt} onClick={()=>alert('Youtube Channel comming soon...')}></i>
+<i className="fab fa-youtube" style={yt} onClick={()=>window.location.href='https://www.youtube.com/channel/UC0vDKn1yF10wwQ13i6EV-rg'}></i>
 <i className="fab fa-github" style={gh} onClick={()=>window.location.href='https://www.github.com/guytonoriji'}></i>
 <i className="fab fa-twitter" style={tw} onClick={()=>window.location.href='https://www.twitter.com/iSpam_The_Code'}></i>
 {

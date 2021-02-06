@@ -72,7 +72,7 @@ return (
     (
 
  <div>
- <div class="container container-slick-btn primary">
+ <div className="container container-slick-btn primary">
  <Button style={conBtn} id="toggler" onClick={this.toggle} className="primary-neumorph"><span><h1 style={{...conLink, marginBottom: '1rem' }}><i className="fas fa-envelope"></i> {this.props.btnL} <i className="fas fa-envelope"></i></h1></span></Button>
   </div>
       
