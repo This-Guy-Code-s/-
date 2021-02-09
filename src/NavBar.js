@@ -68,7 +68,7 @@ return (
 <Tooltip style={soci} placement="bottom" isOpen={this.state.tooltipOpen} autohide={false} target="me" >
 <i className="fab fa-youtube" style={yt} onClick={()=>window.location.href='https://www.youtube.com/channel/UC0vDKn1yF10wwQ13i6EV-rg'}></i>
 <i className="fab fa-github" style={gh} onClick={()=>window.location.href='https://www.github.com/thisguycodez'}></i>
-<a className="fas fa-download" style={resume} title="Download My Resume" href='https://localhost/resume.pdf' download="Guyton-Guy-Resume.pdf"></a>
+<i className="fab fa-linkedin" style={resume}  onClick={()=>window.location.href='https://www.linkedin.com/in/guytonoriji/'}></i>
 {
 this.props.mode?(<i className="fas fa-sun" title='Light Mode!' style={xOutLight} onClick={()=>this.props.DarkMode(false)}></i>)
 :(<i className="fas fa-moon" title='Dark Mode!' style={xOutDark} onClick={()=>this.props.DarkMode(true)}></i>)
