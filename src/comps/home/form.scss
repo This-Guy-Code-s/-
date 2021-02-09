@@ -1,0 +1,46 @@
+$primary:   #2D3142;
+$bg-color:  $primary;
+$text-color: white;
+$border-radius: 10px;
+$button-size: 25px;
+
+//Neumorphism variables
+$neumorphism-darken-lighten: 10%;   //intensitiy coloring
+$primary-lighten: lighten( $primary, $neumorphism-darken-lighten);
+$primary-darken: darken( $primary, $neumorphism-darken-lighten);
+
+$neumorphism-blur: 5px;    //blur intensitiy
+$neumorphism-distance: 5px; //distance
+$neumorphism-insensity: 0.8;  //max 1
+
+//box shadow
+$box-shadow-intensity: 5%;
+$box-shadow-light: lighten( $primary, $box-shadow-intensity);
+$box-shadow-dark:  darken( $primary, $box-shadow-intensity);
+
+//positioning container and center content
+
+
+.container-slick-btn {
+	width: 550px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+
+//final button
+.primary-neumorph, 
+.primary-neumorph:hover,
+.primary-neumorph:visited {
+  padding: $button-size;
+  border-radius: $border-radius;
+  border-color: $primary-lighten;
+  color: $text-color;
+  background: linear-gradient(145deg, $primary-lighten, $primary-darken);
+  box-shadow: $neumorphism-distance $neumorphism-distance $neumorphism-blur $box-shadow-dark, 
+            (-$neumorphism-distance) (-$neumorphism-distance) $neumorphism-blur $box-shadow-light;
+}
+
+

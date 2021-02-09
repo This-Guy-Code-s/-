@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 import {changeBtnLabel,showOrNot} from '../../redux/actions'
 import Form from './Form'
 import './form.css'
+import './form.scss'
 
 
 
@@ -71,7 +72,10 @@ return (
     (
 
  <div>
-      <Button style={conBtn} id="toggler" onClick={this.toggle}><span><h1 style={{...conLink, marginBottom: '1rem' }}><i className="fas fa-envelope"></i> {this.props.btnL} <i className="fas fa-envelope"></i></h1></span></Button>
+ <div className="container container-slick-btn primary">
+ <Button style={conBtn} id="toggler" onClick={this.toggle} className="primary-neumorph"><span><h1 style={{...conLink, marginBottom: '1rem' }}><i className="fas fa-envelope"></i> {this.props.btnL} <i className="fas fa-envelope"></i></h1></span></Button>
+  </div>
+      
     <UncontrolledCollapse toggler="#toggler" className={this.props.className}>
       <Card className='cdh'>
       <small><span>Contact Me Via Email</span><sup><code>-ThisGuyCodez</code>&copy;</sup></small>

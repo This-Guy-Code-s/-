@@ -25,23 +25,3 @@ ReactDOM.render(
 ,
 document.getElementById('root')
 );
-
-
-
-const preloader = document.querySelector('.preloader');
-
-const fadeAway = setInterval(() => {
- 
-  if (!preloader.style.opacity) {
-    preloader.style.opacity = 1;
-  }
-  if (preloader.style.opacity > 0) {
-    preloader.style.opacity -= 0.15;
-    	if(preloader.style.opacity<=0){
-    		preloader.style.zIndex='-221';
-    		preloader.remove()
-    	}
-  } else {
-   return clearInterval(fadeAway);
-  }
-}, 150);
