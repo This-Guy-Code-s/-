@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.scss'
-import Nav from '../Header'
+import NavBar from '../NavBar'
 
 
 class Header extends React.Component{
@@ -8,10 +8,10 @@ class Header extends React.Component{
 
 	render(){
   return (
-    <div className="Header">
+    <div className="Header" id="top-spot">
       <section className="hero">
   <div id="header">
-  <Nav/>
+  <NavBar/>
   </div>
   <div className="hero-header">
     <h1 className="hero-title">Need A Web App?</h1>

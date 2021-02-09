@@ -52,8 +52,8 @@ return (
 <figure id="intro-proj" style={{WebkitTextFillColor:'azure',marginTop:'30px'}}>
 
 
-<figcaption className=' myRole myProjectRole'><i className="fas fa-project-diagram"></i><h3 className="error">P r<span> o </span>j e</h3>
-  <h3 className="code"> c<span> t</span><span> s</span></h3><i className="fas fa-project-diagram" style={{transform:'rotate(180deg) rotateX(180deg)'}}></i></figcaption>
+<figcaption className=' myRole myProjectRole'><i className="fas fa-project-diagram"></i><h1 className="error">P r<span> o </span>j e</h1>
+  <h1 className="code"> c<span> t</span><span> s</span></h1><i className="fas fa-project-diagram" style={{transform:'rotate(180deg) rotateX(180deg)'}}></i></figcaption>
 </figure>
 <Container>
 <div id="movie-card-list" className='movie-card-holder'>
