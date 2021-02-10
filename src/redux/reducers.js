@@ -10,7 +10,7 @@ import bgdm from '../img/bg6dm.jpg'
 
 const initialState = {
 compRendered:sessionStorage.getItem('nav') || 'Home',
-work:'',
+work:[],
 error:'',
 mode:!window.sessionStorage.getItem('toggleDarkMode')?true:JSON.parse(window.sessionStorage.getItem('toggleDarkMode')),
 show:false,
