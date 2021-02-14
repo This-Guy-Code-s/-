@@ -32,8 +32,7 @@ this.toggle = this.toggle.bind(this)
 return axios.post(process.env.REACT_APP_sendmail
 ,this.state.msg)
 .then(res=>{
-console.log(res)
-//reset entire form and state
+
  this.setState({passMsg:res.data})
 
 
