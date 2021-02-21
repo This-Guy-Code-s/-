@@ -124,16 +124,7 @@ return(
 
 
         </form>
-        <div className="social-media primary-neumorphx">
-            <h5>Other Options</h5>
-        
-				<div className="d-flex justify-content-end social-icons social_icon">
-					<a href='tel:+13016872089' ><i className="fas fa-mobile-alt xxx" style={xxx}></i></a>
-					<a href='mailto:thisguycodez@gmail.com' ><i className="fab fa-google-plus-square xxx" style={xxx}></i></a>
-					<a href='https://www.linkedin.com/in/guytonoriji' ><i className="fab fa-linkedin xxx" style={xxx}></i></a>
-				</div>
-
-        </div>
+      
     </div>
 )
 }
