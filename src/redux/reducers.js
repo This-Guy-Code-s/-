@@ -1,4 +1,4 @@
-import {LOADING,SUCCESS,BTN,NAVIGATION,MODE,SHOW,ERR} from './actions'
+import {LOADING,SUCCESS,BTN,NAVIGATION,MODE,SHOW,PROJ_SWITCH,ERR} from './actions'
 import logo from '../img/tgc1.png'
 import me from '../img/me.png'
 import wavio from '../img/wave.png'
@@ -11,6 +11,7 @@ import bgdm from '../img/bg6dm.jpg'
 const initialState = {
 compRendered:sessionStorage.getItem('nav') || 'Home',
 work:[],
+workx:[],
 error:'',
 mode:!window.sessionStorage.getItem('toggleDarkMode')?true:JSON.parse(window.sessionStorage.getItem('toggleDarkMode')),
 show:false,
@@ -52,7 +53,12 @@ name:'Save 50% at N-brand'},
 {
 link:"https://www.amazon.com/promocode/A2LQ9AH18RF13?ref_=assoc_tag_ph_1524218724173&_encoding=UTF8&camp=1789&creative=9325&linkCode=pf4&tag=thisguycodez-20&linkId=d04fddd1d627ad8aaea77967bf29d8b4",
 name:'Save 15% at PICTEK'}
-]
+],
+
+
+
+
+
 }
 
 export const reducer =  (state = initialState, action) =>{
@@ -66,6 +72,16 @@ case SUCCESS:
 return {
 ...state,
 work:action.payload,
+workx:action.payload,
+
+}
+
+
+case PROJ_SWITCH:
+return {
+...state,
+workx:action.payload,
+
 }
 
 case BTN:

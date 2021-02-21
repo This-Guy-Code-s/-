@@ -114,9 +114,13 @@
 }
 
 
+.mexform{
+    border-radius:15px;
+}
 
 
 @media (max-width: 576px) {
+
     .registration-form form{
         padding: 50px 20px;
     }
@@ -128,3 +132,17 @@
         line-height: 70px;
     }
 }
+
+
+
+@media (max-width: 650px) {
+
+.mexform{
+    border-radius:10px;
+}
+
+ 
+}
+
+
+

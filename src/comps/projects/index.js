@@ -1,10 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {getMyWork,tog_description} from '../../redux/actions'
+import {getMyWork,tog_description,$witch} from '../../redux/actions'
 import {
 Container,Spinner
 } from 'reactstrap';
-import {myUids} from './extra.js'
 import './proj.scss'
 import jsImg from '../../img/js.png'
 import reactImg from '../../img/react.png'
@@ -15,14 +14,14 @@ import pythonImg from '../../img/pythonImg.png'
 
 
 class Projects extends React.Component{
-constructor(){
-super()
+constructor(props){
+super(props)
+this.state={
+}
+
 this.actionStyle = this.actionStyle.bind(this)
-this.$etId = this.$etId.bind(this)
 }
-componentDidMount(prevProps){
-this.props.getMyWork();
-}
+
 
 actionStyle(act){
 if(act==='PLAY'){
@@ -33,14 +32,13 @@ return {WebkitTextFillColor:'#03fc13'}
 }
 
 
-$etId(){
-				const newID = []
-			myUids.forEach((char,i)=>{
-if((Math.floor(Math.random() * i) % 2) === Math.floor(Math.random() * 2 + 1))
-{newID.push(char+myUids[Math.floor(Math.random() * 52)])}})
-	
-	return newID.join('')
-	}
+componentDidMount(prevProps){
+this.props.getMyWork();
+}
+
+
+
+
 
 render(){
 
@@ -56,15 +54,25 @@ return (
   <h1 className="code"> c<span> t</span><span> s</span></h1><i className="fas fa-project-diagram" style={{transform:'rotate(180deg) rotateX(180deg)'}}></i></figcaption>
 </figure>
 <Container>
+
+
+<div className="proj-switchers" id='keep-level'>
+ <button id="toggler" onClick={()=>{this.props.$witch('Design',this.props.work);return setTimeout(()=>{document.querySelector('#keep-level').scrollIntoView()},500)}} className="primary-neumorph">WebApps</button>
+ <button id="toggler" onClick={()=>{this.props.$witch('Game',this.props.work);return setTimeout(()=>{document.querySelector('#keep-level').scrollIntoView()},500)}} className="primary-neumorph">Games</button>
+ <button id="toggler" onClick={()=>{this.props.$witch('CLI/GUI',this.props.work);return setTimeout(()=>{document.querySelector('#keep-level').scrollIntoView()},500)}} className="primary-neumorph">CLI/GUI</button>
+ <button id="toggler" onClick={()=>{this.props.$witch('All',this.props.work);return setTimeout(()=>{document.querySelector('#keep-level').scrollIntoView()},500)}} className="primary-neumorph">All</button>{" "}
+</div>
+
+
 <div id="movie-card-list" className='movie-card-holder'>
 {
-this.props.work?this.props.work.map(post=>{
+this.props.workx?this.props.workx.map(post=>{
 
-return	(
+      return post.action?(
 
 
-  <div className="movie-card"  style={{backgroundImage:`url(${post.image})`}}  key={post.id}>
-    <div className="movie-card__overlay" style={{background:this.props.mode?
+  <div className="movie-card "  style={{backgroundImage:`url(${post.image})`}}  key={post.id}>
+    <div className="primary-neumorph movie-card__overlay" style={{background:this.props.mode?
       `linear-gradient(to ${window.innerWidth<=700?'bottom':'right'}, rgba(42,159,255,.2) 0%,rgba(33,33,32,1) ${window.innerWidth<=700?'80%':'60%'},rgba(33,33,32,1) 100%)`
       :`linear-gradient(to ${window.innerWidth<=700?'bottom':'right'}, rgba(245,245,245,.4) 4%,#999 ${window.innerWidth<=700?'96%':'60%'},rgba(245,245,245,1) 100%)`}}></div>
     
@@ -106,7 +114,15 @@ return	(
     </div>
   </div>
 
-)
+):true//if its a game then dont render
+
+
+
+
+
+
+
+
 }):(	
 <div>
 	 <h4><b style={{WebkitTextFillColor:'azure'}}>Loading Projects...</b></h4>
@@ -135,14 +151,7 @@ return {
 
 export default connect(
 mapStateToProps,
-{getMyWork,tog_description}
+{getMyWork,tog_description,$witch}
 )(Projects)
 
 
-
-//SET UP DB FOR LIKE COMMENT AND SHARE FEATURES AFTER HERBI IS COMPLETE, NEEED MORE PROJECTS 1ST
-// <div className="movie-card__share">
-//       <button className="movie-card__icon"><i className="material-icons">&#xe87d</i></button>
-//       <button className="movie-card__icon"><i className="material-icons">&#xe253</i></button>
-//       <button className="movie-card__icon"><i className="material-icons">&#xe80d</i></button>
-//     </div>

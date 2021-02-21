@@ -7,7 +7,8 @@ export const soci={width:'100%',WebkitTextFillColor:'azure',color:'azure',fontWe
 export const NavbarStyle = {WebkitTextFillColor:'#fff',color:'#fff',backgroundColor:'rgba(0,0,0,0)'}
 export const yt = {cursor:'pointer',WebkitTextFillColor:'red'}
 export const gh = {cursor:'pointer',WebkitTextFillColor:'#888'}
-export const resume = {cursor:'pointer',WebkitTextFillColor:'rgb(29, 161, 242)'}
+export const resume = {cursor:'pointer',WebkitTextFillColor:'rgb(202, 103, 042)'}
+export const linkedin = {cursor:'pointer',WebkitTextFillColor:'rgb(29, 161, 242)'}
 export const navbarTogStyle = {WebkitTextFillColor:'azure',color:'azure'}
 export const navBtnStyle = {cursor:'pointer',fontSize:window.innerWidth<=700?'1rem':'1.2rem'}
 export const xOutLight={marginLeft:'10px',cursor:'pointer',WebkitTextFillColor:'yellow'}

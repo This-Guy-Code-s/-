@@ -11,6 +11,8 @@ export const NAVIGATION = 'NAVIGATION'
 
 export const MODE = 'MODE'
 
+export const PROJ_SWITCH = 'PROJ_SWITCH'
+
 export const SHOW = 'SHOW'
 
 export const ERR = 'ERR'
@@ -98,7 +100,17 @@ return dispatch({type:MODE,payload:mode})
 }
 
 
+export const $witch = (type,reset) => dispatch =>{
+const regi = new RegExp(type,'gi')
 
+  if(regi.test('all')){
+        return dispatch({type:PROJ_SWITCH,payload:reset}) 
+  }else{
+    let val = reset.filter((x)=>x.description.toLowerCase().includes(type.toLowerCase()))
+        return dispatch({type:PROJ_SWITCH,payload:val})
+  }
+ 
+}
 
 
 

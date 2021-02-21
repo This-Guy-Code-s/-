@@ -21,6 +21,7 @@ NavbarStyle,
 yt,
 gh,
 resume,
+linkedin,
 navbarTogStyle,
 navBtnStyle,
 xOutLight,
@@ -63,12 +64,13 @@ return (
 {/*ME AS MY OWN LOGO AND SOCIAL LINKS TOO*/}
 <div>
 <span className='navbar-brand' id="me"><span style={brand} ><figure>
-<img src={this.props.me} style={me} alt='me' width='50' height='50'/>
+<img src={this.props.me} style={me} alt='thisguycodez.com' width='50' height='50'/>
 </figure><h2 style={guyStyles}>Guy</h2> {" .M O"}</span></span>
-<Tooltip style={soci} placement="bottom" isOpen={this.state.tooltipOpen} autohide={false} target="me" >
+<Tooltip style={soci} placement="bottom" isOpen={this.state.tooltipOpen} autohide={false} target="me" className="tool-tip-links">
+<i className="fas fa-file-pdf" style={resume}  onClick={()=>window.location.href='https://thisguycodez.github.io/data/Guyton-(Guy)-Oriji(Resume).pdf'}></i>
 <i className="fab fa-youtube" style={yt} onClick={()=>window.location.href='https://www.youtube.com/channel/UC0vDKn1yF10wwQ13i6EV-rg'}></i>
 <i className="fab fa-github" style={gh} onClick={()=>window.location.href='https://www.github.com/thisguycodez'}></i>
-<i className="fab fa-linkedin" style={resume}  onClick={()=>window.location.href='https://www.linkedin.com/in/guytonoriji/'}></i>
+<i className="fab fa-linkedin" style={linkedin}  onClick={()=>window.location.href='https://www.linkedin.com/in/guytonoriji/'}></i>
 {
 this.props.mode?(<i className="fas fa-sun" title='Light Mode!' style={xOutLight} onClick={()=>this.props.DarkMode(false)}></i>)
 :(<i className="fas fa-moon" title='Dark Mode!' style={xOutDark} onClick={()=>this.props.DarkMode(true)}></i>)
@@ -78,7 +80,7 @@ this.props.mode?(<i className="fas fa-sun" title='Light Mode!' style={xOutLight}
 {/*ME AS MY OWN LOGO AND SOCIAL LINKS TOO*/}
 
 <NavbarToggler onClick={this.toggle} style={navbarTogStyle}>
-<i className="fas fa-bars"></i>
+<i className="fas fa-bars" style={{fontSize:'2rem'}}></i>
 </NavbarToggler>
 <Collapse isOpen={this.state.isOpen} navbar>
 <Nav className="mr-auto" navbar>

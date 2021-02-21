@@ -78,9 +78,9 @@ return(
 
 
 	    <div className="registration-form">
-        <form  onSubmit={(e)=>{e.preventDefault();this.toInbox();return e.target.reset()}} data-testid="theForm">
+        <form  onSubmit={(e)=>{e.preventDefault();this.toInbox();return e.target.reset()}} data-testid="theForm" className="primary-neumorphx">
             <div className="me-icon">
-                <span><img src={this.props.me} width='100%' height='100%' alt='small me'/></span>
+                <span><img src={this.props.me} width='100%' height='100%' alt='thisguycodez.com' className="mexform"/></span>
             </div>
 
 
@@ -124,11 +124,11 @@ return(
 
 
         </form>
-        <div className="social-media">
+        <div className="social-media primary-neumorphx">
             <h5>Other Options</h5>
         
 				<div className="d-flex justify-content-end social-icons social_icon">
-					<a href='tel:+12402737952' ><i className="fas fa-mobile-alt xxx" style={xxx}></i></a>
+					<a href='tel:+13016872089' ><i className="fas fa-mobile-alt xxx" style={xxx}></i></a>
 					<a href='mailto:thisguycodez@gmail.com' ><i className="fab fa-google-plus-square xxx" style={xxx}></i></a>
 					<a href='https://www.linkedin.com/in/guytonoriji' ><i className="fab fa-linkedin xxx" style={xxx}></i></a>
 				</div>
