@@ -17,7 +17,7 @@ class Header extends React.Component{
     <h1 className="hero-title">Need A Web App?</h1>
   </div>  
   <footer className="hero-footer">
-    <a className="button button-primary" href='tel:+13016872089'>Call</a>
+    <a className="button button-primary" href='tel:+13019007384'>Call</a>
     <a className="button " href='mailto:thisguycodez@gmail.com'>Email</a>
   </footer>
 </section>
